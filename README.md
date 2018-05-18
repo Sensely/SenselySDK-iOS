@@ -16,7 +16,7 @@ This project demonstrates usage of Sensely SDK in iOS app
 - In `Info.plist` inside `SenselyConfiguration` provide your `username` and `password` 
 - Build and run the app.
 
-##License
+## License
 
 The Sensely iOS SDK is released under the Sensely license. See the LICENSE file for more details.
 
