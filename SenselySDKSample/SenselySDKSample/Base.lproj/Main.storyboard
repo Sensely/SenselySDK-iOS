@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SenselySDKSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bhR-f8-VUp" userLabel="Assessments">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="assessmentRow" id="1jJ-dG-RKs">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1jJ-dG-RKs" id="vti-A4-I1B">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DxN-3n-oHC" userLabel="Restart">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="O2C-lA-Dlt">
+                                        <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Restart" translatesAutoresizingMaskIntoConstraints="NO" id="LAK-kK-BZB" userLabel="Restart">
+                                        <rect key="frame" x="137" y="283" width="100" height="100"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="TFx-o2-agO"/>
+                                            <constraint firstAttribute="height" constant="100" id="b7T-0e-2SF"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="uFw-X9-xJd" appends="YES" id="dWd-nC-SCy"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="O2C-lA-Dlt" firstAttribute="centerY" secondItem="DxN-3n-oHC" secondAttribute="centerY" id="2dP-S6-ZQM"/>
+                                    <constraint firstItem="O2C-lA-Dlt" firstAttribute="centerX" secondItem="DxN-3n-oHC" secondAttribute="centerX" id="9ma-Zp-jPR"/>
+                                    <constraint firstItem="LAK-kK-BZB" firstAttribute="centerX" secondItem="DxN-3n-oHC" secondAttribute="centerX" id="G3u-xR-CIk"/>
+                                    <constraint firstItem="LAK-kK-BZB" firstAttribute="centerY" secondItem="DxN-3n-oHC" secondAttribute="centerY" id="nEy-3t-cT2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhR-f8-VUp" secondAttribute="trailing" id="2iG-1U-WiP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DxN-3n-oHC" secondAttribute="trailing" id="4eM-G2-q0r"/>
+                            <constraint firstItem="DxN-3n-oHC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I82-kZ-l2h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DxN-3n-oHC" secondAttribute="bottom" id="MhJ-gx-Ez2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="bhR-f8-VUp" secondAttribute="top" constant="20" id="cgP-mE-9xi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bhR-f8-VUp" secondAttribute="bottom" id="gbr-CN-jVd"/>
+                            <constraint firstItem="bhR-f8-VUp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nDR-yj-UIa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="DxN-3n-oHC" secondAttribute="top" constant="20" id="vsT-Iv-CHG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="assessmentsTable" destination="bhR-f8-VUp" id="fX1-yR-xdT"/>
+                        <outlet property="loading" destination="O2C-lA-Dlt" id="sXr-pP-11G"/>
+                        <outlet property="restartButton" destination="LAK-kK-BZB" id="p74-IV-rkY"/>
+                        <outlet property="restartView" destination="DxN-3n-oHC" id="acO-rR-PeI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uFw-X9-xJd">
+                    <connections>
+                        <action selector="onRestart:" destination="BYZ-38-t0r" id="05D-N3-h5P"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Restart" width="225" height="225"/>
+    </resources>
+</document>
