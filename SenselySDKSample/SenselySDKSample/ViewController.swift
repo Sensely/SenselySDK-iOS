@@ -9,13 +9,14 @@
 import UIKit
 import Chat_sensely
 
-class ViewController: UIViewController, SenselyViewControllerDelegate, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCallbacks, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var restartButton: UIImageView!
     @IBOutlet weak var restartView: UIView!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var assessmentsTable: UITableView!
     
+    var avatarController:AvatarModule?
     var assessmentsData: [String] = []
     
     override func viewDidLoad() {
@@ -25,6 +26,8 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, UITableVi
         assessmentsTable.delegate = self
         assessmentsTable.dataSource = self
         assessmentsTable.tableFooterView = UIView()
+        
+        Configuration.callbacks = self
         
         loadConversation()
     }
@@ -126,17 +129,26 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        Configuration.assesmentID = String(indexPath.row)
+        Configuration.assessmentID = String(indexPath.row)
         
         tableView.deselectRow(at: indexPath, animated: true)
         
         let s = UIStoryboard (name: "Main", bundle: Bundle(for: AvatarModule.self))
-        let avatarController:AvatarModule = s.instantiateViewController(withIdentifier: "AvatarModule") as! AvatarModule
-        avatarController.delegate = self
-        avatarController.assesmentIndex = Int(Configuration.assesmentID)!
-        let navigationController:UINavigationController = UINavigationController.init(rootViewController: avatarController)
+        avatarController = (s.instantiateViewController(withIdentifier: "AvatarModule") as! AvatarModule)
+        avatarController?.delegate = self
+        avatarController?.assesmentIndex = Int(Configuration.assessmentID)!
+        let navigationController:UINavigationController = UINavigationController.init(rootViewController: avatarController!)
         navigationController.isNavigationBarHidden = true
         
         UIApplication.shared.keyWindow?.rootViewController?.present(navigationController, animated: true, completion: nil)
+    }
+    
+    public func invokeCallback(callback:CallbackData) {
+        
+        print("invokeCallback \(callback.id)")
+        
+        callback.result = "Data to return"
+        
+        avatarController?.resultOfInvokeCallback(callback)
     }
 }
