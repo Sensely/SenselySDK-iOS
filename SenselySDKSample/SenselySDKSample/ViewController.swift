@@ -145,12 +145,21 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         navigationController?.pushViewController(avatar, animated: true)
     }
     
+    func openConsumerScreen(callback:CallbackData) {
+        
+        let s = UIStoryboard (name: "Main", bundle: Bundle.main)
+        let cosumerScreen:ConsumerScreen = s.instantiateViewController(withIdentifier: "ConsumerScreen") as! ConsumerScreen
+        cosumerScreen.avatarModule = avatarController
+        cosumerScreen.senselyCallback = callback
+        self.navigationController?.pushViewController(cosumerScreen, animated: true)
+    }
+    
     public func invokeCallback(callback:CallbackData) {
         
         print("invokeCallback \(callback.id)")
         
         callback.result = "Data to return"
         
-        avatarController?.resultOfInvokeCallback(callback)
+        openConsumerScreen(callback: callback)
     }
 }

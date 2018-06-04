@@ -106,6 +106,63 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--Consumer SDK screen-->
+        <scene sceneID="h5w-Bf-oyF">
+            <objects>
+                <viewController storyboardIdentifier="ConsumerScreen" title="Consumer SDK screen" id="KEc-kq-b1v" customClass="ConsumerScreen" customModule="SenselySDKSample" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mpI-to-KJl"/>
+                        <viewControllerLayoutGuide type="bottom" id="99C-Yw-9vN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JIl-m8-bGC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consumer SDK screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJh-h6-Jt3">
+                                <rect key="frame" x="66.5" y="222" width="242" height="132"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVL-i7-ckk">
+                                <rect key="frame" x="92.5" y="469" width="190" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="owT-Wl-Ute"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Get back to Sensely">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getBackToSensely:" destination="KEc-kq-b1v" eventType="touchUpInside" id="8EN-Ch-cQz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CVL-i7-ckk" firstAttribute="centerX" secondItem="JIl-m8-bGC" secondAttribute="centerX" id="7qG-pk-I6u"/>
+                            <constraint firstItem="ZJh-h6-Jt3" firstAttribute="top" secondItem="mpI-to-KJl" secondAttribute="bottom" constant="202" id="DXx-oo-wfd"/>
+                            <constraint firstItem="ZJh-h6-Jt3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JIl-m8-bGC" secondAttribute="leading" id="MoJ-Lp-1nx"/>
+                            <constraint firstItem="CVL-i7-ckk" firstAttribute="top" secondItem="ZJh-h6-Jt3" secondAttribute="bottom" constant="115" id="hwp-NN-Tat"/>
+                            <constraint firstItem="99C-Yw-9vN" firstAttribute="top" secondItem="ZJh-h6-Jt3" secondAttribute="bottom" constant="313" id="jsP-Wu-qzc"/>
+                            <constraint firstItem="ZJh-h6-Jt3" firstAttribute="centerX" secondItem="JIl-m8-bGC" secondAttribute="centerX" id="mNS-7U-edg"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZJh-h6-Jt3" secondAttribute="trailing" id="sKZ-oi-fhl"/>
+                            <constraint firstItem="99C-Yw-9vN" firstAttribute="top" secondItem="CVL-i7-ckk" secondAttribute="bottom" constant="138" id="uaZ-4Y-LQZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xJu-2q-dph"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAZ-C5-KyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="853"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Restart" width="225" height="225"/>

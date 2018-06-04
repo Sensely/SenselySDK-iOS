@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07249958AD062EBCF4DEA6EE /* Pods_SenselySDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C20A3D876D57C36713D82 /* Pods_SenselySDKSample.framework */; };
+		5848C05620C5834F002EDAC8 /* ConsumerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */; };
 		5882A6DF20AEACC10024B93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5882A6DE20AEACC10024B93E /* AppDelegate.swift */; };
 		5882A6E120AEACC10024B93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5882A6E020AEACC10024B93E /* ViewController.swift */; };
 		5882A6E420AEACC10024B93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5882A6E220AEACC10024B93E /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		4D37F7F0E6E7BE95F7F430FB /* Pods-SenselySDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SenselySDKSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample.release.xcconfig"; sourceTree = "<group>"; };
+		5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerScreen.swift; sourceTree = "<group>"; };
 		5882A6DB20AEACC10024B93E /* SenselySDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SenselySDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5882A6DE20AEACC10024B93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5882A6E020AEACC10024B93E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		5882A6DD20AEACC10024B93E /* SenselySDKSample */ = {
 			isa = PBXGroup;
 			children = (
+				5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */,
 				5882A6DE20AEACC10024B93E /* AppDelegate.swift */,
 				5882A6E020AEACC10024B93E /* ViewController.swift */,
 				5882A6E220AEACC10024B93E /* Main.storyboard */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5882A6E120AEACC10024B93E /* ViewController.swift in Sources */,
+				5848C05620C5834F002EDAC8 /* ConsumerScreen.swift in Sources */,
 				5882A6DF20AEACC10024B93E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
