@@ -133,14 +133,16 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let s = UIStoryboard (name: "Main", bundle: Bundle(for: AvatarModule.self))
-        avatarController = (s.instantiateViewController(withIdentifier: "AvatarModule") as! AvatarModule)
-        avatarController?.delegate = self
-        avatarController?.assesmentIndex = Int(Configuration.assessmentID)!
-        let navigationController:UINavigationController = UINavigationController.init(rootViewController: avatarController!)
-        navigationController.isNavigationBarHidden = true
+        avatarController = AvatarModule(nibName: "AvatarViewController",
+                                        bundle: Bundle(for: AvatarModule.self))
         
-        UIApplication.shared.keyWindow?.rootViewController?.present(navigationController, animated: true, completion: nil)
+        guard let avatar = avatarController else {
+            fatalError("Avatar not loaded")
+        }
+        
+        avatar.delegate = self
+        avatar.assesmentIndex = Int(Configuration.assessmentID)!
+        navigationController?.pushViewController(avatar, animated: true)
     }
     
     public func invokeCallback(callback:CallbackData) {

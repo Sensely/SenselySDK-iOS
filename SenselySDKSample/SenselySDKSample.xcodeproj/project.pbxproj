@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07249958AD062EBCF4DEA6EE /* Pods_SenselySDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98C20A3D876D57C36713D82 /* Pods_SenselySDKSample.framework */; };
 		5882A6DF20AEACC10024B93E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5882A6DE20AEACC10024B93E /* AppDelegate.swift */; };
 		5882A6E120AEACC10024B93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5882A6E020AEACC10024B93E /* ViewController.swift */; };
 		5882A6E420AEACC10024B93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5882A6E220AEACC10024B93E /* Main.storyboard */; };
 		5882A6E620AEACC30024B93E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5882A6E520AEACC30024B93E /* Assets.xcassets */; };
 		5882A6E920AEACC30024B93E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5882A6E720AEACC30024B93E /* LaunchScreen.storyboard */; };
-		7D5330ACC48265CBF1786C31 /* Pods_SenselySDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB958244DB20778F2D629C8E /* Pods_SenselySDKSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		38F9536F64804C16D49D297B /* Pods-SenselySDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SenselySDKSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample.release.xcconfig"; sourceTree = "<group>"; };
-		39A740AD116CCA8DFBDDF915 /* Pods-SenselySDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SenselySDKSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample.debug.xcconfig"; sourceTree = "<group>"; };
+		4D37F7F0E6E7BE95F7F430FB /* Pods-SenselySDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SenselySDKSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample.release.xcconfig"; sourceTree = "<group>"; };
 		5882A6DB20AEACC10024B93E /* SenselySDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SenselySDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5882A6DE20AEACC10024B93E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5882A6E020AEACC10024B93E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +24,8 @@
 		5882A6E520AEACC30024B93E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5882A6E820AEACC30024B93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5882A6EA20AEACC30024B93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB958244DB20778F2D629C8E /* Pods_SenselySDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SenselySDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		766854F65EA5194219D38CD3 /* Pods-SenselySDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SenselySDKSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample.debug.xcconfig"; sourceTree = "<group>"; };
+		C98C20A3D876D57C36713D82 /* Pods_SenselySDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SenselySDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,20 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D5330ACC48265CBF1786C31 /* Pods_SenselySDKSample.framework in Frameworks */,
+				07249958AD062EBCF4DEA6EE /* Pods_SenselySDKSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17E1196D35D7DC4236B3286C /* Pods */ = {
+		007CFF3F1E08F67F4C53E3C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				39A740AD116CCA8DFBDDF915 /* Pods-SenselySDKSample.debug.xcconfig */,
-				38F9536F64804C16D49D297B /* Pods-SenselySDKSample.release.xcconfig */,
+				766854F65EA5194219D38CD3 /* Pods-SenselySDKSample.debug.xcconfig */,
+				4D37F7F0E6E7BE95F7F430FB /* Pods-SenselySDKSample.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		29D1BC97E15D2DBCFF883CF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C98C20A3D876D57C36713D82 /* Pods_SenselySDKSample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5882A6D220AEACC10024B93E = {
@@ -54,8 +62,8 @@
 			children = (
 				5882A6DD20AEACC10024B93E /* SenselySDKSample */,
 				5882A6DC20AEACC10024B93E /* Products */,
-				17E1196D35D7DC4236B3286C /* Pods */,
-				928479786AC7C31562FF68FF /* Frameworks */,
+				007CFF3F1E08F67F4C53E3C4 /* Pods */,
+				29D1BC97E15D2DBCFF883CF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,14 +88,6 @@
 			path = SenselySDKSample;
 			sourceTree = "<group>";
 		};
-		928479786AC7C31562FF68FF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EB958244DB20778F2D629C8E /* Pods_SenselySDKSample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -95,11 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5882A6ED20AEACC30024B93E /* Build configuration list for PBXNativeTarget "SenselySDKSample" */;
 			buildPhases = (
-				0A56DD3A7F93504A2373B262 /* [CP] Check Pods Manifest.lock */,
+				F08FD66054DA8DBC7EE1FC62 /* [CP] Check Pods Manifest.lock */,
 				5882A6D720AEACC10024B93E /* Sources */,
 				5882A6D820AEACC10024B93E /* Frameworks */,
 				5882A6D920AEACC10024B93E /* Resources */,
-				F0E5265317BA88AEDE383691 /* [CP] Embed Pods Frameworks */,
+				20399A107A6A8E33D7C4A0EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,7 +157,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A56DD3A7F93504A2373B262 /* [CP] Check Pods Manifest.lock */ = {
+		20399A107A6A8E33D7C4A0EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EasyAnimation/EasyAnimation.framework",
+				"${BUILT_PRODUCTS_DIR}/KYNavigationProgress/KYNavigationProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${PODS_ROOT}/SenselySDK/Chat_sensely.framework",
+				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyAnimation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYNavigationProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chat_sensely.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F08FD66054DA8DBC7EE1FC62 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -173,30 +199,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F0E5265317BA88AEDE383691 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/EasyAnimation/EasyAnimation.framework",
-				"${BUILT_PRODUCTS_DIR}/KYNavigationProgress/KYNavigationProgress.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${PODS_ROOT}/SenselySDK/Chat_sensely.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyAnimation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYNavigationProgress.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chat_sensely.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -349,7 +351,7 @@
 		};
 		5882A6EE20AEACC30024B93E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39A740AD116CCA8DFBDDF915 /* Pods-SenselySDKSample.debug.xcconfig */;
+			baseConfigurationReference = 766854F65EA5194219D38CD3 /* Pods-SenselySDKSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -369,7 +371,7 @@
 		};
 		5882A6EF20AEACC30024B93E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38F9536F64804C16D49D297B /* Pods-SenselySDKSample.release.xcconfig */;
+			baseConfigurationReference = 4D37F7F0E6E7BE95F7F430FB /* Pods-SenselySDKSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
