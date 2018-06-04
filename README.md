@@ -6,6 +6,7 @@ This project demonstrates usage of Sensely SDK in iOS app
 - iOS 8.0+
 - Xcode 8.0+ [xcode]
 - [Cocoapods][cocoapods] version 1.0 or later
+- iOS device
 
 
 ## Quickstart
@@ -15,6 +16,8 @@ This project demonstrates usage of Sensely SDK in iOS app
 - Open the project by running `open SenselySDKSample.xcworkspace`.
 - In `Info.plist` inside `SenselyConfiguration` provide your `username` and `password` 
 - Build and run the app.
+
+__NOTE: There is no support for simulator for now (x86_64 architecture)__
 
 ## License
 
