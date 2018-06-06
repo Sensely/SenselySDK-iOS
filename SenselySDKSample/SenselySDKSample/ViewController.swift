@@ -9,6 +9,23 @@
 import UIKit
 import Chat_sensely
 
+enum ConsumerCallbacks: String {
+    // `NAS Provider search` assessment
+    case providerSearch   = "ProviderSearch"
+    
+    // `NAS Appointment booking` assessment
+    case emisSchedAppts   = "GetSchedEMISAppts"
+    case emisCancelAppts  = "CancelEMISAppt"
+    case emisAvailAppts   = "GetEMISAvailAppts"
+    case emisConfirmAppts = "ConfirmEMISAppt"
+    case emisMakeAppts    = "MakeEMISAppt"
+    
+    // `NAS Appointment booking` assessment
+    case getPrescList       = "GetPrescList"
+    case confirmPrescRefill = "ConfirmPrescRefill"
+    case resultsPrescRefill = "ResultsPrescRefill"
+}
+
 class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCallbacks, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var restartButton: UIImageView!
@@ -160,6 +177,42 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         
         callback.result = "Data to return"
         
-        openConsumerScreen(callback: callback)
+        if let callbackName = ConsumerCallbacks(rawValue: callback.id) {
+            switch callbackName {
+            case .providerSearch:
+                openConsumerScreen(callback: callback)
+                break
+            case .emisSchedAppts, .emisCancelAppts, .emisAvailAppts:
+                callback.result = emisAppointments()
+                avatarController?.resultOfInvokeCallback(callback)
+                break
+            case .emisConfirmAppts:
+                avatarController?.resultOfInvokeCallback(callback)
+                break
+            case .emisMakeAppts:
+                avatarController?.resultOfInvokeCallback(nil)
+                break;
+            case .getPrescList, .confirmPrescRefill:
+                break
+            default:
+                break;
+            }
+        }
+    }
+    
+    //MARK - Test data
+    
+    func emisAppointments() -> String {
+        
+        if let path = Bundle.main.path(forResource: "appointments_data", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                return String(data: data, encoding: .utf8)!
+                
+            } catch {
+                // handle error
+            }
+        }
+        return ""
     }
 }
