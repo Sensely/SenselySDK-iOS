@@ -109,13 +109,13 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         
         var errorText = "Unrecognized error"
         switch errorType {
-        case .InvalidAssesment:
+        case .invalidAssesment:
             errorText = "Assesment is invalid"
-        case .NetworkError:
+        case .networkError:
             errorText = "There was a network error"
-        case .AvatarDoesntLoad:
+        case .avatarDoesntLoad:
             errorText = "Avatar doesn't load"
-        case .ClosedByUser:
+        case .closedByUser:
             errorText = "Assesment was closed by the user"
         }
         
