@@ -1,9 +1,11 @@
 PODS:
+  - CryptoSwift (0.10.0)
   - EasyAnimation (2.0.2)
   - KYNavigationProgress (2.0.2)
-  - MaterialTextField (0.2.1)
+  - MaterialTextField (1.0.1)
   - ReachabilitySwift (4.1.0)
-  - SenselySDK (1.2.7):
+  - SenselySDK (1.2.9):
+    - CryptoSwift
     - EasyAnimation
     - KYNavigationProgress
     - MaterialTextField
@@ -12,10 +14,11 @@ PODS:
   - WebViewJavascriptBridge (6.0.3)
 
 DEPENDENCIES:
-  - SenselySDK (~> 1.2.7)
+  - SenselySDK (~> 1.2.9)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CryptoSwift
     - EasyAnimation
     - KYNavigationProgress
     - MaterialTextField
@@ -24,13 +27,14 @@ SPEC REPOS:
     - WebViewJavascriptBridge
 
 SPEC CHECKSUMS:
+  CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
   EasyAnimation: 977ef673efe8ce62447807eedb380a77b189dc80
   KYNavigationProgress: a380f5016e898ea4577049cf7b41895ed2a8da5a
-  MaterialTextField: f876a39d571eeece872af6a4da421e3bd065fe0b
+  MaterialTextField: f1a0786588e4d3610cb9bb62d2adbe9777cebbf9
   ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
-  SenselySDK: 2b4fbf60bc72ecabe92bf8b4eaf13958d26f944e
+  SenselySDK: 85c1f4fa43c21445450080f5c9665f344c49f8dd
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
 
-PODFILE CHECKSUM: 5f15951d14f26a257d7d26e641d0c8c26fa238b1
+PODFILE CHECKSUM: 83e73191c522b57322ad7c9bf1d1fa4f71584bba
 
 COCOAPODS: 1.5.3
