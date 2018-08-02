@@ -23,6 +23,6 @@ __NOTE: There is no support for simulator for now (x86_64 architecture)__
 
 The Sensely iOS SDK is released under the Sensely license. See the [LICENSE] file for more details.
 
-[LICENSE] https://github.com/Sensely/SDK-iOS/blob/master/LICENSE
+[LICENSE]: https://github.com/Sensely/SDK-iOS/blob/master/LICENSE
 [cocoapods]: https://cocoapods.org/
 [xcode]: https://developer.apple.com/xcode/
