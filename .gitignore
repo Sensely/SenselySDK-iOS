@@ -5,3 +5,4 @@ SenselySDKSample/SenselySDKSample.xcworkspace
 SenselySDKSample-ObjC
 SenselySDKSample-ObjC/Pods
 SenselySDKSample-ObjC/Build
+Podfile.lock
