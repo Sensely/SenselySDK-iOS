@@ -13,7 +13,7 @@
 		5882A6E120AEACC10024B93E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5882A6E020AEACC10024B93E /* ViewController.swift */; };
 		5882A6E420AEACC10024B93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5882A6E220AEACC10024B93E /* Main.storyboard */; };
 		5882A6E620AEACC30024B93E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5882A6E520AEACC30024B93E /* Assets.xcassets */; };
-		5882A6E920AEACC30024B93E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5882A6E720AEACC30024B93E /* LaunchScreen.storyboard */; };
+		588682912113B8E000032A99 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588682902113B8E000032A99 /* SignInController.swift */; };
 		58A8DD9F20C7F0F700142A61 /* appointments_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 58A8DD9E20C7F0F700142A61 /* appointments_data.json */; };
 /* End PBXBuildFile section */
 
@@ -25,9 +25,10 @@
 		5882A6E020AEACC10024B93E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5882A6E320AEACC10024B93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5882A6E520AEACC30024B93E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5882A6E820AEACC30024B93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5882A6EA20AEACC30024B93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		588682902113B8E000032A99 /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		58A8DD9E20C7F0F700142A61 /* appointments_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appointments_data.json; sourceTree = "<group>"; };
+		58CCAA7A2113E18D00C50D7F /* Sensely-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sensely-Bridging-Header.h"; sourceTree = "<group>"; };
 		9B9E3FBDDC378B5AB1C8FAA6 /* Pods-SenselySDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SenselySDKSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample.release.xcconfig"; sourceTree = "<group>"; };
 		E41E3D3E134EC50657EB3597 /* Pods-SenselySDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SenselySDKSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,12 +67,12 @@
 		5882A6DD20AEACC10024B93E /* SenselySDKSample */ = {
 			isa = PBXGroup;
 			children = (
+				588682902113B8E000032A99 /* SignInController.swift */,
 				5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */,
 				5882A6DE20AEACC10024B93E /* AppDelegate.swift */,
 				5882A6E020AEACC10024B93E /* ViewController.swift */,
 				5882A6E220AEACC10024B93E /* Main.storyboard */,
 				5882A6E520AEACC30024B93E /* Assets.xcassets */,
-				5882A6E720AEACC30024B93E /* LaunchScreen.storyboard */,
 				5882A6EA20AEACC30024B93E /* Info.plist */,
 			);
 			path = SenselySDKSample;
@@ -80,6 +81,7 @@
 		58A8DD9D20C7F00D00142A61 /* Support files */ = {
 			isa = PBXGroup;
 			children = (
+				58CCAA7A2113E18D00C50D7F /* Sensely-Bridging-Header.h */,
 				58A8DD9E20C7F0F700142A61 /* appointments_data.json */,
 			);
 			path = "Support files";
@@ -162,7 +164,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5882A6E920AEACC30024B93E /* LaunchScreen.storyboard in Resources */,
 				58A8DD9F20C7F0F700142A61 /* appointments_data.json in Resources */,
 				5882A6E620AEACC30024B93E /* Assets.xcassets in Resources */,
 				5882A6E420AEACC10024B93E /* Main.storyboard in Resources */,
@@ -228,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5882A6E120AEACC10024B93E /* ViewController.swift in Sources */,
+				588682912113B8E000032A99 /* SignInController.swift in Sources */,
 				5848C05620C5834F002EDAC8 /* ConsumerScreen.swift in Sources */,
 				5882A6DF20AEACC10024B93E /* AppDelegate.swift in Sources */,
 			);
@@ -242,14 +244,6 @@
 				5882A6E320AEACC10024B93E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5882A6E720AEACC30024B93E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5882A6E820AEACC30024B93E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -383,8 +377,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.senselysdk.CarevoiceSample;
+				PRODUCT_BUNDLE_IDENTIFIER = sensely.SenselySDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Support Files/Sensely-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -406,6 +401,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.senselysdk.CarevoiceSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Support Files/Sensely-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

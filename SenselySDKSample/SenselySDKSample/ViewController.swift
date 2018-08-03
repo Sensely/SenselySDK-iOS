@@ -49,29 +49,34 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         loadConversation()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        if self.isMovingFromParentViewController {
+            DataManager.sharedInstance.logOut(completion: {})
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     func loadConversation() {
         
         restartView.isHidden = false
         showLoadingView()
         
-        DataManager.sharedInstance.senselyLogin(password:Configuration.clientPassword, username:Configuration.clientUsername ) { (loginResult) in
-            switch loginResult {
+        DataManager.sharedInstance.gettingAssessments { (result) in
+            switch result {
             case .success( _):
-                DataManager.sharedInstance.gettingAssessments { (result) in
-                    switch result {
-                    case .success( _):
-                        print("\(DataManager.sharedInstance.stateMachine.getAssessmentNames())")
-                        self.assessmentsData = NSMutableArray.init(array: DataManager.sharedInstance.stateMachine.getAssessmentNames()) as! [String]
-                        self.assessmentsTable.reloadData()
-                        self.restartView.isHidden = true
-                        
-                    case .failure( _):
-                        break
-                    }
-                }
+                print("\(DataManager.sharedInstance.stateMachine.getAssessmentNames())")
+                self.assessmentsData = NSMutableArray.init(array: DataManager.sharedInstance.stateMachine.getAssessmentNames()) as! [String]
+                self.assessmentsTable.reloadData()
+                self.restartView.isHidden = true
+                
             case .failure( _):
-                self.hideLoadingView()
-                self.showError(message: "Failed to login. Please check your configurations or contact Sensely support.")
+                DataManager.sharedInstance.logOut(completion: {
+                    self.dismiss(animated: true, completion: {})
+                })
                 break
             }
         }
