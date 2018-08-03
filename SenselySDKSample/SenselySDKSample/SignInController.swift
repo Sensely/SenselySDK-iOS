@@ -62,10 +62,19 @@ open class SignInController: UIViewController, UITextFieldDelegate {
                 self.resetSignInScreenViews()
                 
             case .notApplied:
-                if !Configuration.clientUsername.isEmpty && !Configuration.clientPassword.isEmpty {
-                    self.login()
-                } else {
-                    self.resetSignInScreenViews()
+                
+                self.resetSignInScreenViews()
+                guard DataManager.sharedInstance.senselyToken != nil else {
+                    return
+                }
+                
+                DataManager.sharedInstance.refreshToken { result in
+                    switch result {
+                    case .success:
+                        self.performSegue(withIdentifier: "showAssessmentsList", sender: self)
+                    case .failure:
+                        break
+                    }
                 }
             }
         }
