@@ -163,7 +163,7 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         }
         
         avatar.delegate = self
-        avatar.assesmentIndex = Int(Configuration.assessmentID)!
+        avatar.assessmentIndex = Int(Configuration.assessmentID)!
         navigationController?.pushViewController(avatar, animated: true)
     }
     
