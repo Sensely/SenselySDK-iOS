@@ -1,6 +1,6 @@
 //
 //  ConsumerScreen.swift
-//  SenselySDKTest
+//  Sensely
 //
 //  Created by Gennadiy Ryabkin on 5/22/18.
 //  Copyright © 2018 Sensely. All rights reserved.

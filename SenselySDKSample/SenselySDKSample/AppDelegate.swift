@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  CarevoiceSample
+//  Sensely
 //
 //  Created by Gennadiy Ryabkin on 5/18/18.
 //  Copyright © 2018 Sense.ly. All rights reserved.

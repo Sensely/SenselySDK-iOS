@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  CarevoiceSample
+//  Sensely
 //
 //  Created by Gennadiy Ryabkin on 5/18/18.
 //  Copyright © 2018 Sense.ly. All rights reserved.
@@ -163,7 +163,7 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         }
         
         avatar.delegate = self
-        avatar.assessmentIndex = Int(Configuration.assessmentID)!
+        avatar.assesmentIndex = Int(Configuration.assessmentID)!
         navigationController?.pushViewController(avatar, animated: true)
     }
     
