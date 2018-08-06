@@ -111,7 +111,7 @@
         <!--Consumer SDK screen-->
         <scene sceneID="h5w-Bf-oyF">
             <objects>
-                <viewController storyboardIdentifier="ConsumerScreen" title="Consumer SDK screen" id="KEc-kq-b1v" customClass="ConsumerScreen" customModule="SenselySDKSample" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConsumerScreen" title="Consumer SDK screen" id="KEc-kq-b1v" customClass="ConsumerScreen" customModule="SenselySDKTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mpI-to-KJl"/>
                         <viewControllerLayoutGuide type="bottom" id="99C-Yw-9vN"/>
@@ -174,7 +174,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzr-VS-AbR" customClass="TagButton" customModule="Chat_sensely">
-                                <rect key="frame" x="23" y="395" width="328" height="50"/>
+                                <rect key="frame" x="23" y="352" width="328" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xBh-zV-WWQ"/>
@@ -197,7 +197,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZf-Is-ykr">
-                                <rect key="frame" x="16" y="314" width="343" height="59"/>
+                                <rect key="frame" x="16" y="271" width="343" height="59"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="jpr-Ua-IPM">
                                         <rect key="frame" x="21.5" y="8" width="300" height="21"/>
