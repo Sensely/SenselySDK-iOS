@@ -1,0 +1,12 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Zest/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/Networking & Data requests/DataManager.swift",
+      "line": 36,
+      "symbol": "DataManager.sharedInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Zest/AIR/Sensely/SenselySDK_iOS/ios_project"
+}

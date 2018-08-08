@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CallbackData Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CallbackData" class="dashAnchor"></a>
+    <a title="CallbackData Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Chat_sensely Docs</a> (97% documented)</p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fsensely%2Egithub%2Eio%2FSDK%2DiOS%2Fdocsets%2FChat_sensely%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Chat_sensely Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CallbackData Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AvatarModule.html">AvatarModule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CallbackData.html">CallbackData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataManager.html">DataManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SenselyToken.html">SenselyToken</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SenselyCallbacks.html">SenselyCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SenselyViewControllerDelegate.html">SenselyViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:12Chat_sensely14AssessmentDataa">AssessmentData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:12Chat_sensely11PayloadDataa">PayloadData</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CallbackData</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">CallbackData</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Class is used for passing data between SDK and a consumer app</p>
+
+<p>Initialized at reaching state <code>invokecallback</code></p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Chat_sensely12CallbackDataC2idSSvp"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely12CallbackDataC2idSSvp">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Assigned <code>id</code> to <code>invokecallback</code> state, specified in conversation definition in choices array as a first parameter</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Chat_sensely12CallbackDataC8templateSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/template" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely12CallbackDataC8templateSSSgvp">template</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>invokecallback</code> state can be used in conjunction with <code>dodynamicstate</code> which adds dynamically in conversation graph
+a new state.</p>
+
+<p>Specified in a conversation defition of <code>invokecallback</code> state as a second parameter in <code>choices</code> array</p>
+
+<p>Supported templates are:
+    - <code>spinnerwithid</code> - state which represents a list of choices composed from a data specified in parameter <code><a href="../Classes/CallbackData.html#/s:12Chat_sensely12CallbackDataC6resultSSSgvp">result</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">template</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Chat_sensely12CallbackDataC6resultSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/result" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely12CallbackDataC6resultSSSgvp">result</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Data which consumed by conversation for creating a new states</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">result</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:12Chat_sensely14AssessmentDataa">AssessmentData</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Chat_sensely12CallbackDataC4dataSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely12CallbackDataC4dataSSSgvp">data</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A data or some conversations results which should be passed to a consumer app from a conversation</p>
+
+<p>Specified in a conversation defition of <code>invokecallback</code> state as a third parameter in <code>choices</code> array</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">data</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:12Chat_sensely11PayloadDataa">PayloadData</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="http://www.sensely.com/" target="_blank" rel="external">Sensely</a>. All rights reserved. (Last updated: 2018-08-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

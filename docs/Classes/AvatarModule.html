@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AvatarModule Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/AvatarModule" class="dashAnchor"></a>
+    <a title="AvatarModule Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Chat_sensely Docs</a> (97% documented)</p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fsensely%2Egithub%2Eio%2FSDK%2DiOS%2Fdocsets%2FChat_sensely%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Chat_sensely Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AvatarModule Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AvatarModule.html">AvatarModule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CallbackData.html">CallbackData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DataManager.html">DataManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SenselyToken.html">SenselyToken</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SenselyCallbacks.html">SenselyCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SenselyViewControllerDelegate.html">SenselyViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:12Chat_sensely14AssessmentDataa">AssessmentData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:12Chat_sensely11PayloadDataa">PayloadData</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AvatarModule</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">AvatarModule</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+                   <span class="kt">UICollectionViewDataSource</span><span class="p">,</span>
+                   <span class="kt">UICollectionViewDelegate</span><span class="p">,</span>
+                   <span class="kt">SenselyConsumerActions</span><span class="p">,</span>
+                   <span class="kt">UIScrollViewDelegate</span><span class="p">,</span>
+                   <span class="kt">SpeechDelegate</span><span class="p">,</span>
+                   <span class="kt">SenselyAvatarViewDelegate</span><span class="p">,</span>
+                   <span class="kt">SelfCareContentDelegate</span><span class="p">,</span>
+                   <span class="kt">SelfCareControllerDelegate</span><span class="p">,</span>
+                   <span class="kt">TagCellLayoutDelegate</span><span class="p">,</span>
+                   <span class="kt">TagCollectionViewCellDelegate</span><span class="p">,</span>
+                   <span class="kt">SFSafariViewControllerDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Class for intializing controller with a conversation</p>
+
+<p>User athorization and conversations loading (assessments/checkins) should be completed
+before starting this controller</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    DataManager
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Chat_sensely12AvatarModuleC8delegateAA29SenselyViewControllerDelegate_pSgXwvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely12AvatarModuleC8delegateAA29SenselyViewControllerDelegate_pSgXwvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Implement this protocol to process errors or final results <code>JSON</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SenselyViewControllerDelegate.html">SenselyViewControllerDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Chat_sensely12AvatarModuleC15assessmentIndexSivp"></a>
+                    <a name="//apple_ref/swift/Property/assessmentIndex" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely12AvatarModuleC15assessmentIndexSivp">assessmentIndex</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Index of an assessment from conversations list which should be started</p>
+
+<p>At assigning this param some assessment settings are applied:</p>
+
+<ul>
+<li>TTS (Text To Speech) parameters of avatar</li>
+<li>Avatar, graphical asset of avatar model</li>
+<li>Voice recognition language</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">assessmentIndex</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20functions"></a>
+                <a name="//apple_ref/swift/Section/Public functions" class="dashAnchor"></a>
+                <a href="#/Public%20functions">
+                  <h3 class="section-name">Public functions</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Chat_sensely12AvatarModuleC14changeTitleBarySS6byText_tF"></a>
+                    <a name="//apple_ref/swift/Method/changeTitleBar(byText:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely12AvatarModuleC14changeTitleBarySS6byText_tF">changeTitleBar(byText:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set avatar module navigation title</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">changeTitleBar</span><span class="p">(</span><span class="nv">byText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/SenselyConsumerActions"></a>
+                <a name="//apple_ref/swift/Section/SenselyConsumerActions" class="dashAnchor"></a>
+                <a href="#/SenselyConsumerActions">
+                  <h3 class="section-name">SenselyConsumerActions</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Chat_sensely@objc(cs)AvatarModule(im)resultOfInvokeCallback:"></a>
+                    <a name="//apple_ref/swift/Method/resultOfInvokeCallback(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)AvatarModule(im)resultOfInvokeCallback:">resultOfInvokeCallback(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Call this function when you want to return back after callback invocation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resultOfInvokeCallback</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt"><a href="../Classes/CallbackData.html">CallbackData</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="http://www.sensely.com/" target="_blank" rel="external">Sensely</a>. All rights reserved. (Last updated: 2018-08-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
