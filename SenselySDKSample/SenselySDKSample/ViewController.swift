@@ -8,6 +8,7 @@
 
 import UIKit
 import Chat_sensely
+import AVFoundation
 
 enum ConsumerCallbacks: String {
     // `NAS Provider search` assessment
@@ -35,7 +36,8 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     
     var avatarController:AvatarModule?
     var assessmentsData: [String] = []
-    
+    var audioPlayer: AVAudioPlayer?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -64,7 +66,7 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         
         restartView.isHidden = false
         showLoadingView()
-        
+        //playExampleAudio()
         DataManager.sharedInstance.gettingAssessments { (result) in
             switch result {
             case .success( _):
@@ -96,6 +98,19 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         restartButton.isHidden = true
         loading.startAnimating()
         loading.isHidden = false
+    }
+    
+    func playExampleAudio() {
+        guard let url = Bundle.main.url(forResource: "n99", withExtension: "mp3") else {
+            fatalError("Failed to encode fingd the file")
+        }
+        do {
+            self.audioPlayer = try AVAudioPlayer(contentsOf: url)
+            self.audioPlayer?.prepareToPlay()
+            self.audioPlayer?.play()
+        } catch {
+            // couldn't load file :(
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -167,7 +182,7 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         navigationController?.pushViewController(avatar, animated: true)
     }
     
-    func openConsumerScreen(callback:CallbackData) {
+    func openConsumerScreen(callback: CallbackData) {
         
         let s = UIStoryboard (name: "Main", bundle: Bundle.main)
         let cosumerScreen:ConsumerScreen = s.instantiateViewController(withIdentifier: "ConsumerScreen") as! ConsumerScreen
