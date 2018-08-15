@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="SenselySDKSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="SenselySDKTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +88,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1932" y="116"/>
+            <point key="canvasLocation" x="1926" y="106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dSI-bA-X5X">
@@ -106,12 +106,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGK-b2-2fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="117"/>
+            <point key="canvasLocation" x="6" y="106"/>
         </scene>
         <!--Consumer SDK screen-->
         <scene sceneID="h5w-Bf-oyF">
             <objects>
-                <viewController storyboardIdentifier="ConsumerScreen" title="Consumer SDK screen" id="KEc-kq-b1v" customClass="ConsumerScreen" customModule="SenselySDKSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConsumerScreen" title="Consumer SDK screen" id="KEc-kq-b1v" customClass="ConsumerScreen" customModule="SenselySDKTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mpI-to-KJl"/>
                         <viewControllerLayoutGuide type="bottom" id="99C-Yw-9vN"/>
@@ -168,7 +168,7 @@
         <!--Sign In Controller-->
         <scene sceneID="Fns-UY-AVq">
             <objects>
-                <viewController storyboardIdentifier="SignInController" id="08l-4G-MBx" customClass="SignInController" customModule="SenselySDKSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInController" id="08l-4G-MBx" customClass="SignInController" customModule="SenselySDKTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MMe-dG-sXH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="484"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtn-pC-p3M" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.79999999999995" y="116.94152923538232"/>
+            <point key="canvasLocation" x="976" y="106"/>
         </scene>
     </scenes>
     <resources>
