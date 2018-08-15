@@ -49,7 +49,7 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         Configuration.callbacks = self
         
         loadConversation()
-        
+        /*
         let path = Bundle.main.path(forResource: "n99.mp3", ofType:nil)!
         let url = URL(fileURLWithPath: path)
         do {
@@ -65,7 +65,7 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
             audioPlayer?.play()
         } catch {
             // couldn't load file :(
-        }
+        }*/
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -147,11 +147,11 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     }
     
     func voiceRecognitionWillStart(_ senselyViewController: AvatarModule) {
-        self.audioPlayer?.pause()
+        //self.audioPlayer?.pause()
     }
     
     func voiceRecognitionDidEnded(_ senselyViewController: AvatarModule) {
-        self.audioPlayer?.play()
+        //self.audioPlayer?.play()
     }
     
     func showError(message: String) {
