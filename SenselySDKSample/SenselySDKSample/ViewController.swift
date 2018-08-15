@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Chat_sensely
 import AVFoundation
+import Chat_sensely
 
 enum ConsumerCallbacks: String {
     // `NAS Provider search` assessment
@@ -37,7 +37,7 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     var avatarController:AvatarModule?
     var assessmentsData: [String] = []
     var audioPlayer: AVAudioPlayer?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -49,6 +49,23 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         Configuration.callbacks = self
         
         loadConversation()
+        
+        let path = Bundle.main.path(forResource: "n99.mp3", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
+            print("Playback OK")
+            try AVAudioSession.sharedInstance().setActive(true)
+            print("Session is Active")
+        } catch {
+            print(error)
+        }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            // couldn't load file :(
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -66,7 +83,7 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         
         restartView.isHidden = false
         showLoadingView()
-        //playExampleAudio()
+        
         DataManager.sharedInstance.gettingAssessments { (result) in
             switch result {
             case .success( _):
@@ -100,24 +117,11 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         loading.isHidden = false
     }
     
-    func playExampleAudio() {
-        guard let url = Bundle.main.url(forResource: "n99", withExtension: "mp3") else {
-            fatalError("Failed to encode fingd the file")
-        }
-        do {
-            self.audioPlayer = try AVAudioPlayer(contentsOf: url)
-            self.audioPlayer?.prepareToPlay()
-            self.audioPlayer?.play()
-        } catch {
-            // couldn't load file :(
-        }
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: Sensely delegate
     func senselyViewController(_ senselyViewController: AvatarModule, didReceiveFinalJSON finalString: String) {
         print("Assessments results: \(finalString)")
@@ -140,6 +144,14 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         }
         
         showError(message: errorText)
+    }
+    
+    func voiceRecognitionWillStart(_ senselyViewController: AvatarModule) {
+        self.audioPlayer?.pause()
+    }
+    
+    func voiceRecognitionDidEnded(_ senselyViewController: AvatarModule) {
+        self.audioPlayer?.play()
     }
     
     func showError(message: String) {
