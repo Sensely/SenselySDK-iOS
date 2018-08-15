@@ -15,9 +15,9 @@ The Sensely SDK can be embedded in an existing iOS or Android app. When calling 
     * The results of the conversation are returned to the consuming app in JSON format. These results can also be recorded in Sensely’s backend if desired.
     * The user is transitioned back to the partner app fully.
 
-## Mayo symptom checker
+## Integration with Mayo Clinic symptom assessment tool
 
-Sensely has an interaction in 3 languages that is ready to use for the Mayo Clinic symptom checker. The introduction can be reviewed and customized with disclaimers by the partner’s team. The Mayo symptom checker also supports using the symptom checker on behalf of a 3rd party (child, other family member).
+Sensely is ready to use with the Mayo Clinic symptom assessment tool in 3 languages (contact us for more languages). The introduction can be reviewed and customized with disclaimers by the partner’s team. The Mayo symptom checker also supports using the symptom checker on behalf of a 3rd party (child, other family member).
 
 In addition to symptom checker interactions, partners are able to build other conversation interactions using either our conversation design tools or ad-hoc using a specification of the conversation definition and building the conversation programmatically. More documentation is available upon request. 
 
@@ -37,6 +37,7 @@ Follow these directions, with Xcode 8 or higher installed on your mac:
 * Open the Xcode project by running open SenselySDKSample.xcworkspace from the terminal
 * Build and run the project on a real iOS device (simulator not supported yet)
     * Verify you are logged in to Xcode with your Apple Developer Account and have a valid provisioning profile attached for your iOS device.
+* When the app loads, provide your username and password to see available conversations - you can request a demo license from [https://tinyurl.com/senselysdk](https://tinyurl.com/senselysdk) 
 
 ## Full Documentation
 
