@@ -1,5 +1,7 @@
 # Sensely iOS Conversational SDK
 
+<a href="https://tinyurl.com/senselysdk"><img src="https://cl.ly/ca1a088639e6/request-access-button.png" alt="Request access" width="157"></a>
+
 The Sensely iOS SDK is designed to allow you to easily incorporate custom avatar technology and conversational content in your iOS app. Start using the SDK today to leverage the power of conversational language interfaces. The avatar supports both voice and text options, allowing you to intelligently communicate with your patient and insurance plan member populations.
 
 ## Technical overview
@@ -37,7 +39,9 @@ Follow these directions, with Xcode 8 or higher installed on your mac:
 * Open the Xcode project by running open SenselySDKSample.xcworkspace from the terminal
 * Build and run the project on a real iOS device (simulator not supported yet)
     * Verify you are logged in to Xcode with your Apple Developer Account and have a valid provisioning profile attached for your iOS device.
-* When the app loads, provide your username and password to see available conversations - you can request a demo license from [https://tinyurl.com/senselysdk](https://tinyurl.com/senselysdk) 
+* When the app loads, provide your username and password to see available conversations - you can request a demo license to get access.
+
+<a href="https://tinyurl.com/senselysdk"><img src="https://cl.ly/ca1a088639e6/request-access-button.png" alt="Request access" width="157"></a>
 
 ## Full Documentation
 
