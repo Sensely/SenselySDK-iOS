@@ -14,7 +14,7 @@
     <a title="DataManager Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Chat_sensely Docs</a> (97% documented)</p>
+        <p><a href="../index.html">Chat_sensely Docs</a> (90% documented)</p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fsensely%2Egithub%2Eio%2FSDK%2DiOS%2Fdocsets%2FChat_sensely%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
@@ -138,7 +138,7 @@
                         <p>Shared Instance of a state machine (set of conversation states)</p>
 <div class="aside aside-precondition">
     <p class="aside-title">Precondition</p>
-    Initialized after successfull call of <code>gettingAssessments</code>
+    Initialized after successfull call of <code><a href="../Classes/DataManager.html#/s:12Chat_sensely11DataManagerC18gettingAssessmentsyyAA10JSONResultOc10completion_tF">DataManager.gettingAssessments(...)</a></code>
 
 </div>
 <div class="aside aside-note">
@@ -370,7 +370,7 @@ SNStateMachine.create(withJson: jsonString)
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Function for retrieving assessments for currently logged in user</p>
+                        <p>Function for retrieving all assessments available for the currently logged in user</p>
 <div class="aside aside-precondition">
     <p class="aside-title">Precondition</p>
     should be called after authorization endpoints such as <code>senselyLogin</code>
@@ -410,10 +410,75 @@ SNStateMachine.create(withJson: jsonString)
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Send%20result%20to%20server"></a>
+                <a name="//apple_ref/swift/Section/Send result to server" class="dashAnchor"></a>
+                <a href="#/Send%20result%20to%20server">
+                  <h3 class="section-name">Send result to server</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Chat_sensely11DataManagerC16retrieveTTSAudioySS7ttsText_yAA21AudioEndpointResponseOy10Foundation3URLVGc10completiontF"></a>
+                    <a name="//apple_ref/swift/Method/retrieveTTSAudio(ttsText:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11DataManagerC16retrieveTTSAudioySS7ttsText_yAA21AudioEndpointResponseOy10Foundation3URLVGc10completiontF">retrieveTTSAudio(ttsText:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">retrieveTTSAudio</span><span class="p">(</span><span class="n">ttsText</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">AudioEndpointResponse</span><span class="o">&lt;</span><span class="kt">URL</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Chat_sensely11DataManagerC17retrieveTTSAudiosySaySSG8ttsTexts_tF"></a>
+                    <a name="//apple_ref/swift/Method/retrieveTTSAudios(ttsTexts:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11DataManagerC17retrieveTTSAudiosySaySSG8ttsTexts_tF">retrieveTTSAudios(ttsTexts:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">retrieveTTSAudios</span><span class="p">(</span><span class="n">ttsTexts</span> <span class="nv">anticipatedTexts</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://www.sensely.com/" target="_blank" rel="external">Sensely</a>. All rights reserved. (Last updated: 2018-08-09)</p>
+          <p>&copy; 2018 <a class="link" href="http://www.sensely.com/" target="_blank" rel="external">Sensely</a>. All rights reserved. (Last updated: 2018-09-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

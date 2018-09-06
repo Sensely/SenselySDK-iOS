@@ -1,10 +1,31 @@
 {
   "warnings": [
     {
+      "file": "/Users/Zest/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/AvatarController/AvatarController.swift",
+      "line": 189,
+      "symbol": "AvatarModule.googleSpeechDefaultTimeout",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/Zest/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/Networking & Data requests/DataManager.swift",
-      "line": 36,
+      "line": 37,
       "symbol": "DataManager.sharedInstance",
       "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Zest/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/Networking & Data requests/DataManager.swift",
+      "line": 613,
+      "symbol": "DataManager.retrieveTTSAudio(ttsText:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Zest/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/Networking & Data requests/DataManager.swift",
+      "line": 620,
+      "symbol": "DataManager.retrieveTTSAudios(ttsTexts:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],

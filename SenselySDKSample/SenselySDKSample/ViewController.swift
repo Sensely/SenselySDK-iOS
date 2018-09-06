@@ -189,6 +189,8 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
             fatalError("Avatar not loaded")
         }
         
+        avatar.googleSpeechDefaultTimeout = 4
+        
         avatar.delegate = self
         avatar.assessmentIndex = Int(Configuration.assessmentID)!
         navigationController?.pushViewController(avatar, animated: true)
