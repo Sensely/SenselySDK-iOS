@@ -123,11 +123,11 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     }
     
     // MARK: Sensely delegate
-    func senselyViewController(_ senselyViewController: BaseSenselyAvatarController, didReceiveFinalJSON finalString: String) {
+    func senselyViewController(_ senselyViewController: BaseSenselyViewController, didReceiveFinalJSON finalString: String) {
         print("Assessments results: \(finalString)")
     }
     
-    func senselyViewController(_ senselyViewController: BaseSenselyAvatarController, didReceiveError error: NSError) {
+    func senselyViewController(_ senselyViewController: BaseSenselyViewController, didReceiveError error: NSError) {
         let errorType:Configuration.SenselyError
         errorType = Configuration.SenselyError(rawValue: error.code)!
         
@@ -146,11 +146,11 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         showError(message: errorText)
     }
     
-    func voiceRecognitionWillStart(_ senselyViewController: BaseSenselyAvatarController) {
+    func voiceRecognitionWillStart(_ senselyViewController: BaseSenselyViewController) {
         //self.audioPlayer?.pause()
     }
     
-    func voiceRecognitionDidEnd(_ senselyViewController: BaseSenselyAvatarController) {
+    func voiceRecognitionDidEnd(_ senselyViewController: BaseSenselyViewController) {
         //self.audioPlayer?.play()
     }
     
