@@ -150,7 +150,7 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         //self.audioPlayer?.pause()
     }
     
-    func voiceRecognitionDidEnded(_ senselyViewController: BaseSenselyAvatarController) {
+    func voiceRecognitionDidEnd(_ senselyViewController: BaseSenselyAvatarController) {
         //self.audioPlayer?.play()
     }
     
