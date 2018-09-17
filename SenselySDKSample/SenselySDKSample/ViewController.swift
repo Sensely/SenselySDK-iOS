@@ -1,10 +1,28 @@
-//
-//  ViewController.swift
-//  Sensely
-//
-//  Created by Gennadiy Ryabkin on 5/18/18.
-//  Copyright © 2018 Sense.ly. All rights reserved.
-//
+/***
+ ViewController.swift
+ Sensely
+ 
+ After successfull authorization with Sensely conversation platform
+ the next step is to fetch conversations from the backend server. This logic is
+ described in loadConversation() function.
+ 
+ Conversational logic and data is stored in an instatnce of StateMachine:
+ DataManager.sharedInstance.stateMachine
+ 
+ After picking an assessment name you have two options to initialize a conversation:
+ 1. Using
+          AvatarController (half screen will be occupied by avatar and another half by options to choose)
+       or ChatController (avatar is in small circle can be muted, options to answer and questions are represented in a chat manner)
+ 2. You need to set `assessmentIndex` property to apply settings specific to a picked conversation which are set in *Sensely Dashboard*:
+    avatar voice, avatar look, voice input language
+    These properties can be overriden by using class `Configuration`
+    New values have to be set after setting `assessmentIndex`
+ 3. Translation language of dialogs and widgets is controlled by default by language set in mobile settings
+    Conversation translation is handled in *Sensely Dashboard* and controlled by conversation designer
+ 
+ Created by Gennadiy Ryabkin on 5/18/18.
+ Copyright © 2018 Sense.ly. All rights reserved.
+ */
 
 import UIKit
 import AVFoundation
