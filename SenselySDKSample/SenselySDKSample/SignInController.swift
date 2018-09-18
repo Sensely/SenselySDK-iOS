@@ -11,7 +11,7 @@ import AVFoundation
 open class SignInController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var continueBtn: UIButton!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UITextView!
     @IBOutlet weak var homeTextField: MFTextField!
     @IBOutlet weak var passwordTextField: MFTextField!
     @IBOutlet weak var incorrectView: UIView!
