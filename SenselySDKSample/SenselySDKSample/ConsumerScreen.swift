@@ -11,7 +11,7 @@ import Chat_sensely
 
 class ConsumerScreen: UIViewController {
     
-    var avatarModule: AvatarModule?
+    var avatarModule: BaseSenselyViewController?
     var senselyCallback: CallbackData?
     
     override func viewDidLoad() {

@@ -29,17 +29,17 @@ import AVFoundation
 import Chat_sensely
 
 enum ConsumerCallbacks: String {
-    // `NAS Provider search` assessment
+    // `Provider search` assessment
     case providerSearch   = "ProviderSearch"
     
-    // `NAS Appointment booking` assessment
+    // `Appointment booking` assessment
     case emisSchedAppts   = "GetSchedEMISAppts"
     case emisCancelAppts  = "CancelEMISAppt"
     case emisAvailAppts   = "GetEMISAvailAppts"
     case emisConfirmAppts = "ConfirmEMISAppt"
     case emisMakeAppts    = "MakeEMISAppt"
     
-    // `NAS Appointment booking` assessment
+    // `Appointment booking` assessment
     case getPrescList       = "GetPrescList"
     case confirmPrescRefill = "ConfirmPrescRefill"
     case resultsPrescRefill = "ResultsPrescRefill"
@@ -52,7 +52,7 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var assessmentsTable: UITableView!
     
-    var avatarController:AvatarModule?
+    var avatarController:ChatViewController?
     var assessmentsData: [String] = []
     var audioPlayer: AVAudioPlayer?
     
@@ -172,6 +172,10 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         //self.audioPlayer?.play()
     }
     
+    func didClickPreviousButton() {
+        //
+    }
+    
     func showError(message: String) {
         
         let alert = UIAlertController(title: "An Error occured".localized, message: message, preferredStyle: .alert)
@@ -200,14 +204,14 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        avatarController = AvatarModule(nibName: "AvatarViewController",
-                                        bundle: Bundle(for: AvatarModule.self))
+        avatarController = ChatViewController(nibName: "ChatViewController",
+                                        bundle: Bundle(for: ChatViewController.self))
         
         guard let avatar = avatarController else {
             fatalError("Avatar not loaded")
         }
         
-        avatar.googleSpeechDefaultTimeout = 4
+        //avatar.googleSpeechDefaultTimeout = 4
         
         avatar.delegate = self
         avatar.assessmentIndex = Int(Configuration.assessmentID)!
