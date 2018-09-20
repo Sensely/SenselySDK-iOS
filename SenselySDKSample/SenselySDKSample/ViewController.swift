@@ -172,8 +172,8 @@ class ViewController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         //self.audioPlayer?.play()
     }
     
-    func didClickPreviousButton() {
-        //
+    func previosStateButtonClicked(_ senselyViewController: BaseSenselyViewController) {
+        print("previosStateButtonClicked")
     }
     
     func showError(message: String) {
