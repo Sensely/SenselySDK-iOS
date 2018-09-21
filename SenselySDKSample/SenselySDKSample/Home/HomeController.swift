@@ -45,14 +45,13 @@ enum ConsumerCallbacks: String {
     case resultsPrescRefill = "ResultsPrescRefill"
 }
 
-class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCallbacks, UICollectionViewDataSource, UICollectionViewDelegate {
+class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCallbacks {
     
     @IBOutlet weak var restartButton: UIImageView!
     @IBOutlet weak var restartView: UIView!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
     var avatarController:ChatViewController?
-    var assessmentsData: [String] = []
     var audioPlayer: AVAudioPlayer?
     
     static let footerHeight: CGFloat = 70.0
@@ -66,7 +65,6 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         // Do any additional setup after loading the view, typically from a nib.
         
         Configuration.callbacks = self
-        loadConversation()
         /*
         let path = Bundle.main.path(forResource: "n99.mp3", ofType:nil)!
         let url = URL(fileURLWithPath: path)
@@ -95,14 +93,16 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
+        registerAllCellAndFootersForCV(collectionView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        collectionView.backgroundColor  = UIColor.clear
-        collectionView.delegate = self
-        collectionView.alwaysBounceVertical = false
+        self.collectionView.backgroundColor  = UIColor.clear
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.alwaysBounceVertical = false
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.headerReferenceSize = CGSize(width: 0, height: 0)
@@ -112,22 +112,18 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         layout.itemSize = CGSize(width: view.frame.width - 0, height: 60)
         DispatchQueue.main.async {
             self.collectionView.collectionViewLayout = layout
+            self.loadConversation()
         }
     }
     
     fileprivate func registerAllCellAndFootersForCV(_ collectionView: UICollectionView) {
         let cellNib = UINib(nibName: "HomeCell",
                             bundle: Bundle.main)
-        let headerNib = UINib(nibName: "SShooseResponseHeader",
-                              bundle: Bundle.main)
         let footerNib = UINib(nibName: "HomeFooter",
                               bundle: Bundle.main)
         
         collectionView.register(cellNib,
                                 forCellWithReuseIdentifier: "HomeCell")
-        collectionView.register(headerNib,
-                                forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
-                                withReuseIdentifier: "SShooseResponseHeader")
         collectionView.register(footerNib,
                                 forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
                                 withReuseIdentifier: "HomeFooter")
@@ -144,9 +140,13 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
             switch result {
             case .success( _):
                 print("\(DataManager.sharedInstance.stateMachine.getAssessmentNames())")
-                self.assessmentsData = NSMutableArray.init(array: DataManager.sharedInstance.stateMachine.getAssessmentNames()) as! [String]
-                self.collectionView.reloadData()
                 self.restartView.isHidden = true
+                
+                self.collectionView.isHidden = false
+                self.arrayWithImages = DataManager.sharedInstance.stateMachine.getAssessmentIcons()
+                self.arrayWithNames = DataManager.sharedInstance.stateMachine.getAssessmentNames()
+                DataManager.sharedInstance.areAssessmentsReady = true
+                self.collectionView.reloadData()
                 
             case .failure( _):
                 DataManager.sharedInstance.logOut(completion: {
@@ -200,6 +200,10 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         }
         
         showError(message: errorText)
+    }
+    
+    func previosStateButtonClicked(_ senselyViewController: BaseSenselyViewController) {
+        //
     }
     
     func voiceRecognitionWillStart(_ senselyViewController: BaseSenselyViewController) {
@@ -271,83 +275,5 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
             }
         }
         return ""
-    }
-    
-    //MARK - Home controller
-    
-    fileprivate func configureHomeCell(homeCell: HomeCell, indexPath: IndexPath) -> HomeCell {
-        let anyHorizontalSizeClass = UITraitCollection(horizontalSizeClass: UIUserInterfaceSizeClass.unspecified)
-        homeCell.selectedBackgroundView = UIImageView.init(image: UIImage.init(named: "bg_home_cell",
-                                                                               in: Bundle.main,
-                                                                               compatibleWith: anyHorizontalSizeClass))
-        homeCell.mainLabel.text = arrayWithNames[indexPath.row]
-        homeCell.mainLabel.textColor = UIColor.darkGray
-        if arrayWithImages[indexPath.row].count != 0 {
-            homeCell.mainImageView.downloadImage(url: URL.init(string: arrayWithImages[indexPath.row])!)
-        }
-        homeCell.detailImageView.image = UIImage.init(named: "chevron")
-        homeCell.defaultImageString = arrayWithImages[indexPath.row] as NSString
-        homeCell.blueColor = Configuration.blueColor
-        homeCell.mainImageView.tintColor = Configuration.blueColor
-        return homeCell
-    }
-    
-    // MARK: - UICollectionViewDataSource
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        numberOfItemsInSection section: Int) -> Int {
-        return arrayWithNames.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let homeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell",
-                                                                for: indexPath) as? HomeCell else {
-                                                                    fatalError("Unable to dequeue HomeCell")
-        }
-        return configureHomeCell(homeCell: homeCell, indexPath: indexPath)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        viewForSupplementaryElementOfKind kind: String,
-                        at indexPath: IndexPath) -> UICollectionReusableView {
-        guard kind == UICollectionElementKindSectionFooter else {
-            fatalError("Only supporting custom footer views")
-        }
-        return collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-                                                               withReuseIdentifier: "HomeFooter",
-                                                               for: indexPath)
-    }
-    
-    // MARK: - UICollectionViewDelegate
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout: UICollectionViewLayout,
-                        heightForHeaderInSection section: Int) -> Float {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            
-            Configuration.assessmentID = String(indexPath.row)
-            
-            self.avatarController = ChatViewController(nibName: "ChatViewController",
-                                            bundle: Bundle(for: ChatViewController.self))
-            
-            guard let avatar = self.avatarController else {
-                fatalError("Avatar not loaded")
-            }
-            
-            //self.avatarController.googleSpeechDefaultTimeout = 4
-            
-            self.avatarController?.delegate = self
-            self.avatarController?.assessmentIndex = Int(Configuration.assessmentID)!
-            self.navigationController?.pushViewController(self.avatarController!, animated: true)
-            
-            collectionView.deselectItem(at: indexPath, animated: true)
-            collectionView.reloadItems(at: [indexPath])
-        }
     }
 }

@@ -63,15 +63,22 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            if self.arrayWithNames[indexPath.item] == AssessmentName.serviceFinder {
-                self.performSegue(withIdentifier: HomeControllerSegue.serviceFinder.rawValue, sender: self)
-            } else {
-                
-                let viewController = AvatarModule(nibName: "AvatarViewController",
-                                                  bundle: Bundle(for: AvatarModule.self))
-                viewController.assessmentIndex = indexPath.item
-                self.navigationController?.pushViewController(viewController, animated: true)
+            
+            Configuration.assessmentID = String(indexPath.row)
+            
+            self.avatarController = ChatViewController(nibName: "ChatViewController",
+                                                       bundle: Bundle(for: ChatViewController.self))
+            
+            guard let avatar = self.avatarController else {
+                fatalError("Avatar not loaded")
             }
+            
+            //self.avatarController.googleSpeechDefaultTimeout = 4
+            
+            self.avatarController?.delegate = self
+            self.avatarController?.assessmentIndex = Int(Configuration.assessmentID)!
+            self.navigationController?.pushViewController(avatar, animated: true)
+            
             collectionView.deselectItem(at: indexPath, animated: true)
             collectionView.reloadItems(at: [indexPath])
         }

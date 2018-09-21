@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6zE-vE-9ac">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6zE-vE-9ac">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,7 +43,7 @@
                                         <rect key="frame" x="169" y="283" width="37" height="37"/>
                                     </activityIndicatorView>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Restart" translatesAutoresizingMaskIntoConstraints="NO" id="LAK-kK-BZB" userLabel="Restart">
-                                        <rect key="frame" x="137" y="251" width="100" height="100"/>
+                                        <rect key="frame" x="137.5" y="251.5" width="100" height="100"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="TFx-o2-agO"/>
@@ -75,7 +75,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="SKr-8T-GOa"/>
                     <connections>
-                        <outlet property="collectionView" destination="G2I-vy-3Ye" id="akY-Tz-MB4"/>
+                        <outlet property="collectionView" destination="G2I-vy-3Ye" id="ar8-OU-Mkj"/>
                         <outlet property="loading" destination="O2C-lA-Dlt" id="sXr-pP-11G"/>
                         <outlet property="restartButton" destination="LAK-kK-BZB" id="p74-IV-rkY"/>
                         <outlet property="restartView" destination="DxN-3n-oHC" id="acO-rR-PeI"/>
@@ -208,7 +208,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please try again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeO-xl-Nbl">
-                                        <rect key="frame" x="110.5" y="30" width="121" height="21"/>
+                                        <rect key="frame" x="111" y="30" width="121" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
