@@ -51,7 +51,8 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     @IBOutlet weak var restartView: UIView!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
-    var avatarController:ChatViewController?
+    var avatarController:AvatarModule?
+    var assessmentsData: [String] = []
     var audioPlayer: AVAudioPlayer?
     
     static let footerHeight: CGFloat = 70.0
@@ -86,7 +87,7 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     
     override func viewWillDisappear(_ animated: Bool) {
         
-        if self.isMovingFromParentViewController {
+        if self.isMovingFromParent {
             DataManager.sharedInstance.logOut(completion: {})
         }
     }
@@ -221,6 +222,39 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
             NSLog("The \"OK\" alert occurred.")
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: Table view delegate/data source
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return assessmentsData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "assessmentRow")
+        cell?.textLabel?.text = assessmentsData[indexPath.row]
+        
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        Configuration.assessmentID = String(indexPath.row)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        avatarController = AvatarModule(nibName: "AvatarViewController",
+                                        bundle: Bundle(for: AvatarModule.self))
+        
+        guard let avatar = avatarController else {
+            fatalError("Avatar not loaded")
+        }
+        
+        //avatar.googleSpeechDefaultTimeout = 4
+        
+        avatar.delegate = self
+        avatar.assessmentIndex = Int(Configuration.assessmentID)!
+        navigationController?.pushViewController(avatar, animated: true)
     }
     
     func openConsumerScreen(callback: CallbackData) {
