@@ -10,86 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HomeController-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="HomeController" customClass="HomeController" customModule="SenselySDKTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="9R0-iv-GwO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G2I-vy-3Ye" customClass="SenselyCollectionView" customModule="SenselySDKTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ejr-xs-qOI">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="dwy-0A-aSp"/>
-                                    </userDefinedRuntimeAttributes>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="ConversationsCollectionView"/>
-                                </userDefinedRuntimeAttributes>
-                            </collectionView>
-                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DxN-3n-oHC" userLabel="Restart">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="O2C-lA-Dlt">
-                                        <rect key="frame" x="169" y="283" width="37" height="37"/>
-                                    </activityIndicatorView>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Restart" translatesAutoresizingMaskIntoConstraints="NO" id="LAK-kK-BZB" userLabel="Restart">
-                                        <rect key="frame" x="137.5" y="251.5" width="100" height="100"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="TFx-o2-agO"/>
-                                            <constraint firstAttribute="height" constant="100" id="b7T-0e-2SF"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="uFw-X9-xJd" appends="YES" id="dWd-nC-SCy"/>
-                                        </connections>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="LAK-kK-BZB" firstAttribute="centerX" secondItem="O2C-lA-Dlt" secondAttribute="centerX" id="AFw-1s-Bsv"/>
-                                    <constraint firstItem="LAK-kK-BZB" firstAttribute="centerY" secondItem="DxN-3n-oHC" secondAttribute="centerY" id="VrQ-BD-5Cu"/>
-                                    <constraint firstItem="LAK-kK-BZB" firstAttribute="centerY" secondItem="O2C-lA-Dlt" secondAttribute="centerY" id="WIU-ab-zsx"/>
-                                    <constraint firstItem="LAK-kK-BZB" firstAttribute="centerX" secondItem="DxN-3n-oHC" secondAttribute="centerX" id="mIJ-Cb-yTW"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DxN-3n-oHC" secondAttribute="trailing" id="4eM-G2-q0r"/>
-                            <constraint firstItem="DxN-3n-oHC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I82-kZ-l2h"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DxN-3n-oHC" secondAttribute="bottom" id="MhJ-gx-Ez2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="DxN-3n-oHC" secondAttribute="top" id="vsT-Iv-CHG"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="SKr-8T-GOa"/>
-                    <connections>
-                        <outlet property="collectionView" destination="G2I-vy-3Ye" id="ar8-OU-Mkj"/>
-                        <outlet property="loading" destination="O2C-lA-Dlt" id="sXr-pP-11G"/>
-                        <outlet property="restartButton" destination="LAK-kK-BZB" id="p74-IV-rkY"/>
-                        <outlet property="restartView" destination="DxN-3n-oHC" id="acO-rR-PeI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="uFw-X9-xJd">
-                    <connections>
-                        <action selector="onRestart:" destination="BYZ-38-t0r" id="05D-N3-h5P"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="1925.5999999999999" y="105.69715142428787"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="dSI-bA-X5X">
             <objects>
@@ -311,15 +231,80 @@
                         <outlet property="homeTextField" destination="4HY-t3-mdh" id="aGi-3E-Iam"/>
                         <outlet property="incorrectView" destination="JZf-Is-ykr" id="BTc-Ld-k0I"/>
                         <outlet property="passwordTextField" destination="jPI-Oh-dbA" id="ea2-Wy-EHf"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="showAssessmentsList" id="OZQ-2e-jmz"/>
+                        <segue destination="5SB-VJ-lBt" kind="show" identifier="showAssessmentsList" id="jjR-5Y-fOf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtn-pC-p3M" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976" y="106"/>
+            <point key="canvasLocation" x="729" y="106"/>
+        </scene>
+        <!--Home Controller-->
+        <scene sceneID="IBf-Ln-hfp">
+            <objects>
+                <viewController storyboardIdentifier="HomeController" automaticallyAdjustsScrollViewInsets="NO" id="5SB-VJ-lBt" customClass="HomeController" customModule="SenselySDKTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2cF-pP-X4J"/>
+                        <viewControllerLayoutGuide type="bottom" id="biJ-Jo-tV4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Tb4-gd-6AZ" id="jP0-qe-xYG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView clipsSubviews="YES" contentMode="scaleAspectFit" restorationIdentifier="ANd-xY-eC4" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMZ-uJ-cte" customClass="SenselyAvatarView" customModule="Chat_sensely">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="271.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="ANd-xY-eC4"/>
+                                </userDefinedRuntimeAttributes>
+                            </webView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="9R0-iv-GwO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="stI-dX-a25" customClass="SenselyCollectionView" customModule="HealthCheck" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VTh-cr-xa1">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="dwy-0A-aSp"/>
+                                    </userDefinedRuntimeAttributes>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="ConversationsCollectionView"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5SB-VJ-lBt" id="bkN-QO-hVb"/>
+                                    <outlet property="delegate" destination="5SB-VJ-lBt" id="QTl-5p-Fbx"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WMZ-uJ-cte" firstAttribute="height" secondItem="eFF-OQ-5V0" secondAttribute="height" multiplier="0.45" id="0hM-RV-YD4"/>
+                            <constraint firstItem="stI-dX-a25" firstAttribute="leading" secondItem="jP0-qe-xYG" secondAttribute="leading" id="2UC-5v-OEM"/>
+                            <constraint firstItem="stI-dX-a25" firstAttribute="bottom" secondItem="jP0-qe-xYG" secondAttribute="bottom" id="B57-a1-8Np"/>
+                            <constraint firstItem="WMZ-uJ-cte" firstAttribute="leading" secondItem="jP0-qe-xYG" secondAttribute="leading" id="EyO-V2-tj1"/>
+                            <constraint firstAttribute="trailing" secondItem="stI-dX-a25" secondAttribute="trailing" id="ICL-em-2TQ"/>
+                            <constraint firstItem="stI-dX-a25" firstAttribute="top" secondItem="eFF-OQ-5V0" secondAttribute="top" id="Lyf-5f-yFb"/>
+                            <constraint firstItem="WMZ-uJ-cte" firstAttribute="top" secondItem="eFF-OQ-5V0" secondAttribute="top" id="VY0-4D-7wX"/>
+                            <constraint firstItem="eFF-OQ-5V0" firstAttribute="top" secondItem="stI-dX-a25" secondAttribute="top" id="VgL-o5-esv"/>
+                            <constraint firstAttribute="trailing" secondItem="WMZ-uJ-cte" secondAttribute="trailing" id="t8i-rQ-FZG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eFF-OQ-5V0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Tb4-gd-6AZ"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="Go8-GH-wpB"/>
+                    <connections>
+                        <outlet property="collectionView" destination="stI-dX-a25" id="Mqc-RP-1kw"/>
+                        <outlet property="senselyAvatarView" destination="WMZ-uJ-cte" id="aan-fA-pND"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9fi-0Z-kl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444" y="106"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Restart" width="225" height="225"/>
-    </resources>
 </document>

@@ -8,7 +8,21 @@ import Foundation
 import Chat_sensely.Swift
 
 extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
-    fileprivate func configureHomeCell(homeCell: HomeCell, indexPath: IndexPath) -> HomeCell {
+    
+    func registerAllCellAndFootersForCV(_ collectionView: UICollectionView) {
+        let cellNib = UINib(nibName: "HomeCell",
+                            bundle: Bundle.main)
+        let footerNib = UINib(nibName: "HomeFooter",
+                              bundle: Bundle.main)
+        
+        collectionView.register(cellNib,
+                                forCellWithReuseIdentifier: "HomeCell")
+        collectionView.register(footerNib,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                                withReuseIdentifier: "HomeFooter")
+    }
+    
+    func configureHomeCell(homeCell: HomeCell, indexPath: IndexPath) -> HomeCell {
         let anyHorizontalSizeClass = UITraitCollection(horizontalSizeClass: UIUserInterfaceSizeClass.unspecified)
         homeCell.selectedBackgroundView = UIImageView.init(image: UIImage.init(named: "bg_home_cell",
                                                                                in: Bundle.main,
@@ -23,6 +37,35 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
         homeCell.blueColor = Configuration.blueColor
         homeCell.mainImageView.tintColor = Configuration.blueColor
         return homeCell
+    }
+    
+    func installCollectionView() {
+        
+        var scrollInsetTop: CGFloat
+        
+        if senselyAvatarView.contentSize.height == 0 {
+            scrollInsetTop = senselyAvatarView.frame.height
+        } else {
+            scrollInsetTop = senselyAvatarView.contentSize.height
+        }
+        
+        collectionView.backgroundColor  = UIColor.clear
+        collectionView.contentInset = UIEdgeInsets(top: scrollInsetTop,
+                                                   left: 0,
+                                                   bottom: 0,
+                                                   right: 0)
+        collectionView.delegate = self
+        collectionView.alwaysBounceVertical = false
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.headerReferenceSize = CGSize(width: 0, height: 0)
+        layout.footerReferenceSize = CGSize(width: view.frame.width, height: HomeController.footerHeight)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        layout.itemSize = CGSize(width: view.frame.width - 0, height: 60)
+        DispatchQueue.main.async {
+            self.collectionView.collectionViewLayout = layout
+        }
     }
     
     // MARK: - UICollectionViewDataSource
@@ -44,7 +87,7 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {
-        guard kind == UICollectionElementKindSectionFooter else {
+        guard kind == UICollectionView.elementKindSectionFooter else {
             fatalError("Only supporting custom footer views")
         }
         return collectionView.dequeueReusableSupplementaryView(ofKind: kind,
@@ -66,17 +109,18 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
             
             Configuration.assessmentID = String(indexPath.row)
             
-            self.avatarController = ChatViewController(nibName: "ChatViewController",
-                                                       bundle: Bundle(for: ChatViewController.self))
+            self.avatarController = AvatarModule(nibName: "AvatarViewController",
+                                                       bundle: Bundle(for: AvatarModule.self))
             
             guard let avatar = self.avatarController else {
                 fatalError("Avatar not loaded")
             }
             
-            //self.avatarController.googleSpeechDefaultTimeout = 4
+            self.avatarController?.googleSpeechDefaultTimeout = 4
             
             self.avatarController?.delegate = self
             self.avatarController?.assessmentIndex = Int(Configuration.assessmentID)!
+            
             self.navigationController?.pushViewController(avatar, animated: true)
             
             collectionView.deselectItem(at: indexPath, animated: true)

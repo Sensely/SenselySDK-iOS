@@ -21,9 +21,9 @@ public protocol HapticEmitting {
 /// - selection: Used for calling `UISelectionFeedbackGenerator().selectionChanged()`.
 /// - notification: Used for calling `UINotificationFeedbackGenerator().notificationOccurred(notificationType)`.
 public enum HapticFeedback: HapticEmitting {
-    case impact(UIImpactFeedbackStyle)
+    case impact(UIImpactFeedbackGenerator.FeedbackStyle)
     case selection
-    case notification(UINotificationFeedbackType)
+    case notification(UINotificationFeedbackGenerator.FeedbackType)
 }
 
 extension HapticFeedback {
@@ -183,7 +183,7 @@ public struct FeedbackEffect {
     public static func play(sound: SoundEmitting?, feedback: HapticEmitting? = nil) {
         if let sound = sound {
             do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient, with: .mixWithOthers)
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .default, options: .mixWithOthers)
                 sound.makeSound()
             } catch {
                 print("Couldn't play a sound")

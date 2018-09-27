@@ -47,19 +47,20 @@ enum ConsumerCallbacks: String {
 
 class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCallbacks {
     
-    @IBOutlet weak var restartButton: UIImageView!
-    @IBOutlet weak var restartView: UIView!
-    @IBOutlet weak var loading: UIActivityIndicatorView!
-    
     var avatarController:AvatarModule?
     var assessmentsData: [String] = []
     var audioPlayer: AVAudioPlayer?
     
+    fileprivate var opaqueView = UIView()
     static let footerHeight: CGFloat = 70.0
     var arrayWithImages = [String]()
     var arrayWithNames = [String]()
     fileprivate var dataSourceList = NSMutableArray()
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var senselyAvatarView: SenselyAvatarView!
+    fileprivate var loadingIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +84,9 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         } catch {
             // couldn't load file :(
         }*/
+        
+        title = "Home".localized
+        loadConversation()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -90,6 +94,7 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         if self.isMovingFromParent {
             DataManager.sharedInstance.logOut(completion: {})
         }
+        senselyAvatarView.pauseAvatar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,78 +105,39 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.collectionView.backgroundColor  = UIColor.clear
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.alwaysBounceVertical = false
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.headerReferenceSize = CGSize(width: 0, height: 0)
-        layout.footerReferenceSize = CGSize(width: view.frame.width, height: HomeController.footerHeight)
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
-        layout.itemSize = CGSize(width: view.frame.width - 0, height: 60)
-        DispatchQueue.main.async {
-            self.collectionView.collectionViewLayout = layout
-            self.loadConversation()
-        }
-    }
-    
-    fileprivate func registerAllCellAndFootersForCV(_ collectionView: UICollectionView) {
-        let cellNib = UINib(nibName: "HomeCell",
-                            bundle: Bundle.main)
-        let footerNib = UINib(nibName: "HomeFooter",
-                              bundle: Bundle.main)
-        
-        collectionView.register(cellNib,
-                                forCellWithReuseIdentifier: "HomeCell")
-        collectionView.register(footerNib,
-                                forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
-                                withReuseIdentifier: "HomeFooter")
+        senselyAvatarView.setScale(setScale: 0.6)
+        senselyAvatarView.addBehavior()
+        senselyAvatarView.senselyAvatarViewDelegate = self
+        senselyAvatarView.resumeAvatar()
+        installCollectionView()
     }
     
     /// MARK: Load conversation
     
     func loadConversation() {
         
-        restartView.isHidden = false
-        showLoadingView()
-        
         DataManager.sharedInstance.gettingAssessments { (result) in
             switch result {
-            case .success( _):
-                print("\(DataManager.sharedInstance.stateMachine.getAssessmentNames())")
-                self.restartView.isHidden = true
-                
+            case .success:
+                self.loadingIndicator.stopAnimating()
                 self.collectionView.isHidden = false
                 self.arrayWithImages = DataManager.sharedInstance.stateMachine.getAssessmentIcons()
                 self.arrayWithNames = DataManager.sharedInstance.stateMachine.getAssessmentNames()
                 DataManager.sharedInstance.areAssessmentsReady = true
                 self.collectionView.reloadData()
+            case .failure(let error):
                 
-            case .failure( _):
-                DataManager.sharedInstance.logOut(completion: {
-                    self.dismiss(animated: true, completion: {})
+                let message = "An error occurred while retrieving data from the server, please try again".localized
+                print(error.dictionaryBody.description)
+                self.showRetryCancelModalAlert(title: "Server error".localized,
+                                               message: message,
+                                               retryBlock: {
+                                                self.loadConversation()
+                }, cancelBlock: {
+                    self.abortLoading()
                 })
-                break
             }
         }
-    }
-    
-    @IBAction func onRestart(_ sender: Any) {
-        loadConversation()
-    }
-    
-    func hideLoadingView() {
-        restartButton.isHidden = false
-        loading.stopAnimating()
-        loading.isHidden = true
-    }
-    
-    func showLoadingView() {
-        restartButton.isHidden = true
-        loading.startAnimating()
-        loading.isHidden = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -180,6 +146,7 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     }
     
     // MARK: Sensely delegate
+    
     func senselyViewController(_ senselyViewController: BaseSenselyViewController, didReceiveFinalJSON finalString: String) {
         print("Assessments results: \(finalString)")
     }
@@ -215,47 +182,7 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         //self.audioPlayer?.play()
     }
     
-    func showError(message: String) {
-        
-        let alert = UIAlertController(title: "An Error occured".localized, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK".localized, comment: "Default action"), style: .default, handler: { _ in
-            NSLog("The \"OK\" alert occurred.")
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    // MARK: Table view delegate/data source
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return assessmentsData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "assessmentRow")
-        cell?.textLabel?.text = assessmentsData[indexPath.row]
-        
-        return cell!
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        Configuration.assessmentID = String(indexPath.row)
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        avatarController = AvatarModule(nibName: "AvatarViewController",
-                                        bundle: Bundle(for: AvatarModule.self))
-        
-        guard let avatar = avatarController else {
-            fatalError("Avatar not loaded")
-        }
-        
-        //avatar.googleSpeechDefaultTimeout = 4
-        
-        avatar.delegate = self
-        avatar.assessmentIndex = Int(Configuration.assessmentID)!
-        navigationController?.pushViewController(avatar, animated: true)
-    }
+    //MARK - Invoke callback state
     
     func openConsumerScreen(callback: CallbackData) {
         
@@ -309,5 +236,34 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
             }
         }
         return ""
+    }
+    
+    // MARK: - Helpers
+    
+    func abortLoading() {
+        DataManager.sharedInstance.logOut(completion: {
+            self.navigationController?.popViewController(animated: true)
+        })
+    }
+    
+    func hideLoadingScreen() {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       options: .curveEaseOut,
+                       animations: {
+                        self.opaqueView.alpha = 0
+                        self.installCollectionView()
+        }, completion: { _ in
+            self.opaqueView.isHidden = true
+        })
+    }
+    
+    func showError(message: String) {
+        
+        let alert = UIAlertController(title: "An Error occured".localized, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK".localized, comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occurred.")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
