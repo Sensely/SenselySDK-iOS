@@ -153,6 +153,10 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         print("Assessments results: \(finalString)")
     }
     
+    func didReceive(_ senselyViewController: BaseSenselyViewController, diagnosisData data: DiagnosisData) {
+        print("Diagnosis data: urgency -> \(data.urgency), asset_id -> \(data.assetID)")
+    }
+    
     func senselyViewController(_ senselyViewController: BaseSenselyViewController, didReceiveError error: NSError) {
         let errorType:Configuration.SenselyError
         errorType = Configuration.SenselyError(rawValue: error.code)!
@@ -183,6 +187,7 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     func voiceRecognitionDidEnd(_ senselyViewController: BaseSenselyViewController) {
         //self.audioPlayer?.play()
     }
+    
     
     //MARK - Invoke callback state
     

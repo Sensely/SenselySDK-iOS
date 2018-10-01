@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2.29</string>
+	<string>1.2.32</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -30,11 +30,13 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>To capture user input</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>To capture user&apos;s images of prescriptions or any other medical information</string>
+	<string>To capture user's images of prescriptions or any other medical information</string>
 	<key>SenselyConfiguration</key>
 	<dict>
 		<key>alignButtonsBottom</key>
 		<true/>
+		<key>avatarName</key>
+		<string>Molly</string>
 		<key>hidePreviousStateButton</key>
 		<false/>
 		<key>sdkLanguage</key>
@@ -43,8 +45,6 @@
 		<string>google</string>
 		<key>voiceRecLangID</key>
 		<string>en-US</string>
-		<key>avatarName</key>
-		<string>Molly</string>
 	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
