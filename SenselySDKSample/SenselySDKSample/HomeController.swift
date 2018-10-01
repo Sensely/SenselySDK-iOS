@@ -61,6 +61,8 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     @IBOutlet weak var senselyAvatarView: SenselyAvatarView!
     fileprivate var loadingIndicator = UIActivityIndicatorView(style: .whiteLarge)
     
+    public var customTagCellNib = UINib(nibName: "CustomTagButton",
+                                  bundle: Bundle(for: HomeController.self))
     
     override func viewDidLoad() {
         super.viewDidLoad()

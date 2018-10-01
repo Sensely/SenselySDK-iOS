@@ -112,10 +112,12 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
             self.avatarController = AvatarModule(nibName: "AvatarViewController",
                                                        bundle: Bundle(for: AvatarModule.self))
             
+            
             guard let avatar = self.avatarController else {
                 fatalError("Avatar not loaded")
             }
             
+            // self.avatarController?.tagCellNib = self.customTagCellNib // Custom Tag cell button
             self.avatarController?.googleSpeechDefaultTimeout = 4
             
             self.avatarController?.delegate = self
