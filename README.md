@@ -29,7 +29,6 @@ In addition to symptom checker interactions, partners are able to build other co
 - iOS 10.0+
 - Xcode 8.0+ [xcode]
 - [Cocoapods][cocoapods] version 1.0 or later
-- Physicial iOS device
 
 Follow these directions, with Xcode 8 or higher installed on your mac:
 * Clone [the GitHub repo](https://github.com/Sensely/SDK-iOS).
@@ -37,8 +36,7 @@ Follow these directions, with Xcode 8 or higher installed on your mac:
 * Run pod install to download and build CocoaPods dependencies.
     * To install CocoaPods, see [here](https://cocoapods.org/#install).
 * Open the Xcode project by running open SenselySDKSample.xcworkspace from the terminal
-* Build and run the project on a real iOS device (simulator not supported yet)
-    * Verify you are logged in to Xcode with your Apple Developer Account and have a valid provisioning profile attached for your iOS device.
+* Build and run the project on iOS simulator or real device
 * When the app loads, provide your username and password to see available conversations - you can request a demo license to get access.
 
 <a href="https://tinyurl.com/senselysdk"><img src="https://cl.ly/ca1a088639e6/request-access-button.png" alt="Request access" width="157"></a>
