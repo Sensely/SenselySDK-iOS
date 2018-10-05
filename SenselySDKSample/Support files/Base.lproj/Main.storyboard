@@ -257,7 +257,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="ANd-xY-eC4"/>
                                 </userDefinedRuntimeAttributes>
                             </webView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="9R0-iv-GwO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="stI-dX-a25" customClass="SenselyCollectionView" customModule="SenselySDKTest" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="9R0-iv-GwO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="stI-dX-a25" customClass="SenselyCollectionView" customModule="Chat_sensely">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VTh-cr-xa1">

@@ -117,8 +117,8 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
                 fatalError("Avatar not loaded")
             }
             
-            // self.avatarController?.tagCellNib = self.customTagCellNib // Custom Tag cell button
-            self.avatarController?.googleSpeechDefaultTimeout = 4
+            self.avatarController?.tagCellNib = self.customTagCellNib // Custom Tag cell button
+            self.avatarController?.endOfSpeechTimeout = 4
             
             self.avatarController?.delegate = self
             self.avatarController?.assessmentIndex = Int(Configuration.assessmentID)!
