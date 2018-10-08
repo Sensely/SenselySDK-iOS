@@ -6,5 +6,5 @@ target 'SenselySDKSample' do
   use_frameworks!
 
   # Pods for SenselySDKSample
-  pod 'SenselySDK', '~>1.2.32'
+  pod 'SenselySDK', '~>1.2.33'
 end
