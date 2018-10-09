@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Configuration Class Reference</title>
+    <title>SenselyUser Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/Configuration" class="dashAnchor"></a>
-    <a title="Configuration Class Reference"></a>
+    <a name="//apple_ref/swift/Class/SenselyUser" class="dashAnchor"></a>
+    <a title="SenselyUser Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Chat_sensely Docs</a> (77% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Chat_sensely Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Configuration Class Reference
+        SenselyUser Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -86,35 +86,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Configuration</h1>
+            <h1>SenselyUser</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">Configuration</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SenselyUser</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>Class responsible for handling all of the SDK Configuration options. Provides
-default values for Application-wide configuration properties. All properties are 
-configurable via the respective setter method</p>
-
-<p>You can provide configuration in your .plist file by adding the SenselyConfiguration key:</p>
-<pre class="highlight swift"><code><span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="kt">SenselyConfiguration</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">dict</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">sdkLanguage</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="n">ja</span><span class="o">&lt;/</span><span class="n">string</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">dict</span><span class="o">&gt;</span>
-</code></pre>
-<div class="aside aside-requires">
-    <p class="aside-title">Requires</p>
-    <p>To apply changes you must call <code><a href="../Classes/Configuration.html#/s:12Chat_sensely13ConfigurationC17readFromInfoPlistyyFZ">Configuration.readFromInfoPlist()</a></code> before pushing Avatar onto the screen</p>
-
-</div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <p>AvatarModule</p>
-
-</div>
+            <p>This class holds user data required for creating account or authorization</p>
 
           </section>
           <section class="section task-group-section">
@@ -123,9 +102,9 @@ configurable via the respective setter method</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Chat_sensely@objc(cs)Configuration(cpy)callbacks"></a>
-                    <a name="//apple_ref/swift/Variable/callbacks" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)Configuration(cpy)callbacks">callbacks</a>
+                    <a name="/s:12Chat_sensely11SenselyUserC8usernameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/username" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11SenselyUserC8usernameSSSgvp">username</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -133,15 +112,14 @@ configurable via the respective setter method</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Implement this delegate to receive messages from a conversation flow</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">callbacks</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SenselyCallbacks.html">SenselyCallbacks</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -151,9 +129,9 @@ configurable via the respective setter method</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Chat_sensely@objc(cs)Configuration(cpy)sdkLanguage"></a>
-                    <a name="//apple_ref/swift/Variable/sdkLanguage" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)Configuration(cpy)sdkLanguage">sdkLanguage</a>
+                    <a name="/s:12Chat_sensely11SenselyUserC8passwordSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/password" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11SenselyUserC8passwordSSSgvp">password</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -161,19 +139,14 @@ configurable via the respective setter method</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Translation language of all non-system messages</p>
-
-<ul>
-<li>Available languages are: <code>ar</code>, <code>en</code>, <code>ja</code>, <code>zh-Hant</code>, <code>zh-Hans</code></li>
-</ul>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">sdkLanguage</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -183,9 +156,9 @@ configurable via the respective setter method</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Chat_sensely@objc(cs)Configuration(cpy)hidePreviousStateButton"></a>
-                    <a name="//apple_ref/swift/Variable/hidePreviousStateButton" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)Configuration(cpy)hidePreviousStateButton">hidePreviousStateButton</a>
+                    <a name="/s:12Chat_sensely11SenselyUserC5emailSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/email" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11SenselyUserC5emailSSSgvp">email</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -193,15 +166,14 @@ configurable via the respective setter method</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Hides previous state button on bottom bar in <code>voice</code> mode</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">hidePreviousStateButton</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -211,9 +183,9 @@ configurable via the respective setter method</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Chat_sensely@objc(cs)Configuration(cpy)isAnonymousMode"></a>
-                    <a name="//apple_ref/swift/Variable/isAnonymousMode" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)Configuration(cpy)isAnonymousMode">isAnonymousMode</a>
+                    <a name="/s:12Chat_sensely11SenselyUserC9firstnameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/firstname" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11SenselyUserC9firstnameSSSgvp">firstname</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -221,17 +193,14 @@ configurable via the respective setter method</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Prevents results from being sent to <em>Sensely</em> server if set to <code>true</code></p>
-
-<p>In addition in a composed result <em>json</em> all results will be stored with an empty <code>value</code></p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">isAnonymousMode</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">firstname</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -241,9 +210,9 @@ configurable via the respective setter method</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Chat_sensely@objc(cs)Configuration(cpy)defaultAvatarName"></a>
-                    <a name="//apple_ref/swift/Variable/defaultAvatarName" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)Configuration(cpy)defaultAvatarName">defaultAvatarName</a>
+                    <a name="/s:12Chat_sensely11SenselyUserC8lastnameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastname" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11SenselyUserC8lastnameSSSgvp">lastname</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -251,20 +220,14 @@ configurable via the respective setter method</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Type of avatar is read from user settings received from <em>Sensely</em>&lsquo;s server. You can override
-the avatar by using this property</p>
-
-<p><strong>Some of available names:</strong></p>
-
-<p><em>Molly</em>, <em>DrAnthonyChang</em>, <em>Kathy</em>, <em>Molly</em>, <em>Xu</em>, <em>Olivia</em>, <em>Jason</em>, <em>Yoko</em></p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">defaultAvatarName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lastname</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -274,9 +237,9 @@ the avatar by using this property</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Chat_sensely@objc(cs)Configuration(cpy)withProgressPercentage"></a>
-                    <a name="//apple_ref/swift/Variable/withProgressPercentage" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)Configuration(cpy)withProgressPercentage">withProgressPercentage</a>
+                    <a name="/s:12Chat_sensely11SenselyUserC5phoneSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/phone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11SenselyUserC5phoneSSSgvp">phone</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -284,15 +247,14 @@ the avatar by using this property</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Set this param to <code>true</code> if you want to see a numerical <q>percentage complete</q> figure below the blue progress bar</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">withProgressPercentage</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">phone</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -302,9 +264,9 @@ the avatar by using this property</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Chat_sensely@objc(cs)Configuration(cpy)alignButtonsBottom"></a>
-                    <a name="//apple_ref/swift/Variable/alignButtonsBottom" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)Configuration(cpy)alignButtonsBottom">alignButtonsBottom</a>
+                    <a name="/s:12Chat_sensely11SenselyUserC11claimnumberSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/claimnumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11SenselyUserC11claimnumberSSSgvp">claimnumber</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -312,15 +274,14 @@ the avatar by using this property</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>If <code>true</code> buttons are aligned to bottom, only first row is visible</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">alignButtonsBottom</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">claimnumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -330,9 +291,9 @@ the avatar by using this property</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Chat_sensely@objc(cs)Configuration(cpy)tokenTncTimestamp"></a>
-                    <a name="//apple_ref/swift/Variable/tokenTncTimestamp" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)Configuration(cpy)tokenTncTimestamp">tokenTncTimestamp</a>
+                    <a name="/s:12Chat_sensely11SenselyUserC3dobSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/dob" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11SenselyUserC3dobSSSgvp">dob</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -340,17 +301,14 @@ the avatar by using this property</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>When sending a token for new account creation,
-set tokenTncTimestamp to be true if a terms-and-conditions timestamp needs to be sent.
-Defaults to false.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">tokenTncTimestamp</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dob</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -360,9 +318,9 @@ Defaults to false.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Chat_sensely@objc(cs)Configuration(cpy)tokenPrivacyGP"></a>
-                    <a name="//apple_ref/swift/Variable/tokenPrivacyGP" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)Configuration(cpy)tokenPrivacyGP">tokenPrivacyGP</a>
+                    <a name="/s:12Chat_sensely11SenselyUserC8postcodeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/postcode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11SenselyUserC8postcodeSSSgvp">postcode</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -370,17 +328,14 @@ Defaults to false.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>When sending a token for new account creation,
-some customers require a privacy_gp field to be passed. This field shall not be passed in the token if it == nil.
-Defaults to nil.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">tokenPrivacyGP</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">postcode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -390,9 +345,9 @@ Defaults to nil.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Chat_sensely@objc(cs)Configuration(cpy)tokenSupplementalData"></a>
-                    <a name="//apple_ref/swift/Variable/tokenSupplementalData" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)Configuration(cpy)tokenSupplementalData">tokenSupplementalData</a>
+                    <a name="/s:12Chat_sensely11SenselyUserC6genderSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/gender" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11SenselyUserC6genderSSSgvp">gender</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -400,18 +355,14 @@ Defaults to nil.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>When sending a token for new account creation,
-some customers require a supplemental_data field to be passed. This field shall not be passed in the token if
-it == nil.
-Defaults to nil.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">tokenSupplementalData</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">gender</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -421,9 +372,9 @@ Defaults to nil.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12Chat_sensely13ConfigurationC17readFromInfoPlistyyFZ"></a>
-                    <a name="//apple_ref/swift/Method/readFromInfoPlist()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12Chat_sensely13ConfigurationC17readFromInfoPlistyyFZ">readFromInfoPlist()</a>
+                    <a name="/c:@M@Chat_sensely@objc(cs)SenselyUser(im)init"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)SenselyUser(im)init">init()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -431,20 +382,41 @@ Defaults to nil.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This function should be called in your <code>AppDelegate</code>&lsquo;s
-<code>didFinishLaunching</code> callback if you want to parse configuration options</p>
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    make this call before applying an <code>assessmentIndex</code> in <code>AvatarController</code>
-
-</div>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">readFromInfoPlist</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12Chat_sensely11SenselyUserC8deviceidSSvp"></a>
+                    <a name="//apple_ref/swift/Property/deviceid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely11SenselyUserC8deviceidSSvp">deviceid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves the unique identifier associated with this install of the app on the specific device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">deviceid</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
