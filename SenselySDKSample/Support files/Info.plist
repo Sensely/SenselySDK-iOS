@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2.33</string>
+	<string>1.2.36</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -39,8 +39,6 @@
 		<string>Molly</string>
 		<key>hidePreviousStateButton</key>
 		<false/>
-		<key>sdkLanguage</key>
-		<string>en</string>
 		<key>senselySpeechRecognitionType</key>
 		<string>google</string>
 		<key>voiceRecLangID</key>

@@ -17,6 +17,9 @@ extension HomeController: SenselyAvatarViewDelegate {
         switch result {
         case .success:
             hideLoadingScreen()
+            // senselyAvatarView.model.isVocal = true
+            // senselyAvatarView.say(textToSpeech: "Hello my name is Molly and I like you", andPrefetch: [])
+            
         case .failure:
             let message = "The avatar couldn't load. Try logging in again. Otherwise, contact support.".localized
             let controller = UIAlertController(title: "Avatar Problem".localized,

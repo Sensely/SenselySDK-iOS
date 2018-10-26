@@ -19,14 +19,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="323" height="52"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbS-m1-sOq" customClass="TagButton" customModule="Chat_sensely">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbS-m1-sOq" customClass="TagButton" customModule="Chat_sensely">
                         <rect key="frame" x="4" y="4" width="315" height="44"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="WaL-11-2ce"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
-                        <state key="normal" title="Button">
+                        <state key="normal" title="ButtonButtonButtonButtonButtonButtonButtonButtonButtonButtonButtonButtonButtonButton">
                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <userDefinedRuntimeAttributes>
@@ -54,6 +54,7 @@
             <connections>
                 <outlet property="button" destination="RbS-m1-sOq" id="3Sr-Xa-6m7"/>
             </connections>
+            <point key="canvasLocation" x="-540" y="127.736131934033"/>
         </collectionViewCell>
     </objects>
 </document>
