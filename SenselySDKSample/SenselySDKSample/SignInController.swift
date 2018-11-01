@@ -26,7 +26,11 @@ open class SignInController: UIViewController, UITextFieldDelegate {
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(tap)
         homeTextField.delegate = self as UITextFieldDelegate
+        homeTextField.returnKeyType = UIReturnKeyType.next
+        
         passwordTextField.delegate = self as UITextFieldDelegate
+        passwordTextField.returnKeyType = UIReturnKeyType.send
+        
         self.incorrectView.isHidden = true
         self.incorrectView.layer.borderWidth = 1.0
         self.incorrectView.layer.borderColor = UIColor.gray.cgColor
@@ -86,15 +90,21 @@ open class SignInController: UIViewController, UITextFieldDelegate {
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        if textField == homeTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            textField.resignFirstResponder()
+            continueTapped()
+        }
+        
         return true
     }
     
     // MARK: - IBAction
     
-    @IBAction func continueTapped(_ sender: Any) {
+    @IBAction func continueTapped(_ sender: Any? = nil) {
         self.view.endEditing(true)
-        if homeTextField.text!.count > 1 {
+        if homeTextField.text!.count > 1 && passwordTextField.text!.count > 5 {
             
             self.resetSignInScreenViews()
             self.login()
