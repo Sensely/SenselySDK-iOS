@@ -26,7 +26,6 @@
 		193DFCA9219EC6C600DE2DF7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 193DFCA8219EC6C600DE2DF7 /* Podfile */; };
 		50A35DF56C3370475831CD10 /* Pods_SenselySDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 566271C031405C977A6E3A73 /* Pods_SenselySDKSample.framework */; };
 		5848C05620C5834F002EDAC8 /* ConsumerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */; };
-		5882A6E420AEACC10024B93E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5882A6E220AEACC10024B93E /* Main.storyboard */; };
 		588682912113B8E000032A99 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588682902113B8E000032A99 /* SignInController.swift */; };
 		58A8DD9F20C7F0F700142A61 /* appointments_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 58A8DD9E20C7F0F700142A61 /* appointments_data.json */; };
 /* End PBXBuildFile section */
@@ -52,7 +51,6 @@
 		566271C031405C977A6E3A73 /* Pods_SenselySDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SenselySDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerScreen.swift; sourceTree = "<group>"; };
 		5882A6DB20AEACC10024B93E /* SenselySDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SenselySDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5882A6E320AEACC10024B93E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5882A6EA20AEACC30024B93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		588682902113B8E000032A99 /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		58A8DD9E20C7F0F700142A61 /* appointments_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appointments_data.json; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				588682902113B8E000032A99 /* SignInController.swift */,
 				193DFC84219EC68A00DE2DF7 /* CustomTagButton.swift */,
 				5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */,
-				5882A6E220AEACC10024B93E /* Main.storyboard */,
 				5882A6EA20AEACC30024B93E /* Info.plist */,
 			);
 			path = SenselySDKSample;
@@ -237,7 +234,6 @@
 				193DFC96219EC68B00DE2DF7 /* HomeCell.xib in Resources */,
 				193DFCA6219EC6AF00DE2DF7 /* n99.mp3 in Resources */,
 				193DFCA3219EC6AF00DE2DF7 /* LaunchScreen.storyboard in Resources */,
-				5882A6E420AEACC10024B93E /* Main.storyboard in Resources */,
 				193DFCA5219EC6AF00DE2DF7 /* Assets.xcassets in Resources */,
 				193DFCA2219EC6AF00DE2DF7 /* CustomTagButton.xib in Resources */,
 				193DFCA9219EC6C600DE2DF7 /* Podfile in Resources */,
@@ -330,14 +326,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				193DFC9E219EC6AE00DE2DF7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5882A6E220AEACC10024B93E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5882A6E320AEACC10024B93E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -473,7 +461,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sensely.SenselySDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Support Files/Sensely-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -495,7 +482,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.senselysdk.CarevoiceSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Support Files/Sensely-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
