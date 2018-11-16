@@ -461,6 +461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.senselysdk.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Support Files/Sensely-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -482,6 +483,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.senselysdk.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Support Files/Sensely-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
