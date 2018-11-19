@@ -118,10 +118,11 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
             
             //self.avatarController?.tagCellNib = self.customTagCellNib // Custom Tag cell button
             //self.avatarController?.tagCellSize = CGSize(width: 150, height: 50)
-            self.avatarController?.endOfSpeechTimeout = 2.5
+            self.avatarController?.endOfSpeechTimeoutControls = 2.5
             
             self.avatarController?.delegate = self
             self.avatarController?.assessmentIndex = Int(Configuration.assessmentID)!
+            Configuration.readFromInfoPlist()
             
             self.navigationController?.pushViewController(avatar, animated: true)
             

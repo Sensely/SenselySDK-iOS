@@ -107,7 +107,6 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        senselyAvatarView.setScale(setScale: 0.6)
         senselyAvatarView.addBehavior()
         senselyAvatarView.senselyAvatarViewDelegate = self
         senselyAvatarView.resumeAvatar()
