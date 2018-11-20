@@ -122,7 +122,7 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
             
             self.avatarController?.delegate = self
             self.avatarController?.assessmentIndex = Int(Configuration.assessmentID)!
-            Configuration.readFromInfoPlist()
+            //Configuration.readFromInfoPlist()
             
             self.navigationController?.pushViewController(avatar, animated: true)
             
