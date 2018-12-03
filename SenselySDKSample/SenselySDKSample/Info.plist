@@ -30,23 +30,15 @@
 	<key>SenselyConfiguration</key>
 	<dict>
 		<key>avatarEngineID</key>
-		<string>4</string>
+		<string>3</string>
 		<key>avatarLangID</key>
-		<string>10</string>
+		<string>1</string>
 		<key>avatarName</key>
 		<string>Olivia</string>
 		<key>avatarVoiceID</key>
 		<string>3</string>
-		<key>isAnonymousMode</key>
-		<false/>
-		<key>password</key>
-		<string></string>
-		<key>sdkLanguage</key>
-		<string>zh-Hans</string>
-		<key>username</key>
-		<string></string>
 		<key>voiceRecLangID</key>
-		<string>cmn-Hans-HK</string>
+		<string>en-US</string>
 	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

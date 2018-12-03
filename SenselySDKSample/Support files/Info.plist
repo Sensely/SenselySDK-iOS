@@ -33,18 +33,10 @@
 	<string>To capture user's images of prescriptions or any other medical information</string>
 	<key>SenselyConfiguration</key>
 	<dict>
-		<key>alignButtonsBottom</key>
-		<true/>
 		<key>avatarName</key>
 		<string>Molly</string>
-		<key>hidePreviousStateButton</key>
-		<false/>
-		<key>isAnonymousMode</key>
-		<string>YES</string>
-		<key>sdkLanguage</key>
-		<string>ja</string>
 		<key>voiceRecLangID</key>
-		<string>ja-JP</string>
+		<string>en-US</string>
 	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
