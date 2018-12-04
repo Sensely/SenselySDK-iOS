@@ -106,7 +106,7 @@ open class SignInController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         if homeTextField.text!.count > 1 && passwordTextField.text!.count > 5 {
             
-            self.resetSignInScreenViews()
+            self.signInViewsLoadingState()
             self.login()
         }
     }
