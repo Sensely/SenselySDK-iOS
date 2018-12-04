@@ -109,8 +109,8 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
             
             Configuration.assessmentID = String(indexPath.row)
             
-            self.avatarController = AvatarModule(nibName: "AvatarViewController",
-                                                       bundle: Bundle(for: AvatarModule.self))
+            self.avatarController = ChatViewController(nibName: "ChatViewController",
+                                                       bundle: Bundle(for: ChatViewController.self))
             
             guard let avatar = self.avatarController else {
                 fatalError("Avatar not loaded")
