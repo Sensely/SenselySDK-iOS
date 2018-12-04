@@ -241,7 +241,7 @@
         <!--Home Controller-->
         <scene sceneID="IBf-Ln-hfp">
             <objects>
-                <viewController storyboardIdentifier="HomeController" automaticallyAdjustsScrollViewInsets="NO" id="5SB-VJ-lBt" customClass="HomeController" customModule="SenselySDK_TestFlight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeController" id="5SB-VJ-lBt" customClass="HomeController" customModule="SenselySDK_TestFlight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2cF-pP-X4J"/>
                         <viewControllerLayoutGuide type="bottom" id="biJ-Jo-tV4"/>
@@ -251,8 +251,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView clipsSubviews="YES" contentMode="scaleAspectFit" restorationIdentifier="ANd-xY-eC4" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMZ-uJ-cte" customClass="SenselyAvatarView" customModule="Chat_sensely">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WMZ-uJ-cte" secondAttribute="height" multiplier="4:3" id="rDn-pu-Hwm"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="ANd-xY-eC4"/>
                                 </userDefinedRuntimeAttributes>
@@ -281,7 +284,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WMZ-uJ-cte" firstAttribute="height" secondItem="eFF-OQ-5V0" secondAttribute="height" multiplier="0.45" id="0hM-RV-YD4"/>
                             <constraint firstItem="stI-dX-a25" firstAttribute="leading" secondItem="jP0-qe-xYG" secondAttribute="leading" id="2UC-5v-OEM"/>
                             <constraint firstItem="stI-dX-a25" firstAttribute="bottom" secondItem="jP0-qe-xYG" secondAttribute="bottom" id="B57-a1-8Np"/>
                             <constraint firstItem="WMZ-uJ-cte" firstAttribute="leading" secondItem="jP0-qe-xYG" secondAttribute="leading" id="EyO-V2-tj1"/>

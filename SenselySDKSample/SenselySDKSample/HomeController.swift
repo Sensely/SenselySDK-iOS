@@ -108,6 +108,9 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         super.viewDidAppear(animated)
         
         senselyAvatarView.addBehavior()
+        senselyAvatarView.setScale(setScale: 0.5)
+        senselyAvatarView.avatarPercentTop = -9
+        senselyAvatarView.setCanvasScale(scaleX: 1.25, y: 1.25)
         senselyAvatarView.senselyAvatarViewDelegate = self
         senselyAvatarView.resumeAvatar()
         installCollectionView()
