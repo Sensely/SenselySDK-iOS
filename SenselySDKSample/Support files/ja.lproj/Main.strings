@@ -1,0 +1,27 @@
+
+/* Class = "UITextField"; placeholder = "Email or Username"; ObjectID = "4HY-t3-mdh"; */
+"4HY-t3-mdh.placeholder" = "メールアドレスまたはユーザ名";
+
+/* Class = "UIButton"; normalTitle = "Get back to Sensely"; ObjectID = "CVL-i7-ckk"; */
+"CVL-i7-ckk.normalTitle" = "センセーリーに戻る";
+
+/* Class = "UIViewController"; title = "Consumer SDK screen"; ObjectID = "KEc-kq-b1v"; */
+"KEc-kq-b1v.title" = "コンシューマーSDK画面";
+
+/* Class = "UILabel"; text = "Consumer SDK screen"; ObjectID = "ZJh-h6-Jt3"; */
+"ZJh-h6-Jt3.text" = "コンシューマーSDK画面";
+
+/* Class = "UITextView"; text = "Use your Sensely credentials to login. Go to www.sensely.com to request access."; ObjectID = "bOF-nv-Nxg"; */
+"bOF-nv-Nxg.text" = "あなたのSensely認証情報を使ってログインしてください。 www.sensely.comにアクセスしてアクセスをリクエストしてください。";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "dzr-VS-AbR"; */
+"dzr-VS-AbR.normalTitle" = "サインイン";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "jPI-Oh-dbA"; */
+"jPI-Oh-dbA.placeholder" = "パスワード";
+
+/* Class = "UILabel"; text = "Please try again"; ObjectID = "jeO-xl-Nbl"; */
+"jeO-xl-Nbl.text" = "もう一度お試しください";
+
+/* Class = "UILabel"; text = "The Username or Password is incorrect\n"; ObjectID = "jpr-Ua-IPM"; */
+"jpr-Ua-IPM.text" = "ユーザー名またはパスワードが正しくありません";

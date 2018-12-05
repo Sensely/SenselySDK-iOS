@@ -37,6 +37,8 @@ open class SignInController: UIViewController, UITextFieldDelegate {
         homeTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         self.navigationItem.title = "Sign In".localized
+        
+        self.descriptionLabel.text = self.descriptionLabel.text.localized
     }
     
     override open func didReceiveMemoryWarning() {
