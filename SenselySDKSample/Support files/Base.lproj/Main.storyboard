@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzr-VS-AbR" customClass="TagButton" customModule="Chat_sensely">
-                                <rect key="frame" x="23" y="352" width="328" height="50"/>
+                                <rect key="frame" x="23" y="376" width="328" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xBh-zV-WWQ"/>
@@ -117,7 +117,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZf-Is-ykr">
-                                <rect key="frame" x="16" y="271" width="343" height="59"/>
+                                <rect key="frame" x="16" y="295" width="343" height="59"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="jpr-Ua-IPM">
                                         <rect key="frame" x="21.5" y="8" width="300" height="21"/>
@@ -150,17 +150,17 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Use your Sensely credentials to login. Go to www.sensely.com to request access." translatesAutoresizingMaskIntoConstraints="NO" id="bOF-nv-Nxg" userLabel="Description Label">
-                                <rect key="frame" x="20" y="30" width="335" height="56"/>
+                                <rect key="frame" x="20" y="30" width="335" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="NwC-M1-Rzl"/>
+                                    <constraint firstAttribute="height" constant="80" id="NwC-M1-Rzl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or Username" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4HY-t3-mdh" customClass="MFTextField">
-                                <rect key="frame" x="23" y="111" width="328" height="60"/>
+                                <rect key="frame" x="23" y="135" width="328" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Ssd-sq-s9L"/>
                                 </constraints>
@@ -182,7 +182,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPI-Oh-dbA" customClass="MFTextField">
-                                <rect key="frame" x="23" y="179" width="328" height="60"/>
+                                <rect key="frame" x="23" y="203" width="328" height="60"/>
                                 <color key="textColor" red="0.3422979712" green="0.39760923390000003" blue="0.46281796689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>

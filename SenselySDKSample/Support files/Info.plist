@@ -37,6 +37,8 @@
 	<dict>
 		<key>avatarName</key>
 		<string>Molly</string>
+		<key>senselySpeechRecognitionType</key>
+		<string>nuance</string>
 		<key>voiceRecLangID</key>
 		<string>en-US</string>
 	</dict>

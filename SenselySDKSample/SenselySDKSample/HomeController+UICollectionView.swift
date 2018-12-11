@@ -109,8 +109,8 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
             
             Configuration.assessmentID = String(indexPath.row)
             
-            self.avatarController = ChatViewController(nibName: "ChatViewController",
-                                                       bundle: Bundle(for: ChatViewController.self))
+            self.avatarController = AvatarModule(nibName: "AvatarViewController",
+                                                       bundle: Bundle(for: AvatarModule.self))
             
             guard let avatar = self.avatarController else {
                 fatalError("Avatar not loaded")
@@ -118,7 +118,7 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
             
             //self.avatarController?.tagCellNib = self.customTagCellNib // Custom Tag cell button
             //self.avatarController?.tagCellSize = CGSize(width: 150, height: 50)
-            self.avatarController?.endOfSpeechTimeoutControls = 2.5
+            self.avatarController?.endOfSpeechTimeoutControls = 0
             
             self.avatarController?.delegate = self
             self.avatarController?.assessmentIndex = Int(Configuration.assessmentID)!

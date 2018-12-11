@@ -47,7 +47,7 @@ enum ConsumerCallbacks: String {
 
 class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCallbacks {
     
-    var avatarController:ChatViewController?
+    var avatarController:AvatarModule?
     var assessmentsData: [String] = []
     var audioPlayer: AVAudioPlayer?
     

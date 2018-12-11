@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Chat_sensely.Swift
+import Chat_sensely
 
 extension HomeController: SenselyAvatarViewDelegate {
     
