@@ -107,13 +107,13 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        senselyAvatarView.addBehavior()
-        senselyAvatarView.setScale(setScale: 0.5)
-        senselyAvatarView.avatarPercentTop = -9
-        senselyAvatarView.setCanvasScale(scaleX: 1.25, y: 1.25)
-        senselyAvatarView.senselyAvatarViewDelegate = self
-        senselyAvatarView.resumeAvatar()
-        installCollectionView()
+        self.senselyAvatarView.addBehavior()
+        self.senselyAvatarView.setScale(setScale: 0.5)
+        self.senselyAvatarView.avatarPercentTop = -9
+        self.senselyAvatarView.setCanvasScale(scaleX: 1.25, y: 1.25)
+        self.senselyAvatarView.senselyAvatarViewDelegate = self
+        self.senselyAvatarView.resumeAvatar()
+        self.installCollectionView()
     }
     
     /// MARK: Load conversation
@@ -127,7 +127,6 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
                 self.collectionView.isHidden = false
                 self.arrayWithImages = DataManager.sharedInstance.stateMachine.getAssessmentIcons()
                 self.arrayWithNames = DataManager.sharedInstance.stateMachine.getAssessmentNames()
-                DataManager.sharedInstance.areAssessmentsReady = true
                 self.collectionView.reloadData()
             case .failure(let error):
                 
@@ -159,23 +158,16 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         print("Diagnosis data: urgency -> \(data.urgency), asset_id -> \(data.assetID)")
     }
     
-    func senselyViewController(_ senselyViewController: BaseSenselyViewController, didReceiveError error: NSError) {
-        let errorType:Configuration.SenselyError
-        errorType = Configuration.SenselyError(rawValue: error.code)!
+    func senselyViewController(_ senselyViewController: BaseSenselyViewController, didReceiveError error: SenselyError) {
         
-        var errorText = "Unrecognized error"
-        switch errorType {
-        case .invalidAssesment:
-            errorText = "Assesment is invalid"
-        case .networkError:
-            errorText = "There was a network error"
-        case .avatarDoesntLoad:
-            errorText = "Avatar doesn't load"
-        case .closedByUser:
-            errorText = "Assesment was closed by the user"
+        switch error {
+        case .initializationFailure, .conversationFailure:
+            let alertController = UIAlertController(title: "The assessment wasn't initialized".localized,
+                                                    message: "Data is corrupted or not full".localized,
+                                                    preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(dismissWithHandler: nil))
+            self.present(alertController, animated: true, completion: nil)
         }
-        
-        showError(message: errorText)
     }
     
     func previosStateButtonClicked(_ senselyViewController: BaseSenselyViewController) {

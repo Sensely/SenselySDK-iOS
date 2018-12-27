@@ -109,22 +109,13 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
             
             Configuration.assessmentID = String(indexPath.row)
             
-            self.avatarController = ChatViewController(nibName: "ChatViewController",
-                                                       bundle: Bundle(for: ChatViewController.self))
+            var chatOptions = ChatOptions()
+            chatOptions.procedureID = DataManager.sharedInstance.stateMachine.getProcedureId(at: Int32(indexPath.item))
             
-            guard let avatar = self.avatarController else {
-                fatalError("Avatar not loaded")
-            }
-            
-            //self.avatarController?.tagCellNib = self.customTagCellNib // Custom Tag cell button
-            //self.avatarController?.tagCellSize = CGSize(width: 150, height: 50)
-            self.avatarController?.endOfSpeechTimeoutControls = 0
-            
-            self.avatarController?.delegate = self
-            self.avatarController?.assessmentIndex = Int(Configuration.assessmentID)!
-            //Configuration.readFromInfoPlist()
-            
-            self.navigationController?.pushViewController(avatar, animated: true)
+            let viewController = ChatViewController(nibName: "ChatViewController",
+                                                    bundle: Bundle(for: ChatViewController.self))
+            viewController.startChat(withOptions: chatOptions, inNavigationController: self.navigationController)
+            viewController.delegate = self
             
             collectionView.deselectItem(at: indexPath, animated: true)
             collectionView.reloadItems(at: [indexPath])
