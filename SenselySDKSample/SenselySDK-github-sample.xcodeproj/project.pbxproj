@@ -24,7 +24,6 @@
 		193DFCA6219EC6AF00DE2DF7 /* n99.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 193DFCA0219EC6AE00DE2DF7 /* n99.mp3 */; };
 		193DFCA7219EC6AF00DE2DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DFCA1219EC6AF00DE2DF7 /* AppDelegate.swift */; };
 		193DFCA9219EC6C600DE2DF7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 193DFCA8219EC6C600DE2DF7 /* Podfile */; };
-		50A35DF56C3370475831CD10 /* Pods_SenselySDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 566271C031405C977A6E3A73 /* Pods_SenselySDKSample.framework */; };
 		5848C05620C5834F002EDAC8 /* ConsumerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */; };
 		588682912113B8E000032A99 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588682902113B8E000032A99 /* SignInController.swift */; };
 		58A8DD9F20C7F0F700142A61 /* appointments_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 58A8DD9E20C7F0F700142A61 /* appointments_data.json */; };
@@ -48,15 +47,12 @@
 		193DFCA0219EC6AE00DE2DF7 /* n99.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = n99.mp3; sourceTree = "<group>"; };
 		193DFCA1219EC6AF00DE2DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		193DFCA8219EC6C600DE2DF7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
-		566271C031405C977A6E3A73 /* Pods_SenselySDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SenselySDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerScreen.swift; sourceTree = "<group>"; };
 		5882A6DB20AEACC10024B93E /* SenselySDK-github-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SenselySDK-github-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5882A6EA20AEACC30024B93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		588682902113B8E000032A99 /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		58A8DD9E20C7F0F700142A61 /* appointments_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appointments_data.json; sourceTree = "<group>"; };
 		58CCAA7A2113E18D00C50D7F /* Sensely-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sensely-Bridging-Header.h"; sourceTree = "<group>"; };
-		9B9E3FBDDC378B5AB1C8FAA6 /* Pods-SenselySDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SenselySDKSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample.release.xcconfig"; sourceTree = "<group>"; };
-		E41E3D3E134EC50657EB3597 /* Pods-SenselySDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SenselySDKSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50A35DF56C3370475831CD10 /* Pods_SenselySDKSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +102,6 @@
 				58A8DD9D20C7F00D00142A61 /* Support files */,
 				5882A6DD20AEACC10024B93E /* SenselySDKSample */,
 				5882A6DC20AEACC10024B93E /* Products */,
-				93353F34BFBA6F82793624D8 /* Pods */,
-				A1D4E660C515B879FC37A438 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,23 +143,6 @@
 			path = "Support files";
 			sourceTree = "<group>";
 		};
-		93353F34BFBA6F82793624D8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E41E3D3E134EC50657EB3597 /* Pods-SenselySDKSample.debug.xcconfig */,
-				9B9E3FBDDC378B5AB1C8FAA6 /* Pods-SenselySDKSample.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A1D4E660C515B879FC37A438 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				566271C031405C977A6E3A73 /* Pods_SenselySDKSample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,11 +150,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5882A6ED20AEACC30024B93E /* Build configuration list for PBXNativeTarget "SenselySDK-github-sample" */;
 			buildPhases = (
-				7D44612268FA99DB13560463 /* [CP] Check Pods Manifest.lock */,
 				5882A6D720AEACC10024B93E /* Sources */,
 				5882A6D820AEACC10024B93E /* Frameworks */,
 				5882A6D920AEACC10024B93E /* Resources */,
-				B797CE0A65C35D4D30D6D944 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,7 +170,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Sense.ly;
 				TargetAttributes = {
 					5882A6DA20AEACC10024B93E = {
@@ -241,57 +215,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7D44612268FA99DB13560463 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SenselySDKSample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B797CE0A65C35D4D30D6D944 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/EasyAnimation/EasyAnimation.framework",
-				"${BUILT_PRODUCTS_DIR}/KYNavigationProgress/KYNavigationProgress.framework",
-				"${BUILT_PRODUCTS_DIR}/MaterialTextField/MaterialTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${PODS_ROOT}/SenselySDK/Chat_sensely.framework",
-				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyAnimation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYNavigationProgress.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chat_sensely.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SenselySDKSample/Pods-SenselySDKSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5882A6D720AEACC10024B93E /* Sources */ = {
@@ -370,6 +293,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -380,6 +304,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -389,7 +314,6 @@
 		};
 		19B43CE121BAC01E00DEC6D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E41E3D3E134EC50657EB3597 /* Pods-SenselySDKSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -409,102 +333,24 @@
 			};
 			name = Debug;
 		};
-		5882A6EC20AEACC30024B93E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		5882A6EF20AEACC30024B93E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B9E3FBDDC378B5AB1C8FAA6 /* Pods-SenselySDKSample.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RXE7329A59;
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/SenselySDKSample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.senselysdk.sample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Support Files/Sensely-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		5882A6D620AEACC10024B93E /* Build configuration list for PBXProject "SenselySDK-github-sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5882A6EC20AEACC30024B93E /* Release */,
 				19B43CE021BAC01E00DEC6D2 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		5882A6ED20AEACC30024B93E /* Build configuration list for PBXNativeTarget "SenselySDK-github-sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5882A6EF20AEACC30024B93E /* Release */,
 				19B43CE121BAC01E00DEC6D2 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

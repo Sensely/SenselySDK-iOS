@@ -112,8 +112,8 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
             var chatOptions = ChatOptions()
             chatOptions.procedureID = DataManager.sharedInstance.stateMachine.getProcedureId(at: Int32(indexPath.item))
             
-            let viewController = ChatViewController(nibName: "ChatViewController",
-                                                    bundle: Bundle(for: ChatViewController.self))
+            let viewController = AvatarModule(nibName: "AvatarViewController",
+                                                    bundle: Bundle(for: AvatarModule.self))
             viewController.startChat(withOptions: chatOptions, inNavigationController: self.navigationController)
             viewController.delegate = self
             
