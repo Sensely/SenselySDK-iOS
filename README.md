@@ -53,3 +53,7 @@ The Sensely iOS SDK is released under the Sensely license. See the [LICENSE] fil
 [cocoapods]: https://cocoapods.org/
 [xcode]: https://developer.apple.com/xcode/
 [documentation page]: https://sensely.github.io/SDK-iOS/
+
+## Other platforms of the Sensely SDK
+* [Web](https://github.com/Sensely/SDK-Web/)
+* [Android](https://github.com/Sensely/SDK-Android)
