@@ -23,37 +23,9 @@
     },
     {
       "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
-      "line": 20,
-      "symbol": "ChatOptions.autoPop",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
-      "line": 47,
+      "line": 48,
       "symbol": "ChatOptions.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
-      "line": 59,
-      "symbol": "BaseSenselyViewController.options",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
-      "line": 63,
-      "symbol": "BaseSenselyViewController.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
-      "line": 68,
-      "symbol": "BaseSenselyViewController.dataManager",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
