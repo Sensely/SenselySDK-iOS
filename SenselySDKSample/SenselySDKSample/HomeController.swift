@@ -158,7 +158,7 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         print("Diagnosis data: urgency -> \(data.urgency), asset_id -> \(data.assetID)")
     }
     
-    func senselyViewController(_ senselyViewController: BaseSenselyViewController, didReceiveError error: SenselyError) {
+    func senselyViewController(_ senselyViewController: UIViewController, didReceiveError error: SenselyError) {
         
         switch error {
         case .initializationFailure, .conversationFailure:

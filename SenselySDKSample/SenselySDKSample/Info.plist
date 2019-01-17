@@ -37,6 +37,8 @@
 		<string>Olivia</string>
 		<key>avatarVoiceID</key>
 		<string>3</string>
+		<key>isAnonymousMode</key>
+		<true/>
 		<key>voiceRecLangID</key>
 		<string>en-US</string>
 	</dict>
