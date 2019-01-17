@@ -2,16 +2,44 @@
   "warnings": [
     {
       "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/AvatarController/AvatarController.swift",
-      "line": 53,
-      "symbol": "AvatarModule.dataManager",
+      "line": 52,
+      "symbol": "AvatarModule.autoPop",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/AvatarController/AvatarController.swift",
-      "line": 800,
+      "line": 53,
+      "symbol": "AvatarModule.tagCellSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/AvatarController/AvatarController.swift",
+      "line": 55,
+      "symbol": "AvatarModule.exclusiveRows",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/AvatarController/AvatarController.swift",
+      "line": 762,
       "symbol": "AvatarModule.changeTitleBar(withText:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/Models/DiagnosisData.swift",
+      "line": 15,
+      "symbol": "DiagnosisData.urgency",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/Models/DiagnosisData.swift",
+      "line": 16,
+      "symbol": "DiagnosisData.assetID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -93,9 +121,16 @@
     },
     {
       "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/Networking & Data requests/DataManager.swift",
-      "line": 39,
+      "line": 41,
       "symbol": "DataManager.sharedInstance",
       "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/Networking & Data requests/DataManager.swift",
+      "line": 368,
+      "symbol": "DataManager.spineMatchCheck(accountParams:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
