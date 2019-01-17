@@ -1,45 +1,80 @@
 {
   "warnings": [
     {
-      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/AvatarController/AvatarController.swift",
-      "line": 52,
-      "symbol": "AvatarModule.autoPop",
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
+      "line": 12,
+      "symbol": "SenselyError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
+      "line": 13,
+      "symbol": "SenselyError.conversationFailure(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
+      "line": 14,
+      "symbol": "SenselyError.initializationFailure(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
+      "line": 20,
+      "symbol": "ChatOptions.autoPop",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/AvatarController/AvatarController.swift",
-      "line": 53,
-      "symbol": "AvatarModule.tagCellSize",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/AvatarController/AvatarController.swift",
-      "line": 55,
-      "symbol": "AvatarModule.exclusiveRows",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/AvatarController/AvatarController.swift",
-      "line": 762,
-      "symbol": "AvatarModule.changeTitleBar(withText:)",
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
+      "line": 47,
+      "symbol": "ChatOptions.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/Models/DiagnosisData.swift",
-      "line": 15,
-      "symbol": "DiagnosisData.urgency",
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
+      "line": 59,
+      "symbol": "BaseSenselyViewController.options",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/Models/DiagnosisData.swift",
-      "line": 16,
-      "symbol": "DiagnosisData.assetID",
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
+      "line": 63,
+      "symbol": "BaseSenselyViewController.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/BaseSenselyChat/BaseSenselyViewController.swift",
+      "line": 68,
+      "symbol": "BaseSenselyViewController.dataManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/ChatController/ChatViewController.swift",
+      "line": 12,
+      "symbol": "AssesmentType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/ChatController/ChatViewController.swift",
+      "line": 13,
+      "symbol": "AssesmentType.selfCare",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zestu/AIR/Sensely/SenselySDK_iOS/ios_project/Chat_sensely/ChatController/ChatViewController.swift",
+      "line": 14,
+      "symbol": "AssesmentType.notSelfCare",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {

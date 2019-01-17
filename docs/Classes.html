@@ -14,7 +14,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Chat_sensely Docs</a> (67% documented)</p>
+        <p><a href="index.html">Chat_sensely Docs</a> (71% documented)</p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fsensely%2Egithub%2Eio%2FSDK%2DiOS%2Fdocsets%2FChat_sensely%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
@@ -32,10 +32,13 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/AvatarModule.html">AvatarModule</a>
+                <a href="Classes/BaseSenselyViewController.html">BaseSenselyViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CallbackData.html">CallbackData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ChatViewController.html">ChatViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Configuration.html">Configuration</a>
@@ -52,6 +55,12 @@
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/AssesmentType.html">AssesmentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SenselyError.html">SenselyError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/SenselyResult.html">SenselyResult</a>
               </li>
             </ul>
@@ -62,11 +71,17 @@
               <li class="nav-group-task">
                 <a href="Protocols/SenselyCallbacks.html">SenselyCallbacks</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SenselyViewControllerDelegate.html">SenselyViewControllerDelegate</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/ChatOptions.html">ChatOptions</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/DiagnosisData.html">DiagnosisData</a>
               </li>
@@ -98,9 +113,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Chat_sensely@objc(cs)AvatarModule"></a>
-                    <a name="//apple_ref/swift/Class/AvatarModule" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)AvatarModule">AvatarModule</a>
+                    <a name="/c:@M@Chat_sensely@objc(cs)BaseSenselyViewController"></a>
+                    <a name="//apple_ref/swift/Class/BaseSenselyViewController" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)BaseSenselyViewController">BaseSenselyViewController</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -108,34 +123,26 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Class for intializing controller with a conversation</p>
+                        <p>Basic options common for all Sensely controllers</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="Classes/ChatViewController.html">ChatViewController</a></code>
 
-<p>User athorization and conversations loading (assessments/checkins) should be completed
-before starting this controller</p>
+</div>
 <div class="aside aside-seealso">
     <p class="aside-title">Seealso</p>
     <code><a href="Classes/DataManager.html">DataManager</a></code>
 
 </div>
 
-                        <a href="Classes/AvatarModule.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/BaseSenselyViewController.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">AvatarModule</span><span class="p">:</span> <span class="kt">BaseSenselyViewController</span><span class="p">,</span>
-                      <span class="kt">UICollectionViewDataSource</span><span class="p">,</span>
-                      <span class="kt">UICollectionViewDelegate</span><span class="p">,</span>
-                      <span class="kt">UIScrollViewDelegate</span><span class="p">,</span>
-                      <span class="kt">SpeechManagerDelegate</span><span class="p">,</span>
-                      <span class="kt">SenselyAvatarViewDelegate</span><span class="p">,</span>
-                      <span class="kt">SelfCareContentDelegate</span><span class="p">,</span>
-                      <span class="kt">SelfCareControllerDelegate</span><span class="p">,</span>
-                      <span class="kt">TagCellLayoutDelegate</span><span class="p">,</span>
-                      <span class="kt">TagCollectionViewCellDelegate</span><span class="p">,</span>
-                      <span class="kt">SFSafariViewControllerDelegate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">BaseSenselyViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+                                         <span class="kt">SenselyConsumerActions</span></code></pre>
 
                         </div>
                       </div>
@@ -170,6 +177,78 @@ Initialized at reaching state <code>invokecallback</code></p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">CallbackData</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@Chat_sensely@objc(cs)ChatViewController"></a>
+                    <a name="//apple_ref/swift/Class/ChatViewController" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@Chat_sensely@objc(cs)ChatViewController">ChatViewController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Class for intializing controller with a conversation</p>
+
+<p>User athorization and conversations loading (assessments/checkins) should be completed
+before starting this controller
+You may start this controller <code><a href="Classes/BaseSenselyViewController.html#/s:12Chat_sensely25BaseSenselyViewControllerC05startA011withOptions012inNavigationF0yAA0aI0V_So012UINavigationF0CSgtF">BaseSenselyViewController.startChat(...)</a></code> specifying in which navigation controller to push chat
+Or by making a call <code><a href="Classes/DataManager.html#/s:12Chat_sensely11DataManagerC22getConversationDetails14conversationID10completionySS_yAA10JSONResultOctF">DataManager.getConversationDetails(...)</a></code> and pushing it manually</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="Classes/DataManager.html">DataManager</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="Classes/BaseSenselyViewController.html">BaseSenselyViewController</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="Structs/ChatOptions.html">ChatOptions</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="Protocols/SenselyViewControllerDelegate.html">SenselyViewControllerDelegate</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="Protocols/SenselyCallbacks.html">SenselyCallbacks</a></code>
+
+</div>
+
+                        <a href="Classes/ChatViewController.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ChatViewController</span><span class="p">:</span> <span class="kt"><a href="Classes/BaseSenselyViewController.html">BaseSenselyViewController</a></span><span class="p">,</span>
+                         <span class="kt">SenselyAvatarViewDelegate</span><span class="p">,</span>
+                         <span class="kt">SelfCareContentDelegate</span><span class="p">,</span>
+                         <span class="kt">SelfCareControllerDelegate</span><span class="p">,</span>
+                         <span class="kt">SFSafariViewControllerDelegate</span><span class="p">,</span>
+                         <span class="kt">ChatInputAccessoryViewDelegate</span><span class="p">,</span>
+                         <span class="kt">SpeechManagerDelegate</span><span class="p">,</span>
+                         <span class="kt">AvatarDecoratorDelegate</span><span class="p">,</span>
+                         <span class="kt">CalendarManagerDelegate</span><span class="p">,</span>
+                         <span class="kt">UIScrollViewDelegate</span></code></pre>
 
                         </div>
                       </div>

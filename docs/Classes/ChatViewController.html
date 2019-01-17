@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SenselyResult Enumeration Reference</title>
+    <title>ChatViewController Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/SenselyResult" class="dashAnchor"></a>
-    <a title="SenselyResult Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Class/ChatViewController" class="dashAnchor"></a>
+    <a title="ChatViewController Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Chat_sensely Docs</a> (71% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Chat_sensely Reference</a>
         <img id="carat" src="../img/carat.png" />
-        SenselyResult Enumeration Reference
+        ChatViewController Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -103,14 +103,54 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>SenselyResult</h1>
+            <h1>ChatViewController</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SenselyResult</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ChatViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/BaseSenselyViewController.html">BaseSenselyViewController</a></span><span class="p">,</span>
+                         <span class="kt">SenselyAvatarViewDelegate</span><span class="p">,</span>
+                         <span class="kt">SelfCareContentDelegate</span><span class="p">,</span>
+                         <span class="kt">SelfCareControllerDelegate</span><span class="p">,</span>
+                         <span class="kt">SFSafariViewControllerDelegate</span><span class="p">,</span>
+                         <span class="kt">ChatInputAccessoryViewDelegate</span><span class="p">,</span>
+                         <span class="kt">SpeechManagerDelegate</span><span class="p">,</span>
+                         <span class="kt">AvatarDecoratorDelegate</span><span class="p">,</span>
+                         <span class="kt">CalendarManagerDelegate</span><span class="p">,</span>
+                         <span class="kt">UIScrollViewDelegate</span></code></pre>
 
                 </div>
               </div>
-            <p>Result of Sensely API network calls</p>
+            <p>Class for intializing controller with a conversation</p>
+
+<p>User athorization and conversations loading (assessments/checkins) should be completed
+before starting this controller
+You may start this controller <code><a href="../Classes/BaseSenselyViewController.html#/s:12Chat_sensely25BaseSenselyViewControllerC05startA011withOptions012inNavigationF0yAA0aI0V_So012UINavigationF0CSgtF">BaseSenselyViewController.startChat(...)</a></code> specifying in which navigation controller to push chat
+Or by making a call <code><a href="../Classes/DataManager.html#/s:12Chat_sensely11DataManagerC22getConversationDetails14conversationID10completionySS_yAA10JSONResultOctF">DataManager.getConversationDetails(...)</a></code> and pushing it manually</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Classes/DataManager.html">DataManager</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Classes/BaseSenselyViewController.html">BaseSenselyViewController</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Structs/ChatOptions.html">ChatOptions</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Protocols/SenselyViewControllerDelegate.html">SenselyViewControllerDelegate</a></code>
+
+</div>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Protocols/SenselyCallbacks.html">SenselyCallbacks</a></code>
+
+</div>
 
           </section>
           <section class="section task-group-section">
@@ -119,9 +159,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12Chat_sensely13SenselyResultO7successyACyxGxcAEmlF"></a>
-                    <a name="//apple_ref/swift/Element/success(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12Chat_sensely13SenselyResultO7successyACyxGxcAEmlF">success(_:)</a>
+                    <a name="/s:12Chat_sensely0A14ViewControllerC10tagCellNibSo5UINibCvp"></a>
+                    <a name="//apple_ref/swift/Property/tagCellNib" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12Chat_sensely0A14ViewControllerC10tagCellNibSo5UINibCvp">tagCellNib</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -129,41 +169,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Success, typically JSON string</p>
+                        <p>You can customize button controls by inheriting <code>TagCollectionViewCell</code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">success</span><span class="p">(</span><span class="kt">T</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12Chat_sensely13SenselyResultO7failureyACyxGxcAEmlF"></a>
-                    <a name="//apple_ref/swift/Element/failure(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12Chat_sensely13SenselyResultO7failureyACyxGxcAEmlF">failure(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Typically, cocoa error</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">failure</span><span class="p">(</span><span class="kt">T</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">tagCellNib</span><span class="p">:</span> <span class="kt">UINib</span></code></pre>
 
                         </div>
                       </div>
