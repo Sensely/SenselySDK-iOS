@@ -61,11 +61,8 @@ open class SignInController: UIViewController, UITextFieldDelegate {
         self.dataManager.applyTestingProgram { (result) in
             
             switch result {
-            case .credentialsChanged:
+            case .credentialsChanged, .serverChanged:
                 self.login()
-                
-            case .serverChanged:
-                self.resetSignInScreenViews()
                 
             case .notApplied:
                 
