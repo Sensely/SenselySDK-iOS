@@ -105,20 +105,6 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            
-            Configuration.assessmentID = String(indexPath.row)
-            
-            var chatOptions = ChatOptions()
-            chatOptions.procedureID = DataManager.sharedInstance.stateMachine.getProcedureId(at: Int32(indexPath.item))
-            
-            let viewController = ChatViewController(nibName: "ChatViewController",
-                                                    bundle: Bundle(for: ChatViewController.self))
-            viewController.startChat(withOptions: chatOptions, inNavigationController: self.navigationController)
-            viewController.delegate = self
-            
-            collectionView.deselectItem(at: indexPath, animated: true)
-            collectionView.reloadItems(at: [indexPath])
-        }
+        self.startConversation(atIndex: indexPath)
     }
 }

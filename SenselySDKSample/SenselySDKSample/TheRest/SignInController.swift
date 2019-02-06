@@ -5,7 +5,7 @@
 //  Created by Egor Afanasenko on 12/8/17.
 //
 
-import Chat_sensely.Swift
+import Chat_sensely
 import AVFoundation
 
 open class SignInController: UIViewController, UITextFieldDelegate {

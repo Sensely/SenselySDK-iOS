@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		193DFC8F219EC68B00DE2DF7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DFC83219EC68A00DE2DF7 /* HomeController.swift */; };
 		193DFC90219EC68B00DE2DF7 /* CustomTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DFC84219EC68A00DE2DF7 /* CustomTagButton.swift */; };
-		193DFC91219EC68B00DE2DF7 /* HomeController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DFC85219EC68A00DE2DF7 /* HomeController+UICollectionView.swift */; };
-		193DFC92219EC68B00DE2DF7 /* HomeController+AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DFC86219EC68A00DE2DF7 /* HomeController+AvatarView.swift */; };
+		193DFC91219EC68B00DE2DF7 /* HomeController+MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DFC85219EC68A00DE2DF7 /* HomeController+MenuItems.swift */; };
+		193DFC92219EC68B00DE2DF7 /* HomeController+Sensely.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DFC86219EC68A00DE2DF7 /* HomeController+Sensely.swift */; };
 		193DFC93219EC68B00DE2DF7 /* HomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DFC88219EC68B00DE2DF7 /* HomeFooter.swift */; };
 		193DFC94219EC68B00DE2DF7 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DFC89219EC68B00DE2DF7 /* HomeCell.swift */; };
 		193DFC95219EC68B00DE2DF7 /* HomeFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 193DFC8A219EC68B00DE2DF7 /* HomeFooter.xib */; };
@@ -27,13 +27,14 @@
 		5848C05620C5834F002EDAC8 /* ConsumerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */; };
 		588682912113B8E000032A99 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588682902113B8E000032A99 /* SignInController.swift */; };
 		58A8DD9F20C7F0F700142A61 /* appointments_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 58A8DD9E20C7F0F700142A61 /* appointments_data.json */; };
+		CD9651FFC706C2DD625D85FC /* Pods_SenselySDK_github_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF8A86847C1EFE74D981919 /* Pods_SenselySDK_github_sample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		193DFC83219EC68A00DE2DF7 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		193DFC84219EC68A00DE2DF7 /* CustomTagButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTagButton.swift; sourceTree = "<group>"; };
-		193DFC85219EC68A00DE2DF7 /* HomeController+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeController+UICollectionView.swift"; sourceTree = "<group>"; };
-		193DFC86219EC68A00DE2DF7 /* HomeController+AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeController+AvatarView.swift"; sourceTree = "<group>"; };
+		193DFC85219EC68A00DE2DF7 /* HomeController+MenuItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeController+MenuItems.swift"; sourceTree = "<group>"; };
+		193DFC86219EC68A00DE2DF7 /* HomeController+Sensely.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeController+Sensely.swift"; sourceTree = "<group>"; };
 		193DFC88219EC68B00DE2DF7 /* HomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFooter.swift; sourceTree = "<group>"; };
 		193DFC89219EC68B00DE2DF7 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		193DFC8A219EC68B00DE2DF7 /* HomeFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeFooter.xib; sourceTree = "<group>"; };
@@ -47,12 +48,15 @@
 		193DFCA0219EC6AE00DE2DF7 /* n99.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = n99.mp3; sourceTree = "<group>"; };
 		193DFCA1219EC6AF00DE2DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		193DFCA8219EC6C600DE2DF7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		1944CFAE220B869200CB249E /* Chat_sensely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chat_sensely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerScreen.swift; sourceTree = "<group>"; };
 		5882A6DB20AEACC10024B93E /* SenselySDK-github-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SenselySDK-github-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5882A6EA20AEACC30024B93E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		588682902113B8E000032A99 /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		58A8DD9E20C7F0F700142A61 /* appointments_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appointments_data.json; sourceTree = "<group>"; };
 		58CCAA7A2113E18D00C50D7F /* Sensely-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sensely-Bridging-Header.h"; sourceTree = "<group>"; };
+		5EF8A86847C1EFE74D981919 /* Pods_SenselySDK_github_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SenselySDK_github_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5F7E98B2D664DE4ABA25C6A /* Pods-SenselySDK-github-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SenselySDK-github-sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SenselySDK-github-sample/Pods-SenselySDK-github-sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9651FFC706C2DD625D85FC /* Pods_SenselySDK_github_sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +101,32 @@
 			path = Base.lproj;
 			sourceTree = "<group>";
 		};
+		1944CFAD220B84A800CB249E /* TheRest */ = {
+			isa = PBXGroup;
+			children = (
+				588682902113B8E000032A99 /* SignInController.swift */,
+				193DFC84219EC68A00DE2DF7 /* CustomTagButton.swift */,
+				5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */,
+			);
+			path = TheRest;
+			sourceTree = "<group>";
+		};
+		4EEEE214127FA811EF54273A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5F7E98B2D664DE4ABA25C6A /* Pods-SenselySDK-github-sample.debug.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5882A6D220AEACC10024B93E = {
 			isa = PBXGroup;
 			children = (
 				58A8DD9D20C7F00D00142A61 /* Support files */,
 				5882A6DD20AEACC10024B93E /* SenselySDKSample */,
 				5882A6DC20AEACC10024B93E /* Products */,
+				4EEEE214127FA811EF54273A /* Pods */,
+				D00FF064E339F2A9345AC119 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,12 +142,10 @@
 			isa = PBXGroup;
 			children = (
 				193DFC83219EC68A00DE2DF7 /* HomeController.swift */,
-				193DFC86219EC68A00DE2DF7 /* HomeController+AvatarView.swift */,
-				193DFC85219EC68A00DE2DF7 /* HomeController+UICollectionView.swift */,
+				193DFC86219EC68A00DE2DF7 /* HomeController+Sensely.swift */,
+				193DFC85219EC68A00DE2DF7 /* HomeController+MenuItems.swift */,
 				193DFC87219EC68A00DE2DF7 /* HomeViews */,
-				588682902113B8E000032A99 /* SignInController.swift */,
-				193DFC84219EC68A00DE2DF7 /* CustomTagButton.swift */,
-				5848C05520C5834F002EDAC8 /* ConsumerScreen.swift */,
+				1944CFAD220B84A800CB249E /* TheRest */,
 				5882A6EA20AEACC30024B93E /* Info.plist */,
 			);
 			path = SenselySDKSample;
@@ -143,6 +166,15 @@
 			path = "Support files";
 			sourceTree = "<group>";
 		};
+		D00FF064E339F2A9345AC119 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1944CFAE220B869200CB249E /* Chat_sensely.framework */,
+				5EF8A86847C1EFE74D981919 /* Pods_SenselySDK_github_sample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5882A6ED20AEACC30024B93E /* Build configuration list for PBXNativeTarget "SenselySDK-github-sample" */;
 			buildPhases = (
+				7084DF97432ABD33EE61BAC7 /* [CP] Check Pods Manifest.lock */,
 				5882A6D720AEACC10024B93E /* Sources */,
 				5882A6D820AEACC10024B93E /* Frameworks */,
 				5882A6D920AEACC10024B93E /* Resources */,
+				3DCFBC437381A7B64B415A99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +250,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DCFBC437381A7B64B415A99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SenselySDK-github-sample/Pods-SenselySDK-github-sample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EasyAnimation/EasyAnimation.framework",
+				"${BUILT_PRODUCTS_DIR}/KYNavigationProgress/KYNavigationProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${PODS_ROOT}/SenselySDK/Chat_sensely.framework",
+				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyAnimation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYNavigationProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chat_sensely.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SenselySDK-github-sample/Pods-SenselySDK-github-sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7084DF97432ABD33EE61BAC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SenselySDK-github-sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5882A6D720AEACC10024B93E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -224,9 +313,9 @@
 				588682912113B8E000032A99 /* SignInController.swift in Sources */,
 				5848C05620C5834F002EDAC8 /* ConsumerScreen.swift in Sources */,
 				193DFC94219EC68B00DE2DF7 /* HomeCell.swift in Sources */,
-				193DFC91219EC68B00DE2DF7 /* HomeController+UICollectionView.swift in Sources */,
+				193DFC91219EC68B00DE2DF7 /* HomeController+MenuItems.swift in Sources */,
 				193DFC8F219EC68B00DE2DF7 /* HomeController.swift in Sources */,
-				193DFC92219EC68B00DE2DF7 /* HomeController+AvatarView.swift in Sources */,
+				193DFC92219EC68B00DE2DF7 /* HomeController+Sensely.swift in Sources */,
 				193DFC97219EC68B00DE2DF7 /* FeedbackEffect.swift in Sources */,
 				193DFC90219EC68B00DE2DF7 /* CustomTagButton.swift in Sources */,
 				193DFCA7219EC6AF00DE2DF7 /* AppDelegate.swift in Sources */,
@@ -314,6 +403,7 @@
 		};
 		19B43CE121BAC01E00DEC6D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5F7E98B2D664DE4ABA25C6A /* Pods-SenselySDK-github-sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

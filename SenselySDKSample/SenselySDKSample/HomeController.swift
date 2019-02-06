@@ -45,7 +45,7 @@ enum ConsumerCallbacks: String {
     case resultsPrescRefill = "ResultsPrescRefill"
 }
 
-class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCallbacks {
+class HomeController: UIViewController, SenselyAvatarViewDelegate {
     
     var avatarController:ChatViewController?
     var assessmentsData: [String] = []
@@ -59,7 +59,7 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var senselyAvatarView: SenselyAvatarView!
-    fileprivate var loadingIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    var loadingIndicator = UIActivityIndicatorView(style: .whiteLarge)
     
     public var customTagCellNib = UINib(nibName: "CustomTagButton",
                                   bundle: Bundle(for: HomeController.self))
@@ -69,7 +69,7 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         // Do any additional setup after loading the view, typically from a nib.
         
         Configuration.callbacks = self
-        /*
+        /* There is an options to play custom music on the background
         let path = Bundle.main.path(forResource: "n99.mp3", ofType:nil)!
         let url = URL(fileURLWithPath: path)
         do {
@@ -116,111 +116,9 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
         self.installCollectionView()
     }
     
-    /// MARK: Load conversation
-    
-    func loadConversation() {
-        
-        DataManager.sharedInstance.gettingAssessments { (result) in
-            switch result {
-            case .success:
-                self.loadingIndicator.stopAnimating()
-                self.collectionView.isHidden = false
-                self.arrayWithImages = DataManager.sharedInstance.stateMachine.getAssessmentIcons()
-                self.arrayWithNames = DataManager.sharedInstance.stateMachine.getAssessmentNames()
-                self.collectionView.reloadData()
-            case .failure(let error):
-                
-                let message = "An error occurred while retrieving data from the server, please try again".localized
-                print(error.dictionaryBody.description)
-                self.showRetryCancelModalAlert(title: "Server error".localized,
-                                               message: message,
-                                               retryBlock: {
-                                                self.loadConversation()
-                }, cancelBlock: {
-                    self.abortLoading()
-                })
-            }
-        }
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: Sensely delegate
-    
-    func senselyViewController(_ senselyViewController: BaseSenselyViewController, didReceiveFinalJSON finalString: String) {
-        print("Assessments results: \(finalString)")
-    }
-    
-    func didReceive(_ senselyViewController: BaseSenselyViewController, diagnosisData data: DiagnosisData) {
-        print("Diagnosis data: urgency -> \(data.urgency), asset_id -> \(data.assetID)")
-    }
-    
-    func senselyViewController(_ senselyViewController: UIViewController, didReceiveError error: SenselyError) {
-        
-        switch error {
-        case .initializationFailure, .conversationFailure:
-            let alertController = UIAlertController(title: "The assessment wasn't initialized".localized,
-                                                    message: "Data is corrupted or not full".localized,
-                                                    preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(dismissWithHandler: nil))
-            self.present(alertController, animated: true, completion: nil)
-        }
-    }
-    
-    func previosStateButtonClicked(_ senselyViewController: BaseSenselyViewController) {
-        //
-    }
-    
-    func voiceRecognitionWillStart(_ senselyViewController: BaseSenselyViewController) {
-        //self.audioPlayer?.pause()
-    }
-    
-    func voiceRecognitionDidEnd(_ senselyViewController: BaseSenselyViewController) {
-        //self.audioPlayer?.play()
-    }
-    
-    
-    //MARK - Invoke callback state
-    
-    func openConsumerScreen(callback: CallbackData) {
-        
-        let s = UIStoryboard (name: "Main", bundle: Bundle.main)
-        let cosumerScreen:ConsumerScreen = s.instantiateViewController(withIdentifier: "ConsumerScreen") as! ConsumerScreen
-        cosumerScreen.avatarModule = self.avatarController
-        cosumerScreen.senselyCallback = callback
-        self.navigationController?.pushViewController(cosumerScreen, animated: true)
-    }
-    
-    public func invokeCallback(callback:CallbackData) {
-        
-        print("invokeCallback \(callback.id)")
-        
-        callback.result = "Data to return"
-        
-        if let callbackName = ConsumerCallbacks(rawValue: callback.id) {
-            switch callbackName {
-            case .providerSearch:
-                openConsumerScreen(callback: callback)
-                break
-            case .emisSchedAppts, .emisCancelAppts, .emisAvailAppts:
-                callback.result = emisAppointments()
-                self.avatarController?.resultOfInvokeCallback(callback)
-                break
-            case .emisConfirmAppts:
-                self.avatarController?.resultOfInvokeCallback(callback)
-                break
-            case .emisMakeAppts:
-                self.avatarController?.resultOfInvokeCallback(nil)
-                break;
-            case .getPrescList, .confirmPrescRefill:
-                break
-            default:
-                break;
-            }
-        }
     }
     
     //MARK - Test data
@@ -266,5 +164,29 @@ class HomeController: UIViewController, SenselyViewControllerDelegate, SenselyCa
             NSLog("The \"OK\" alert occurred.")
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - SenselyAvatarViewDelegate
+    
+    func avatarView(_ view: SenselyAvatarView, didFinishLoading result: SenselyAvatarView.Result) {
+        switch result {
+        case .success:
+            hideLoadingScreen()
+            
+        case .failure:
+            let message = "The avatar couldn't load. Try logging in again. Otherwise, contact support.".localized
+            let controller = UIAlertController(title: "Avatar Problem".localized,
+                                               message: message,
+                                               preferredStyle: .alert)
+            
+            controller.addAction(UIAlertAction.init(dismissWithHandler: { [weak self] _ in
+                self?.abortLoading()
+            }))
+            present(controller, animated: true, completion: nil)
+        }
+    }
+    
+    func avatarView(_ view: SenselyAvatarView, didSayTextVocally: Bool) {
+        // do nothing
     }
 }
