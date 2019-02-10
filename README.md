@@ -26,9 +26,11 @@ In addition to symptom checker interactions, partners are able to build other co
 ## Technical Quickstart
 
 ### Prerequisites
-- iOS 10.0+
-- Xcode 8.0+ [xcode]
+- iOS 11.0+
+- Xcode 10.1+ [xcode]
 - [Cocoapods][cocoapods] version 1.0 or later
+- Framework is written in Swift 4.2
+- Objective-C support on request
 
 Follow these directions, with Xcode 8 or higher installed on your mac:
 * Clone [the GitHub repo](https://github.com/Sensely/SDK-iOS).
