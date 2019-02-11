@@ -5,5 +5,5 @@ target 'SenselySDK-github-sample' do
   use_frameworks!
 
   # Pods for SenselySDK-github-sample
-  pod 'SenselySDK'
+  pod 'SenselySDK', '~> 3.3.8'
 end
