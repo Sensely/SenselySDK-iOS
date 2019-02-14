@@ -12,7 +12,7 @@
     UIColor *senselyColor;
 }
 
-    @property (nonatomic) DataManager* dataManager;
+@property (nonatomic) DataManager* dataManager;
 @property (strong, nonatomic) IBOutlet TagButton *startAvatarBtn;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *btnLoading;
 

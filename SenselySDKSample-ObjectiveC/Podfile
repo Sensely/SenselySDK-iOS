@@ -1,9 +1,9 @@
 platform :ios, '11.0'
 
-target 'SenselySDK-github-sample' do
+target 'SDKSample-ObjectiveC' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for SenselySDK-github-sample
+  # Pods for SDKSample-ObjectiveC
   pod 'SenselySDK'
 end
