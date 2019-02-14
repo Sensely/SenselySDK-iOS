@@ -5,5 +5,5 @@ target 'SDKSample-ObjectiveC' do
   use_frameworks!
 
   # Pods for SDKSample-ObjectiveC
-  pod 'SenselySDK'
+  pod 'SenselySDK', '~>3.3.9'
 end
