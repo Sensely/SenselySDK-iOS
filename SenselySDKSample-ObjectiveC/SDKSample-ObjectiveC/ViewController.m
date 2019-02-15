@@ -51,7 +51,7 @@
             NSString* procedureID = [self.dataManager.stateMachine getProcedureIdAtIndex:0];
             
             // Override `userInfo` settings to skip states with questions answers to which system already knows
-            NSString* userInfo = @"{\"userInfo\":{\"gender\":\"M\", \"dob\":\"1980-10-30\", \"first_name\":\"Jenny\"}}";
+            NSString* userInfo = @"{\"userInfo\":{\"gender\":\"F\",\"dob\":\"1980-10-30\"}}";
             [self.dataManager overrideSettingsWithUserInfo:userInfo];
             
             // Initialize chat
