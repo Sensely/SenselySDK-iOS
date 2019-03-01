@@ -35,7 +35,7 @@ In addition to symptom checker interactions, partners are able to build other co
 Follow these directions, with Xcode 8 or higher installed on your mac:
 * Clone [the GitHub repo](https://github.com/Sensely/SDK-iOS).
 * Open terminal in repo directory and cd SenselySDKSample/
-* Sensely SDK uses Google Speech for voice recognition. If you're using SenselySDK 3.4+ then download in the directory where your Podfile placed the following [podspec](https://github.com/GoogleCloudPlatform/ios-docs-samples/tree/master/speech/Objective-C/Speech-gRPC-Streaming) along with the folder of [proto interfaces](https://github.com/GoogleCloudPlatform/ios-docs-samples/tree/master/speech/Objective-C/Speech-gRPC-Streaming/google). Add into your Podfile `pod 'googleapis', :path => '.'`
+* Sensely SDK uses Google Speech for voice recognition. If you're using SenselySDK 3.4+ then download in the directory where your Podfile placed the following [podspec](https://github.com/GoogleCloudPlatform/ios-docs-samples/blob/master/speech/Objective-C/Speech-gRPC-Streaming/googleapis.podspec) along with the folder of [google](https://github.com/GoogleCloudPlatform/ios-docs-samples/tree/master/speech/Objective-C/Speech-gRPC-Streaming/google) apis proto interfaces. Add into your Podfile `pod 'googleapis', :path => '.'`
 * Run pod install to download and build CocoaPods dependencies.
     * To install CocoaPods, see [here](https://cocoapods.org/#install).
 * Open the Xcode project by running open SenselySDKSample.xcworkspace from the terminal
