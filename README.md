@@ -36,7 +36,7 @@ Follow these directions, with Xcode 8 or higher installed on your mac:
 * Clone [the GitHub repo](https://github.com/Sensely/SDK-iOS).
 * Open terminal in repo directory and cd `SenselySDKSample/`
 * `SenselySDK` uses `GoogleSpeech` for voice recognition. Download in the directory where your `Podfile` located the following [podspec](https://github.com/GoogleCloudPlatform/ios-docs-samples/blob/master/speech/Objective-C/Speech-gRPC-Streaming/googleapis.podspec) along with the folder of [google](https://github.com/GoogleCloudPlatform/ios-docs-samples/tree/master/speech/Objective-C/Speech-gRPC-Streaming/google) apis proto interfaces. Add into your Podfile `pod 'googleapis', :path => '.'`
-* If you are using Swift version and have problems with Google's speech imports, run script ./FIX_GOOGLE_SPEECH_IMPORTS.sh located in `SenselySDKSample/` folder
+* If you are using Swift version and have problems with Google's speech imports, run script `./FIX_GOOGLE_SPEECH_IMPORTS.sh` located in `SenselySDKSample/` folder
 * Run pod install to download and build CocoaPods dependencies.
     * To install CocoaPods, see [here](https://cocoapods.org/#install).
 * Open the Xcode project by running open SenselySDKSample.xcworkspace from the terminal
