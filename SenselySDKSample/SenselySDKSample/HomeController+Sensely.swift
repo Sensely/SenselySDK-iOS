@@ -107,8 +107,9 @@ extension HomeController: SenselyViewControllerDelegate, SenselyCallbacks {
         print("Assessments results: \(finalString)")
     }
     
-    func didReceive(_ senselyViewController: BaseSenselyViewController, diagnosisData data: DiagnosisData) {
-        print("Diagnosis data: urgency -> \(data.urgency), asset_id -> \(data.assetID)")
+    func didReceiveDiagnosisData(_ senselyViewController: BaseSenselyViewController, urgency: String, assetID: String) {
+        
+        print("Diagnosis data: urgency -> \(urgency), asset_id -> \(assetID)")
     }
     
     func senselyViewController(_ senselyViewController: UIViewController, didReceiveError error: SenselyError) {
