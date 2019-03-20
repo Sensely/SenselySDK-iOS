@@ -1,8 +1,0 @@
-#!/bin/sh
-
-echo "Fix the bad imports in the generated files"
-grep -rl "google/cloud/speech/v1beta1/CloudSpeech.pbobjc.h"  google/** | xargs sed -i '' s@'"google\/cloud\/speech\/v1beta1\/CloudSpeech\.pbobjc\.h"'@'\<googleapis\/CloudSpeech\.pbobjc\.h\>'@g
-grep -rl "google/api/Annotations.pbobjc.h"  google/** | xargs sed -i '' s@'"google\/api\/Annotations\.pbobjc\.h"'@'\<googleapis\/Annotations\.pbobjc\.h\>'@g
-grep -rl "google/longrunning/Operations.pbobjc.h"  google/** | xargs sed -i '' s@'"google\/longrunning\/Operations\.pbobjc\.h"'@'\<googleapis\/Operations\.pbobjc\.h\>'@g
-grep -rl "google/rpc/Status.pbobjc.h"  google/** | xargs sed -i '' s@'"google\/rpc\/Status\.pbobjc\.h"'@'\<googleapis\/Status\.pbobjc\.h\>'@g
-grep -rl "google/cloud/speech/v1/CloudSpeech.pbobjc.h"  google/** | xargs sed -i '' s@'"\google\/cloud\/speech\/v1\/CloudSpeech\.pbobjc\.h\"'@'\<googleapis\/CloudSpeech\.pbobjc\.h\>'@g 
