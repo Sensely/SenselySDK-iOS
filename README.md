@@ -27,14 +27,15 @@ In addition to symptom checker interactions, partners are able to build other co
 
 ### Prerequisites
 - iOS 11.0+
-- Xcode 10.1+ [xcode]
+- Xcode 10.2+ [xcode]
 - [Cocoapods][cocoapods] version 1.0 or later
-- Framework is written in Swift 4.2
+- Framework is written in Swift 5.0
 - Objective-C support on request
 
 Follow these directions, with Xcode 8 or higher installed on your mac:
 * Clone [the GitHub repo](https://github.com/Sensely/SDK-iOS).
-* Open terminal in repo directory and cd `SenselySDKSample/`
+* Open terminal in repo directory and cd `ProjectDirectory`
+* For `Objective-C` version set flag `ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES`
 * `SenselySDK` uses `GoogleSpeech` for voice recognition. Download, untar and move `google` directory and `google.podspec` file to the directory where your `Podfile` located the following [arhive](https://github.com/Sensely/SDK-iOS/blob/master/third-party/google-deps.tar.gz). Add into your Podfile `pod 'googleapis', :path => '.'`
 * If you are using Swift version and have problems with Google's speech imports, run script `./FIX_GOOGLE_SPEECH_IMPORTS.sh` located in `SenselySDKSample/` folder
 * Run pod install to download and build CocoaPods dependencies.
