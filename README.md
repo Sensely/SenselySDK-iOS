@@ -41,6 +41,7 @@ Follow these directions, with Xcode 8 or higher installed on your mac:
 * Run pod install to download and build CocoaPods dependencies.
     * To install CocoaPods, see [here](https://cocoapods.org/#install).
 * Open the Xcode project by running open SenselySDKSample.xcworkspace from the terminal
+* Specify `Privacy - Microphone Usage Description` - `So that avatar can hear you`
 * Build and run the project on iOS simulator or real device
 * When the app loads, provide your username and password to see available conversations - you can request a demo license to get access.
 
