@@ -45,6 +45,16 @@ Follow these directions, with Xcode 8 or higher installed on your mac:
 * Build and run the project on iOS simulator or real device
 * When the app loads, provide your username and password to see available conversations - you can request a demo license to get access.
 
+
+- To avoid warning ITMS-90381: Too many symbol files add in your `Podfile` the following lines of code:
+```swift
+post_install do |installer|
+    installer.pods_project.build_configuration_list.build_configurations.each do |configuration|
+        configuration.build_settings['VALID_ARCHS'] = 'arm64'
+    end
+end
+```
+
 <a href="https://tinyurl.com/senselysdk"><img src="https://cl.ly/ca1a088639e6/request-access-button.png" alt="Request access" width="157"></a>
 
 ## Full Documentation
