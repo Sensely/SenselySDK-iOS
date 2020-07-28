@@ -42,7 +42,7 @@ Follow these directions, with Xcode 8 or higher installed on your mac:
 * Open the Xcode project by running open SenselySDKSample.xcworkspace from the terminal
 * Specify `Privacy - Microphone Usage Description` - `So that avatar can hear you`
 * Build and run the project on iOS simulator or real device
-* When the app loads, provide your username and password to see available conversations - request a demo license from Sensely to get access.
+* When the app loads, provide your username and password to see available conversations - request a demo license from Sensely to get access (see below).
 
 
 - To avoid warning ITMS-90381: Too many symbol files add in your `Podfile` the following lines of code:
@@ -58,7 +58,7 @@ end
 
 ## Full Documentation
 
-  To get more details about SDK please see our [documentation page]
+  Contact Sensely for full SDK documentation, including sample code.
 
 ## Licenses
 
