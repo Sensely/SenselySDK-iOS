@@ -54,11 +54,11 @@ post_install do |installer|
 end
 ```
 
-<a href="mailto:info@sensely.com"><img src="https://cl.ly/ca1a088639e6/request-access-button.png" alt="Request access" width="157"></a>
 
-## Full Documentation
+## Full Documentation and more details
 
-  Contact Sensely for full SDK documentation, including sample code.
+  Contact Sensely for full SDK documentation, including sample code to integrate.
+  <a href="mailto:info@sensely.com"><img src="https://cl.ly/ca1a088639e6/request-access-button.png" alt="Request access" width="157"></a>
 
 ## Licenses
 
