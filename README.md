@@ -6,9 +6,8 @@ The Sensely iOS SDK is designed to allow you to easily incorporate custom avatar
 
 ## Technical overview
 
-The Sensely SDK can be embedded in an existing iOS or Android app. When calling the SDK, the partner app will get a conversation flow (e.g. mayo symptom checker). Here is an overview of the integration:
+The Sensely SDK can be embedded in an existing app. When calling the SDK, the partner app will get a conversation flow (e.g. mayo symptom checker). Here is an overview of the integration:
 
-* The SDK can run in anonymous mode (no unique user, Sensely does not store responses) or with an authenticated user.
 * The partner app activates the Sensely UI and begin the conversation experience:
     * The user proceeds through the conversation by interacting with the Sensely UI which generally takes up the full screen inside the app.
     * During the conversation, the sensely conversation engine will direct a user through a flow, described below.
@@ -19,7 +18,7 @@ The Sensely SDK can be embedded in an existing iOS or Android app. When calling 
 
 ## Integration with Mayo Clinic symptom assessment tool
 
-Sensely is ready to use with the Mayo Clinic symptom assessment tool in 3 languages (contact us for more languages). The introduction can be reviewed and customized with disclaimers by the partner’s team. The Mayo symptom checker also supports using the symptom checker on behalf of a 3rd party (child, other family member).
+Sensely is ready to use with the Mayo Clinic symptom assessment tool in 8 languages (contact us for more languages). The introduction can be reviewed and customized with disclaimers by the partner’s team. The Mayo symptom checker also supports using the symptom checker on behalf of a 3rd party (child, other family member).
 
 In addition to symptom checker interactions, partners are able to build other conversation interactions using either our conversation design tools or ad-hoc using a specification of the conversation definition and building the conversation programmatically. More documentation is available upon request. 
 
@@ -30,7 +29,7 @@ In addition to symptom checker interactions, partners are able to build other co
 - Xcode 10.2+ [xcode]
 - [Cocoapods][cocoapods] version 1.0 or later
 - Framework is written in Swift 5.0
-- Objective-C support on request
+- Objective-C support (on request)
 
 Follow these directions, with Xcode 8 or higher installed on your mac:
 * Clone [the GitHub repo](https://github.com/Sensely/SDK-iOS).
@@ -43,7 +42,7 @@ Follow these directions, with Xcode 8 or higher installed on your mac:
 * Open the Xcode project by running open SenselySDKSample.xcworkspace from the terminal
 * Specify `Privacy - Microphone Usage Description` - `So that avatar can hear you`
 * Build and run the project on iOS simulator or real device
-* When the app loads, provide your username and password to see available conversations - you can request a demo license to get access.
+* When the app loads, provide your username and password to see available conversations - request a demo license from Sensely to get access.
 
 
 - To avoid warning ITMS-90381: Too many symbol files add in your `Podfile` the following lines of code:
