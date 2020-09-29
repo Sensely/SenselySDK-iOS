@@ -1,6 +1,6 @@
 # Sensely iOS Conversational SDK
 
-<a href="mailto:info@sensely.com"><img src="https://cl.ly/ca1a088639e6/request-access-button.png" alt="Request access" width="157"></a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSd0IG28QiYD-_BChDa0OrV3BgAzFJawFvTy6WZFPhmyUb9PCQ/viewform?usp=sf_link"><img src="https://cl.ly/ca1a088639e6/request-access-button.png" alt="Request access" width="157"></a>
 
 The Sensely iOS SDK is designed to allow you to easily incorporate custom avatar technology and conversational content in your iOS app. Start using the SDK today to leverage the power of conversational language interfaces. The avatar supports both voice and text options, allowing you to intelligently communicate with your patient and insurance plan member populations.
 
@@ -59,7 +59,7 @@ end
 
   Contact Sensely for full SDK documentation, including sample code to integrate.
   
-  <a href="mailto:info@sensely.com"><img src="https://cl.ly/ca1a088639e6/request-access-button.png" alt="Request access" width="157"></a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0IG28QiYD-_BChDa0OrV3BgAzFJawFvTy6WZFPhmyUb9PCQ/viewform?usp=sf_link"><img src="https://cl.ly/ca1a088639e6/request-access-button.png" alt="Request access" width="157"></a>
 
 ## Licenses
 
