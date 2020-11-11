@@ -67,6 +67,8 @@ SenselyWidget.initialize(username: "<username>",
 
 - At the current moment the `SDK` doesn't work with apps which has `SceneDelegate` implemented
 
+- `ENABLED_BITCODE` flag should be set to `NO` for your app
+
 - `SenselyWidget` can be pushed only in navigation controller. So app's root controller where widget is going to be pushed should be embeded in the navigation one.
 
 - To avoid warning <span style="color:red">**ITMS-90381**</span>: Too many symbol files add in your `Podfile` the following lines of code:
