@@ -25,31 +25,55 @@ In addition to symptom checker interactions, partners are able to build other co
 ## Technical Quickstart
 
 ### Prerequisites
-- iOS 11.0+
-- Xcode 10.2+ [xcode]
+- iOS 12.0+
+- Xcode 11+ [xcode]
 - [Cocoapods][cocoapods] version 1.0 or later
-- Framework is written in Swift 5.0
 - Objective-C support (on request)
 
 Follow these directions, with Xcode 8 or higher installed on your mac:
 * Clone [the GitHub repo](https://github.com/Sensely/SDK-iOS).
 * Open terminal in repo directory and cd `ProjectDirectory`
-* For `Objective-C` version set flag `ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES`
+* Create `Podfile` for your project, see [cocoapods](https://cocoapods.org/)
 * `SenselySDK` uses `GoogleSpeech` for voice recognition. Download, untar and move `google` directory and `google.podspec` file to the directory where your `Podfile` located the following [arhive](https://github.com/Sensely/SDK-iOS/blob/master/third-party/google-deps.tar.gz). Add into your Podfile `pod 'googleapis', :path => '.'`
-* If you are using Swift version and have problems with Google's speech imports, run script `./FIX_GOOGLE_SPEECH_IMPORTS.sh` located in `SenselySDKSample/` folder
-* Run pod install to download and build CocoaPods dependencies.
-    * To install CocoaPods, see [here](https://cocoapods.org/#install).
-* Open the Xcode project by running open SenselySDKSample.xcworkspace from the terminal
-* Specify `Privacy - Microphone Usage Description` - `So that avatar can hear you`
-* Build and run the project on iOS simulator or real device
-* When the app loads, provide your username and password to see available conversations - request a demo license from Sensely to get access (see below).
+* Add line `pod SenselySDK` 
+* Run `pod install` command or `pod update` to get the latest version for sure
+* Add in your app's Info.plist `NSMicrophoneUsageDescription` key explaining that you need access to microphone for capturing user's speech by voice recognition engine
+* Add header `import SenselySDK` or `#import <SenselySDK/SenselySDK.h>`
+* To receive assessment data results subscribe to the delegate `SenselyViewControllerDelegate`:
+```
+class ViewController: SenselyViewControllerDelegate {
+    
+     func senselyViewController(_ senselyViewController: BaseSenselyViewController, didReceiveFinalJSON finalString: String) {
+        print("Assessments results: \(finalString)")
+    }
+}
+```
+* At the appropriate time, you wish the widget to appear, invoke the init method, passing in appropriate parameters to change widgets language, regional server, color scheme and listen to final results event:
+```
+SenselyWidget.initialize(username: "<username>",
+                         password: "<password>",
+                      procedureId: "<procedureID>",
+                         language: "uk",
+                 conversationData: SenselyWidget.conversationData(gender: "M", dob: "1980-10-30", orgId: "<device-uuid>"),
+                            theme: "sensely", //
+                           region: "", // US server by default
+                       navigation: self.navigationController,
+                  senselyDelegate: self) { // SenselyViewControllerDelegate
+    // Widget is loaded
+}
+```
 
+## Known issues and limitations
 
-- To avoid warning ITMS-90381: Too many symbol files add in your `Podfile` the following lines of code:
+- At the current moment the `SDK` doesn't work with apps which has `SceneDelegate` implemented
+
+- `SenselyWidget` can be pushed only in navigation controller. So app's root controller where widget is going to be pushed should be embeded in the navigation one.
+
+- To avoid warning <span style="color:red">**ITMS-90381**</span>: Too many symbol files add in your `Podfile` the following lines of code:
 ```swift
 post_install do |installer|
     installer.pods_project.build_configuration_list.build_configurations.each do |configuration|
-        configuration.build_settings['VALID_ARCHS'] = 'arm64'
+        configuration.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
     end
 end
 ```
