@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self hideKeyboardWhenTappedAround];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -101,6 +102,17 @@
     [self theme].enabled = isEnabled;
     [self region].enabled = isEnabled;
     [self startBtn].enabled = isEnabled;
+}
+
+- (void) hideKeyboardWhenTappedAround {
+    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    tap.cancelsTouchesInView = NO;
+    
+    [self.view addGestureRecognizer:tap];
+}
+
+- (void) dismissKeyboard {
+    [self.view endEditing: YES];
 }
 
 - (void)senselyViewController:(BaseSenselyViewController * _Nonnull)senselyViewController didReceiveFinalJSON:(NSString * _Nonnull)finalString {
