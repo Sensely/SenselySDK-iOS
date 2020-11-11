@@ -52,7 +52,12 @@
     }
     
     if ([self procedureID].text == nil || [[self procedureID].text length] == 0) {
-        [self alertUser:@""];
+        [self alertUser:@"ProcedureID required parameter"];
+        return;
+    }
+    
+    if (self.navigationController == nil) {
+        [self alertUser:@"SenselyWidget can be pushed only in UINavigation controller. So app's root controller where widget is going to be pushed should be embeded in the navigation one."];
         return;
     }
     

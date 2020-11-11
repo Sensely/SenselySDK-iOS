@@ -78,6 +78,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MQ7-Ci-hj3"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="language" destination="sLA-5w-h1s" id="C4l-ds-fcg"/>
                         <outlet property="password" destination="2mb-OT-cMr" id="Vvf-qy-AWm"/>
