@@ -7,7 +7,7 @@ abstract_target 'Samples' do
   workspace 'SenselySamples'
   use_frameworks!
   
-  pod 'googleapis', :path => './third-party', :inhibit_warnings => true
+  pod 'googleapis', :path => '.', :inhibit_warnings => true
   
   pod 'SenselySDK'
 
