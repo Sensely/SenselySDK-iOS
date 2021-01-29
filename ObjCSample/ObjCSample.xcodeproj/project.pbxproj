@@ -104,7 +104,6 @@
 			buildConfigurationList = 19570A1A255B325D00FF88D2 /* Build configuration list for PBXNativeTarget "ObjCSample" */;
 			buildPhases = (
 				5E7DC0BBB60CEFAA29ACF85B /* [CP] Check Pods Manifest.lock */,
-				6CB62FE537AE69E33AF4EFF7 /* [CP] Prepare Artifacts */,
 				195709FD255B325A00FF88D2 /* Sources */,
 				195709FE255B325A00FF88D2 /* Frameworks */,
 				195709FF255B325A00FF88D2 /* Resources */,
@@ -184,23 +183,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6CB62FE537AE69E33AF4EFF7 /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Samples-ObjCSample/Pods-Samples-ObjCSample-artifacts-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Samples-ObjCSample/Pods-Samples-ObjCSample-artifacts-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Samples-ObjCSample/Pods-Samples-ObjCSample-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AE44677FDEAEE7FC2892CC1F /* [CP] Embed Pods Frameworks */ = {

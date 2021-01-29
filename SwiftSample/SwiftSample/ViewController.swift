@@ -71,11 +71,12 @@ class ViewController: UIViewController {
                                  conversationData: cData,
                                  theme: theme.text ?? "", // Optional: default 'sensely'
                                  region: region.text ?? "", // Optional: default 'us'
-                                 navigation: nav,
-                                 senselyDelegate: self) {
-            
-            print("SenselyWidget initization success or failure, catch errors with SenselyDelegate")
-        }
+                                 controller: nav,
+                                 delegate: self,
+                                 completion: {
+                
+                print("SenselyWidget initization success or failure, catch errors with SenselyDelegate")
+         })
     }
     
     private func alertUser(msg: String) {

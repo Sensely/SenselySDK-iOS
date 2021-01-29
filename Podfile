@@ -9,7 +9,7 @@ abstract_target 'Samples' do
   
   pod 'googleapis', :path => '.', :inhibit_warnings => true
   
-  pod 'SenselySDK'
+  pod 'SenselySDK', '~> 3.9.2'
 
   target 'SwiftSample' do
     project 'SwiftSample/SwiftSample.xcodeproj'
