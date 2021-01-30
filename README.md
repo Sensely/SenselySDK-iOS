@@ -52,15 +52,17 @@ class ViewController: SenselyViewControllerDelegate {
 ```
 SenselyWidget.initialize(username: "<username>",
                          password: "<password>",
-                      procedureId: "<procedureID>",
-                         language: "uk",
-                 conversationData: SenselyWidget.conversationData(gender: "M", dob: "1980-10-30", orgId: "<device-uuid>"),
-                            theme: "sensely", //
-                           region: "", // US server by default
-                       navigation: self.navigationController,
-                  senselyDelegate: self) { // SenselyViewControllerDelegate
-    // Widget is loaded
-}
+                         procedureId: procedureID.text!,
+                         language: "uk", // Optional: default 'en'
+                         conversationData: SenselyWidget.conversationData(gender: "M", dob: "1980-10-30", orgId: "<device-uuid>"),
+                         theme: "sensely", // Optional: default 'sensely'
+                         region: "", // Optional: default 'us'
+                         controller: self.navigationController,
+                         delegate: self,
+                         completion: { // SenselyViewControllerDelegate
+                
+                // Widget is loaded
+         })
 ```
 
 ## Known issues and limitations
