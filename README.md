@@ -52,7 +52,7 @@ class ViewController: SenselyViewControllerDelegate {
 ```
 SenselyWidget.initialize(username: "<username>",
                          password: "<password>",
-                         procedureId: procedureID.text!,
+                         procedureId: "<procedureID>",
                          language: "uk", // Optional: default 'en'
                          conversationData: SenselyWidget.conversationData(gender: "M", dob: "1980-10-30", orgId: "<device-uuid>"),
                          theme: "sensely", // Optional: default 'sensely'
