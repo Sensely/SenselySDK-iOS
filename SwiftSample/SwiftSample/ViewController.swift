@@ -33,7 +33,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.controls(enable: true)
     }
     
     @IBAction func startAssessment(_ sender: Any) {
@@ -76,6 +75,7 @@ class ViewController: UIViewController {
                                  completion: {
                 
                 print("SenselyWidget initization success or failure, catch errors with SenselyDelegate")
+                self.controls(enable: true)
          })
     }
     
