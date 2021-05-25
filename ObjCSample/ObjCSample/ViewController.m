@@ -39,6 +39,20 @@
     [self controls: YES];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)didMoveToParentViewController:(UIViewController *)parent {
+    NSLog(@"didMoveToParentViewController");
+}
+
+- (void)willMoveToParentViewController:(UIViewController *)parent
+{
+    NSLog(@"willMoveToParentViewController");
+}
+
 - (IBAction)startAssessment:(id)sender {
     
     if ([self username].text == nil || [[self username].text length] == 0) {
@@ -74,10 +88,11 @@
                          conversationData:userData
                                     theme:[self theme].text
                                    region:[self region].text
-                               navigation:self.navigationController
-                          senselyDelegate:self
+                               controller:self
+                                 delegate:self
                                completion:^{
         
+        [self controls: YES];
         NSLog(@"SenselyWidget initization success or failure, catch errors with SenselyDelegate");
     }];
 }
