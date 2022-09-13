@@ -26,25 +26,24 @@ In addition to symptom checker interactions, partners are able to build other co
 
 ### Prerequisites
 - iOS 12.0+
-- Xcode 11+ [xcode]
+- Xcode 12+ [xcode]
 - [Cocoapods][cocoapods] version 1.0 or later
 - Objective-C support (on request)
 
-Follow these directions, with Xcode 8 or higher installed on your mac:
+Follow these directions, with Xcode 12 or higher installed on your mac:
 * Clone [the GitHub repo](https://github.com/Sensely/SDK-iOS).
 * Open terminal in repo directory and cd `ProjectDirectory`
 * Create `Podfile` for your project, see [cocoapods](https://cocoapods.org/)
-* `SenselySDK` uses `GoogleSpeech` for voice recognition. Download, untar and move `google` directory and `google.podspec` file to the directory where your `Podfile` located the following [arhive](https://github.com/Sensely/SDK-iOS/blob/master/third-party/google-deps.tar.gz). Add into your Podfile `pod 'googleapis', :path => '.'`
 * Add line `pod SenselySDK` 
 * Run `pod install` command or `pod update` to get the latest version for sure
 * Add in your app's Info.plist `NSMicrophoneUsageDescription` key explaining that you need access to microphone for capturing user's speech by voice recognition engine
-* Add header `import SenselySDK` or `#import <SenselySDK/SenselySDK.h>`
+* Add header `import SenselySDK`
 * To receive assessment data results subscribe to the delegate `SenselyViewControllerDelegate`:
 ```
 class ViewController: SenselyViewControllerDelegate {
-    
-     func senselyViewController(_ senselyViewController: BaseSenselyViewController, didReceiveFinalJSON finalString: String) {
-        print("Assessments results: \(finalString)")
+	
+	 func senselyViewController(_ senselyViewController: BaseSenselyViewController, didReceiveFinalJSON finalString: String) {
+		print("Assessments results: \(finalString)")
     }
 }
 ```
@@ -54,8 +53,9 @@ SenselyWidget.initialize(username: "<username>",
                          password: "<password>",
                          procedureId: "<procedureID>",
                          language: "uk", // Optional: default 'en'
-                         conversationData: SenselyWidget.conversationData(gender: "M", dob: "1980-10-30", orgId: "<device-uuid>"),
+                         conversationData: SenselyWidget.conversationData(gender: "M", dob: "1980-10-30", orgId: "<device-uuid>", custom: ["mykey": "myvalue"]),
                          theme: "sensely", // Optional: default 'sensely'
+                         defaultAudio: "on",  // "on", "off", "ask". Default set to "on" if skipped
                          controller: self.navigationController,
                          delegate: self,
                          completion: { // SenselyViewControllerDelegate
@@ -71,15 +71,6 @@ SenselyWidget.initialize(username: "<username>",
 - `ENABLED_BITCODE` flag should be set to `NO` for your app (some our `third-party` dependencies don't include bitcode)
 
 - `SenselyWidget` can be pushed only in `UINavigation` controller. So app's root controller where widget is going to be pushed should be embeded in the navigation one.
-
-- To avoid warning <span style="color:red">**ITMS-90381**</span>: Too many symbol files add in your `Podfile` the following lines of code:
-```swift
-post_install do |installer|
-    installer.pods_project.build_configuration_list.build_configurations.each do |configuration|
-        configuration.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
-    end
-end
-```
 
 
 ## Full Documentation and more details
