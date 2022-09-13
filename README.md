@@ -70,6 +70,17 @@ SenselyWidget.initialize(username: "<username>",
 
 - `SenselyWidget` can be pushed only in `UINavigation` controller. So app's root controller where widget is going to be pushed should be embeded in the navigation one.
 - "compiling for iOS x.0, but module 'SocketIO' has a minimum deployment target of iOS y.0' y > x, known limitation of cocoapods which are going to be fixed in Cocoapods v1.8.0, see [here](https://github.com/CocoaPods/CocoaPods/issues/9105),[here](https://github.com/CocoaPods/CocoaPods/issues/10968): current workaround is to set Pod's project deployment target on version x.0
+- "dyld[20229]: Symbol not found: Referenced from:" (more about it [here](https://github.com/CocoaPods/CocoaPods/issues/9775)) if you see such type of error please try to add into your Podfile the following code:
+```
+post_install do |installer|
+	installer.pods_project.targets.each do |target|
+		target.build_configurations.each do |config|
+			config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+		end
+	end
+end
+```
+
 
 
 ## Full Documentation and more details
