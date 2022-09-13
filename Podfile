@@ -7,7 +7,7 @@ abstract_target 'Samples' do
   workspace 'SenselySamples'
   use_frameworks!
   
-  pod 'SenselySDK'
+  pod 'SenselySDK', '~> 3.13.3'
   
   target 'SwiftSample' do
     project 'SwiftSample/SwiftSample.xcodeproj'
