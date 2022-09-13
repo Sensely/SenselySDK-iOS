@@ -12,7 +12,7 @@
 		19128A1E255C2B8D00A49D8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19128A1C255C2B8D00A49D8E /* Main.storyboard */; };
 		19128A20255C2B9100A49D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19128A1F255C2B9100A49D8E /* Assets.xcassets */; };
 		19128A23255C2B9100A49D8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19128A21255C2B9100A49D8E /* LaunchScreen.storyboard */; };
-		31D67C62FBC7655EDAF5FC1B /* Pods_Samples_SwiftSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624A5A6EB47C8770708E19DF /* Pods_Samples_SwiftSample.framework */; };
+		24714A0E954FDE2509D78D9D /* Pods_Samples_SwiftSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624A5A6EB47C8770708E19DF /* Pods_Samples_SwiftSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31D67C62FBC7655EDAF5FC1B /* Pods_Samples_SwiftSample.framework in Frameworks */,
+				24714A0E954FDE2509D78D9D /* Pods_Samples_SwiftSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,12 +350,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 17FDC92C9F5C94D545F731D7 /* Pods-Samples-SwiftSample.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXE7329A59;
 				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AppAuth/AppAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth/GTMAppAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleSignIn/GoogleSignIn.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Socket.IO-Client-Swift/SocketIO.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Starscream/Starscream.framework/Headers\"",
+					"\"${PODS_ROOT}/../../LocalFrameworks/SenselySDK/SenselySDK.xcframework/ios-x86_64-simulator/SenselySDK.framework/Headers\"",
+				);
 				INFOPLIST_FILE = SwiftSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,12 +383,25 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 277DA62A9D801C91FC37630F /* Pods-Samples-SwiftSample.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXE7329A59;
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AppAuth/AppAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth/GTMAppAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleSignIn/GoogleSignIn.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Socket.IO-Client-Swift/SocketIO.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Starscream/Starscream.framework/Headers\"",
+					"\"${PODS_ROOT}/../../LocalFrameworks/SenselySDK/SenselySDK.xcframework/ios-x86_64-simulator/SenselySDK.framework/Headers\"",
+				);
 				INFOPLIST_FILE = SwiftSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

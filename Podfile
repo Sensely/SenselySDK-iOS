@@ -7,10 +7,8 @@ abstract_target 'Samples' do
   workspace 'SenselySamples'
   use_frameworks!
   
-  pod 'googleapis', :path => '.', :inhibit_warnings => true
+  pod 'SenselySDK'
   
-  pod 'SenselySDK', '3.9.4'
-
   target 'SwiftSample' do
     project 'SwiftSample/SwiftSample.xcodeproj'
   end

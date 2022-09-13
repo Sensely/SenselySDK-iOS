@@ -78,7 +78,8 @@
     NSString* uuid = [[UIDevice currentDevice] identifierForVendor].UUIDString;
     ConversationData* userData = [SenselyWidget conversationDataWithGender:@"M"
                                                                        dob:@"1980-10-30"
-                                                                     orgId:uuid];
+                                                                     orgId:uuid
+                                                                    custom:@{ @"mykey":@"myvalue" }];
     
     [self controls: NO];
     [SenselyWidget initializeWithUsername:[self username].text
@@ -87,7 +88,7 @@
                                  language:[self language].text
                          conversationData:userData
                                     theme:[self theme].text
-                                   region:[self region].text
+                             defaultAudio:@"off"
                                controller:self
                                  delegate:self
                                completion:^{

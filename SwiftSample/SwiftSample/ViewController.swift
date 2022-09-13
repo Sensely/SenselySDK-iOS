@@ -60,7 +60,8 @@ class ViewController: UIViewController {
         // Information about user used to skip some questions with already known answers
         let cData = ConversationData(userInfo: UserInfo(gender: "M",
                                                         dob: "1980-10-30",
-                                                        orgId: NSUUID().uuidString))
+                                                        orgId: NSUUID().uuidString,
+                                                        custom: [ "mykey": "myvalue" ]))
         self.controls(enable: false)
         
         SenselyWidget.initialize(username: username.text!,
@@ -69,7 +70,6 @@ class ViewController: UIViewController {
                                  language: language.text ?? "", // Optional: default 'en'
                                  conversationData: cData,
                                  theme: theme.text ?? "", // Optional: default 'sensely'
-                                 region: region.text ?? "", // Optional: default 'us'
                                  controller: nav,
                                  delegate: self,
                                  completion: {
