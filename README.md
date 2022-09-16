@@ -80,7 +80,11 @@ post_install do |installer|
 	end
 end
 ```
-
+Unfortunately with the current version of cocoapods at the moment it 1.11.2 these settings lead to "Symbol not found" issue ar runtime
+```
+config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+```
 
 
 ## Full Documentation and more details
