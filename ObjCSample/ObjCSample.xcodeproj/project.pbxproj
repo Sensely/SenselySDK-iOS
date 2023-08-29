@@ -3,22 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		190AB2DD255B5F720068C1B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190AB2D9255B5F710068C1B7 /* LaunchScreen.storyboard */; };
 		190AB2DE255B5F720068C1B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190AB2DB255B5F710068C1B7 /* Main.storyboard */; };
+		192E12D52AA9F26D00EA0FE7 /* SenselySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 192E12D42AA9F26D00EA0FE7 /* SenselySDK */; };
 		19570A06255B325A00FF88D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19570A05255B325A00FF88D2 /* AppDelegate.m */; };
 		19570A0C255B325A00FF88D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19570A0B255B325A00FF88D2 /* ViewController.m */; };
 		19570A11255B325D00FF88D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19570A10255B325D00FF88D2 /* Assets.xcassets */; };
 		19570A17255B325D00FF88D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19570A16255B325D00FF88D2 /* main.m */; };
-		4AC59B7876FF3FA917E32A41 /* Pods_Samples_ObjCSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C71C3F4B77AD184B40F41F /* Pods_Samples_ObjCSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		190AB2DA255B5F710068C1B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		190AB2DC255B5F710068C1B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		192E12D12AA9F21500EA0FE7 /* SenselySDK-iOS */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SenselySDK-iOS"; path = ..; sourceTree = "<group>"; };
 		19570A01255B325A00FF88D2 /* ObjCSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjCSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19570A04255B325A00FF88D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19570A05255B325A00FF88D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -27,9 +28,6 @@
 		19570A10255B325D00FF88D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19570A15255B325D00FF88D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19570A16255B325D00FF88D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		47376ED6943CAE1780937C38 /* Pods-Samples-ObjCSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Samples-ObjCSample.debug.xcconfig"; path = "Target Support Files/Pods-Samples-ObjCSample/Pods-Samples-ObjCSample.debug.xcconfig"; sourceTree = "<group>"; };
-		67C71C3F4B77AD184B40F41F /* Pods_Samples_ObjCSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Samples_ObjCSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6751B54F563C85DF5BB7245 /* Pods-Samples-ObjCSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Samples-ObjCSample.release.xcconfig"; path = "Target Support Files/Pods-Samples-ObjCSample/Pods-Samples-ObjCSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AC59B7876FF3FA917E32A41 /* Pods_Samples_ObjCSample.framework in Frameworks */,
+				192E12D52AA9F26D00EA0FE7 /* SenselySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,9 +45,9 @@
 		195709F8255B325A00FF88D2 = {
 			isa = PBXGroup;
 			children = (
+				19893A3D2AA1EE2300E354FE /* Packages */,
 				19570A03255B325A00FF88D2 /* ObjCSample */,
 				19570A02255B325A00FF88D2 /* Products */,
-				CDCDD18C0B9376609D4B9B75 /* Pods */,
 				C7C8387399B210009D708F8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -78,22 +76,19 @@
 			path = ObjCSample;
 			sourceTree = "<group>";
 		};
+		19893A3D2AA1EE2300E354FE /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				192E12D12AA9F21500EA0FE7 /* SenselySDK-iOS */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		C7C8387399B210009D708F8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				67C71C3F4B77AD184B40F41F /* Pods_Samples_ObjCSample.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CDCDD18C0B9376609D4B9B75 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				47376ED6943CAE1780937C38 /* Pods-Samples-ObjCSample.debug.xcconfig */,
-				A6751B54F563C85DF5BB7245 /* Pods-Samples-ObjCSample.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,17 +98,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19570A1A255B325D00FF88D2 /* Build configuration list for PBXNativeTarget "ObjCSample" */;
 			buildPhases = (
-				2A336504B916078F655EBD03 /* [CP] Check Pods Manifest.lock */,
 				195709FD255B325A00FF88D2 /* Sources */,
 				195709FE255B325A00FF88D2 /* Frameworks */,
 				195709FF255B325A00FF88D2 /* Resources */,
-				825DA4E841271B57B45FD8D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ObjCSample;
+			packageProductDependencies = (
+				192E12D42AA9F26D00EA0FE7 /* SenselySDK */,
+			);
 			productName = ObjCSample;
 			productReference = 19570A01255B325A00FF88D2 /* ObjCSample.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +136,8 @@
 				Base,
 			);
 			mainGroup = 195709F8255B325A00FF88D2;
+			packageReferences = (
+			);
 			productRefGroup = 19570A02255B325A00FF88D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,48 +159,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2A336504B916078F655EBD03 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Samples-ObjCSample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		825DA4E841271B57B45FD8D7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Samples-ObjCSample/Pods-Samples-ObjCSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Samples-ObjCSample/Pods-Samples-ObjCSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Samples-ObjCSample/Pods-Samples-ObjCSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		195709FD255B325A00FF88D2 /* Sources */ = {
@@ -351,40 +307,56 @@
 		};
 		19570A1B255B325D00FF88D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47376ED6943CAE1780937C38 /* Pods-Samples-ObjCSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RXE7329A59;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = RXE7329A59;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ObjCSample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SenselySDKSample-ObjC";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sensely.sdk.ObjCSample;
+				MARKETING_VERSION = 3.14.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = sensely.SenselySDKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development sensely.SenselySDKTest";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		19570A1C255B325D00FF88D2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6751B54F563C85DF5BB7245 /* Pods-Samples-ObjCSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RXE7329A59;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = RXE7329A59;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ObjCSample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SenselySDKSample-ObjC";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sensely.sdk.ObjCSample;
+				MARKETING_VERSION = 3.14.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = sensely.SenselySDKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore sensely.SenselySDKTest";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -411,6 +383,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		192E12D42AA9F26D00EA0FE7 /* SenselySDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SenselySDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 195709F9255B325A00FF88D2 /* Project object */;
 }

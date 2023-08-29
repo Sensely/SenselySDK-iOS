@@ -82,11 +82,13 @@
                                                                     custom:@{ @"mykey":@"myvalue" }];
     
     [self controls: NO];
+    
     [SenselyWidget initializeWithUsername:[self username].text
                                  password:[self password].text
                               procedureId:[self procedureID].text
                                  language:[self language].text
                          conversationData:userData
+                           doNotStoreData:TRUE
                                     theme:[self theme].text
                              defaultAudio:@"off"
                                controller:self

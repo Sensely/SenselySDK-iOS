@@ -25,19 +25,25 @@ In addition to symptom checker interactions, partners are able to build other co
 ## Technical Quickstart
 
 ### Prerequisites
-- iOS 12.0+
-- Xcode 12+ [xcode]
-- [Cocoapods][cocoapods] version 1.0 or later
-- Objective-C support (on request)
+- iOS 13.0+
+- Xcode 14.3+ [xcode]
 
-Follow these directions, with Xcode 12 or higher installed on your mac:
+### To run samples:
 * Clone [the GitHub repo](https://github.com/Sensely/SDK-iOS).
-* Open terminal in repo directory and cd `ProjectDirectory`
-* Create `Podfile` for your project, see [cocoapods](https://cocoapods.org/)
-* Add line `pod SenselySDK` 
-* Run `pod install` command or `pod update` to get the latest version for sure
+* `open ObjSample.xcodeproj` or `open SwiftSample.xcodeproj`
+
+
+### To integrate into your project:
+* To add with SPM follow [this guide](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app) and use link to [the GitHub repo](https://github.com/Sensely/SDK-iOS).
+* In `Build Settings -> Link Binary with libraries` section add `SenselySDK`
+
+
+### To start working with SenselySDK:
+
+Follow these directions, with Xcode 14.3+ installed on your mac:
+
 * Add in your app's Info.plist `NSMicrophoneUsageDescription` key explaining that you need access to microphone for capturing user's speech by voice recognition engine
-* Add header `import SenselySDK`
+* Add header `import SenselySDK` or `#import <SenselySDK/SenselySDK.h>` for Obj-C
 * To receive assessment data results subscribe to the delegate `SenselyViewControllerDelegate`:
 ```
 class ViewController: SenselyViewControllerDelegate {
@@ -66,26 +72,13 @@ SenselyWidget.initialize(username: "<username>",
 
 ## Known issues and limitations
 
-- `ENABLED_BITCODE` flag should be set to `NO` for your app (some our `third-party` dependencies don't include bitcode)
+### Versions prior 3.14.2 are distributed using cocoapods. You need cocoapods 1.0+
 
-- `SenselyWidget` can be pushed only in `UINavigation` controller. So app's root controller where widget is going to be pushed should be embeded in the navigation one.
-- "compiling for iOS x.0, but module 'SocketIO' has a minimum deployment target of iOS y.0' y > x, known limitation of cocoapods which are going to be fixed in Cocoapods v1.8.0, see [here](https://github.com/CocoaPods/CocoaPods/issues/9105),[here](https://github.com/CocoaPods/CocoaPods/issues/10968): current workaround is to set Pod's project deployment target on version x.0
-- "dyld[20229]: Symbol not found: Referenced from:" (more about it [here](https://github.com/CocoaPods/CocoaPods/issues/9775)) if you see such type of error please try to add into your Podfile the following code:
-```
-post_install do |installer|
-	installer.pods_project.targets.each do |target|
-		target.build_configurations.each do |config|
-			config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-		end
-	end
-end
-```
-Unfortunately with the current version of cocoapods at the moment it 1.11.2 these settings lead to "Symbol not found" issue at runtime
-```
-config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
-config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
-```
-
+* Create `Podfile` for your project, see [cocoapods](https://cocoapods.org/)
+* Add line `pod SenselySDK` 
+* Run `pod install` command or `pod update` to get the latest version for sure
+* Follow directions in `To start working with SenselySDK` section
+ 
 
 ## Full Documentation and more details
 
