@@ -12,8 +12,19 @@
 		19128A1E255C2B8D00A49D8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19128A1C255C2B8D00A49D8E /* Main.storyboard */; };
 		19128A20255C2B9100A49D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19128A1F255C2B9100A49D8E /* Assets.xcassets */; };
 		19128A23255C2B9100A49D8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19128A21255C2B9100A49D8E /* LaunchScreen.storyboard */; };
-		19D974F12AA607490040B412 /* SenselySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 19D974F02AA607490040B412 /* SenselySDK */; };
+		19C2C8292AAB398200D3B6B6 /* SwiftSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C2C8282AAB398200D3B6B6 /* SwiftSampleTests.swift */; };
+		19F845882AAA0F91001A628E /* SenselySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 19F845872AAA0F91001A628E /* SenselySDK */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19C2C82A2AAB398200D3B6B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19128A0B255C2B8D00A49D8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19128A12255C2B8D00A49D8E;
+			remoteInfo = SwiftSample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		19128A13255C2B8D00A49D8E /* SwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,7 +34,8 @@
 		19128A1F255C2B9100A49D8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19128A22255C2B9100A49D8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19128A24255C2B9100A49D8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19D974EF2AA6070D0040B412 /* SenselySDK-iOS */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SenselySDK-iOS"; path = "../../SenselySDK-iOS"; sourceTree = "<group>"; };
+		19C2C8262AAB398200D3B6B6 /* SwiftSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C2C8282AAB398200D3B6B6 /* SwiftSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSampleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +43,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19D974F12AA607490040B412 /* SenselySDK in Frameworks */,
+				19F845882AAA0F91001A628E /* SenselySDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19C2C8232AAB398200D3B6B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +60,8 @@
 		19128A0A255C2B8D00A49D8E = {
 			isa = PBXGroup;
 			children = (
-				19ADF9432A9E27F800ECC029 /* Packages */,
 				19128A15255C2B8D00A49D8E /* SwiftSample */,
+				19C2C8272AAB398200D3B6B6 /* SwiftSampleTests */,
 				19128A14255C2B8D00A49D8E /* Products */,
 				631102139C362E39FED356A6 /* Frameworks */,
 			);
@@ -52,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				19128A13255C2B8D00A49D8E /* SwiftSample.app */,
+				19C2C8262AAB398200D3B6B6 /* SwiftSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,12 +89,12 @@
 			path = SwiftSample;
 			sourceTree = "<group>";
 		};
-		19ADF9432A9E27F800ECC029 /* Packages */ = {
+		19C2C8272AAB398200D3B6B6 /* SwiftSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				19D974EF2AA6070D0040B412 /* SenselySDK-iOS */,
+				19C2C8282AAB398200D3B6B6 /* SwiftSampleTests.swift */,
 			);
-			name = Packages;
+			path = SwiftSampleTests;
 			sourceTree = "<group>";
 		};
 		631102139C362E39FED356A6 /* Frameworks */ = {
@@ -101,11 +121,29 @@
 			);
 			name = SwiftSample;
 			packageProductDependencies = (
-				19D974F02AA607490040B412 /* SenselySDK */,
+				19F845872AAA0F91001A628E /* SenselySDK */,
 			);
 			productName = SwiftSample;
 			productReference = 19128A13255C2B8D00A49D8E /* SwiftSample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		19C2C8252AAB398200D3B6B6 /* SwiftSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19C2C82E2AAB398200D3B6B6 /* Build configuration list for PBXNativeTarget "SwiftSampleTests" */;
+			buildPhases = (
+				19C2C8222AAB398200D3B6B6 /* Sources */,
+				19C2C8232AAB398200D3B6B6 /* Frameworks */,
+				19C2C8242AAB398200D3B6B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19C2C82B2AAB398200D3B6B6 /* PBXTargetDependency */,
+			);
+			name = SwiftSampleTests;
+			productName = SwiftSampleTests;
+			productReference = 19C2C8262AAB398200D3B6B6 /* SwiftSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -114,11 +152,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1210;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					19128A12255C2B8D00A49D8E = {
 						CreatedOnToolsVersion = 12.1;
+					};
+					19C2C8252AAB398200D3B6B6 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 19128A12255C2B8D00A49D8E;
 					};
 				};
 			};
@@ -132,12 +174,14 @@
 			);
 			mainGroup = 19128A0A255C2B8D00A49D8E;
 			packageReferences = (
+				19F845862AAA0F91001A628E /* XCRemoteSwiftPackageReference "SenselySDK-iOS" */,
 			);
 			productRefGroup = 19128A14255C2B8D00A49D8E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				19128A12255C2B8D00A49D8E /* SwiftSample */,
+				19C2C8252AAB398200D3B6B6 /* SwiftSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -153,6 +197,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19C2C8242AAB398200D3B6B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -165,7 +216,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19C2C8222AAB398200D3B6B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C2C8292AAB398200D3B6B6 /* SwiftSampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19C2C82B2AAB398200D3B6B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19128A12255C2B8D00A49D8E /* SwiftSample */;
+			targetProxy = 19C2C82A2AAB398200D3B6B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		19128A1C255C2B8D00A49D8E /* Main.storyboard */ = {
@@ -310,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -366,6 +434,44 @@
 			};
 			name = Release;
 		};
+		19C2C82C2AAB398200D3B6B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sense.ly.SwiftSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftSample";
+			};
+			name = Debug;
+		};
+		19C2C82D2AAB398200D3B6B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sense.ly.SwiftSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftSample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftSample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -387,11 +493,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		19C2C82E2AAB398200D3B6B6 /* Build configuration list for PBXNativeTarget "SwiftSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19C2C82C2AAB398200D3B6B6 /* Debug */,
+				19C2C82D2AAB398200D3B6B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		19F845862AAA0F91001A628E /* XCRemoteSwiftPackageReference "SenselySDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Sensely/SenselySDK-iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.14.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		19D974F02AA607490040B412 /* SenselySDK */ = {
+		19F845872AAA0F91001A628E /* SenselySDK */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 19F845862AAA0F91001A628E /* XCRemoteSwiftPackageReference "SenselySDK-iOS" */;
 			productName = SenselySDK;
 		};
 /* End XCSwiftPackageProductDependency section */

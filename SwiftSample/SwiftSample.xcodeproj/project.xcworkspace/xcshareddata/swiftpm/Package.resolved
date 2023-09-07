@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "senselysdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Sensely/SenselySDK-iOS.git",
+      "state" : {
+        "revision" : "20f8b06a72c5475e65a5b0a78334a5f115ac7fc4",
+        "version" : "3.14.2"
+      }
+    }
+  ],
+  "version" : 2
+}

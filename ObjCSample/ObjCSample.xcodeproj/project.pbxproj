@@ -9,17 +9,16 @@
 /* Begin PBXBuildFile section */
 		190AB2DD255B5F720068C1B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190AB2D9255B5F710068C1B7 /* LaunchScreen.storyboard */; };
 		190AB2DE255B5F720068C1B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190AB2DB255B5F710068C1B7 /* Main.storyboard */; };
-		192E12D52AA9F26D00EA0FE7 /* SenselySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 192E12D42AA9F26D00EA0FE7 /* SenselySDK */; };
 		19570A06255B325A00FF88D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19570A05255B325A00FF88D2 /* AppDelegate.m */; };
 		19570A0C255B325A00FF88D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19570A0B255B325A00FF88D2 /* ViewController.m */; };
 		19570A11255B325D00FF88D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19570A10255B325D00FF88D2 /* Assets.xcassets */; };
 		19570A17255B325D00FF88D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19570A16255B325D00FF88D2 /* main.m */; };
+		19F845852AAA0F64001A628E /* SenselySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 19F845842AAA0F64001A628E /* SenselySDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		190AB2DA255B5F710068C1B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		190AB2DC255B5F710068C1B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		192E12D12AA9F21500EA0FE7 /* SenselySDK-iOS */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SenselySDK-iOS"; path = ..; sourceTree = "<group>"; };
 		19570A01255B325A00FF88D2 /* ObjCSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjCSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19570A04255B325A00FF88D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19570A05255B325A00FF88D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				192E12D52AA9F26D00EA0FE7 /* SenselySDK in Frameworks */,
+				19F845852AAA0F64001A628E /* SenselySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +44,6 @@
 		195709F8255B325A00FF88D2 = {
 			isa = PBXGroup;
 			children = (
-				19893A3D2AA1EE2300E354FE /* Packages */,
 				19570A03255B325A00FF88D2 /* ObjCSample */,
 				19570A02255B325A00FF88D2 /* Products */,
 				C7C8387399B210009D708F8D /* Frameworks */,
@@ -76,14 +74,6 @@
 			path = ObjCSample;
 			sourceTree = "<group>";
 		};
-		19893A3D2AA1EE2300E354FE /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				192E12D12AA9F21500EA0FE7 /* SenselySDK-iOS */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		C7C8387399B210009D708F8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +98,7 @@
 			);
 			name = ObjCSample;
 			packageProductDependencies = (
-				192E12D42AA9F26D00EA0FE7 /* SenselySDK */,
+				19F845842AAA0F64001A628E /* SenselySDK */,
 			);
 			productName = ObjCSample;
 			productReference = 19570A01255B325A00FF88D2 /* ObjCSample.app */;
@@ -137,6 +127,7 @@
 			);
 			mainGroup = 195709F8255B325A00FF88D2;
 			packageReferences = (
+				19F845832AAA0F64001A628E /* XCRemoteSwiftPackageReference "SenselySDK-iOS" */,
 			);
 			productRefGroup = 19570A02255B325A00FF88D2 /* Products */;
 			projectDirPath = "";
@@ -310,11 +301,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = RXE7329A59;
+				DEVELOPMENT_TEAM = RXE7329A59;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ObjCSample/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "SenselySDKSample-ObjC";
@@ -328,7 +318,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sensely.SenselySDKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development sensely.SenselySDKTest";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -384,9 +373,21 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		19F845832AAA0F64001A628E /* XCRemoteSwiftPackageReference "SenselySDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Sensely/SenselySDK-iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.14.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		192E12D42AA9F26D00EA0FE7 /* SenselySDK */ = {
+		19F845842AAA0F64001A628E /* SenselySDK */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 19F845832AAA0F64001A628E /* XCRemoteSwiftPackageReference "SenselySDK-iOS" */;
 			productName = SenselySDK;
 		};
 /* End XCSwiftPackageProductDependency section */
