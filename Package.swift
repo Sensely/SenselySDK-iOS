@@ -59,17 +59,17 @@ let package = Package(
     .binaryTarget(
         name: "Starscream",
         url: "https://nexus.sense.ly/repository/sensely-sdk-ios-dependencies/Starscream/4.0.4/Starscream.zip",
-        checksum: "383ec67512c9965a86b7358068a7a693924c8647c91354a1d6685c6088bd5f50"
+        checksum: "8ac9995d431fed91a125697e1b60aa893df224051528bb0028de29bdd9bf9584"
     ),
     .binaryTarget(
         name: "Socket-IO",
         url: "https://nexus.sense.ly/repository/sensely-sdk-ios-dependencies/SocketIO/16.1.0/SocketIO.zip",
-        checksum: "a06755a175424f58699a051bc3bed8855e5c25b74b07ac4b3ca702d2fa9bbd82"
+        checksum: "789078112529d31092d924d27e551f1dd619bf244d4200a98317491852a8e60d"
     ),
     .binaryTarget(
         name: "SenselySDK-XCFramework",
         url: "https://nexus.sense.ly/repository/sensely-sdk-ios/com/sensely/SDK/3.14.2/SenselySDK.zip",
-        checksum: "7f5c1e5f09cc53f2d35342f9cd0de50334ab232f1eb688afcfdb9751974bb488"
+        checksum: "3e5e26e9627c51eb4bebe7191bba8baf63444c4270480b57bfb1463b056dcc17"
      )
   ]
 )
