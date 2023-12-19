@@ -59,7 +59,7 @@ let package = Package(
     .binaryTarget(
         name: "Starscream",
         url: "https://nexus.sense.ly/repository/sensely-sdk-ios-dependencies/Starscream/4.0.4/Starscream.zip",
-        checksum: "8ac9995d431fed91a125697e1b60aa893df224051528bb0028de29bdd9bf9584"
+        checksum: "cfaea87092ca07a534b5a7614ef8a01b766f40478f14bf57c99acaf9dc0ab0bd"
     ),
     .binaryTarget(
         name: "Socket-IO",
