@@ -48,8 +48,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "SenselySDK-XCFramework",
-            url: "https://nexus.sense.ly/repository/sensely-sdk-ios/com/sensely/SDK/3.14.3/SenselySDK.zip",
-            checksum: "c8817eb314d125b3cc9501d577041a0386a7462df506b5c219d3ddcc410bb12b"
+            url: "https://nexus.sense.ly/repository/sensely-sdk-ios/com/sensely/SDK/3.14.4/SenselySDK.zip",
+            checksum: "869162d051f33e69bd2a69e487ee895638080d04d22c23fe1eac57255b5879e0"
          )
     ]
 )
